@@ -5,15 +5,15 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
 	 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=0.8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=0.7"/>
 
   </head>
 <title>Crazzy's</title>
-	 <hr>
+	 
 			<!--Title icon-->
 		 <div class="center">
 		 </div> <div class="img"> <img align=middle src="images/Title.png" 
-alt="Img" width="430" height="60"></a> 
+alt="Img" width="490" height="60"></a> 
 
 
 <!--Adding some css-->
@@ -26,94 +26,125 @@ alt="Img" width="430" height="60"></a>
 		<link rel="stylesheet" type="text/css" href="css/icons.css" />
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
 		<script src="js/modernizr.custom.js"></script>
-<style> 	
-
- 	body 	{ 		
-			background-image:url('images/background.png'); 	
-				background-repeat:repeat; 		
-				background-position:top; 		
-				margin-center:10px; }
- 
-ul.a {list-style-type:circle;} 
-ul.b {list-style-type:disc;} 
-ul.c {list-style-type:square;} 
-ol.d {list-style-type:armenian;} 
-ol.e {list-style-type:cjk-ideographic;} 
-ol.f {list-style-type:decimal;} 
-ol.g {list-style-type:decimal-leading-zero;} 
-ol.h {list-style-type:georgian;} 
-ol.i {list-style-type:hebrew;} 
-ol.j {list-style-type:hiragana;} 
-ol.k {list-style-type:hiragana-iroha;} 
-ol.l {list-style-type:katakana;} 
-ol.m {list-style-type:katakana-iroha;} 
-ol.n {list-style-type:lower-alpha;} 
-ol.o {list-style-type:lower-greek;} 
-ol.p {list-style-type:lower-latin;} 
-ol.q {list-style-type:lower-roman;} 
-ol.r {list-style-type:upper-alpha;} 
-ol.s {list-style-type:upper-latin;} 
-ol.t {list-style-type:upper-roman;} 
-ol.u {list-style-type:none;} 
-ol.v {list-style-type:inherit;}
-
-
-
-
-p.none {border-style: none;}
-
-p.dotted {border-style: dotted;}
-
-p.dashed {border-style: dashed;}
-
-p.solid {border-style: solid;}
-
-p.double {border-style: double;}
-
-p.groove {border-style: groove;}
-
-p.ridge {border-style: ridge;}
-
-p.inset {border-style: inset;}
-
-p.outset {border-style: outset;}
-
-p.hidden {border-style: hidden;}
-
-
-h1 {
-
-    text-align: center;
-
+	   <style>
+#splash1 {
+     color: #FFFF00;
+     font-size: 1.5em;
+     font-family:'volter';
+     text-shadow:3px 3px #3F3F33;
+     padding: 40px;
+     position: absolute;
+}
+.pop {
+   animation: pop 0.58s infinite;
+   -webkit-animation: pop 0.58 infinite;
+}
+@keyframes pop {
+   from {
+     transform:scale(0.95)
+   }
+   50% {
+     transform:scale(1)
+   }
+   to {
+     transform:scale(0.95)
+   }
+}
+@-webkit-keyframes pop {
+   from {
+     -webkit-transform:scale(0.95)
+   }
+   50% {
+     -webkit-transform:scale(1)
+   }
+   to {
+     -webkit-transform:scale(0.95)
+   }
+}
+.tilt {
+   -ms-transform: rotate(-25deg);
+   -webkit-transform: rotate(-25deg);
+   transform: rotate(-25deg);
 }
 
- 
-
-p.ridge {
-
-    text-align: center;
-
+    
+@font-face {
+  font-family:volter;
+  src: url('fonts/crazzy.ttf');
 }
-
- 
-
-p.main {
-
-    text-align: justify;
-
+@font-face {
+  font-family:crazzy;
+  src: url('fonts/crazzy.ttf');
 }
+body {
+    background-image: url(images/background.png);
+    font-family:'volter';
+    text-shadow:3px 3px #3F3F33;
+}
+div.title {
+  text-align: center;
+}
+#bod {
+    background-image: url(images/background.png);
+    width:100%;
+    height:500px;
+    color:#fff;
+}
+#pbg {
+    background-image: url(images/background.png);
+}
+#mc {
+  font-family:mcpe;
+}
+/* De registro unicamente */
+#boton {
+    background-color: rgb(149,134,129);
+    color:#FFFFFF;
+    height:30px;
+    font-family:'volter';
+    text-shadow:1.5px 1.5px #3F3F33;
+}
+#boton:hover{
+    background-color: rgb(115,101,99);
+    color: rgb(255,255,164);
+}
+#boton:active {
+    background-color: rgb(115,101,99);
+    color: rgb(255,255,164);
+}
+#entrada {
+    border:solid rbg(107,97,99);
+    background-color: rgb(58,53,49);
+    font-family:'volter';
+    color:#fff;
+    height:20px;
+    text-shadow:2px 2px #3F3F33;
+}
+#chb {
+    font-size:8px;
+    text-shadow:1.4px 1.3px #3F3F33;
+}
+#lel {
+    font-size:10px;
+    text-shadow:1.1px 1.1px #3F3F33;
+    color: rgb(255,255,164);
+}
+	   </style> 
+		   <!--Adds Animated menu icons-->
+		   <nav id="bt-menu" class="bt-menu">
+			 <a class="bt-menu-trigger"><span>Menu</span></a>
+			 <ul>
+			   <li>Inicio<a href="index.html" class="bt-icon icon-home">Inicio</a></li>
+			   <li>Twitter<a href="http://www.twitter.com/CrazzyMCPE" class="bt-icon icon-twitter">Twitter</a></li>
+			   <li>Facebook<a href="http://www.facebook.com/elCrazzy" class="bt-icon icon-facebook">Facebook</a></li>
+			   <li>Descargas<a href="descargas.html" class="bt-icon icon-download">Descargas</a></li>
+			 </ul>
 
 
-
-
-
+		 
+		   </nav>
  
-</style> 
-
-
-
- 
- 
+		 </div>
 <div>
 <header class="codrops-header">
 				<nav class="codrops-demos">
@@ -128,7 +159,7 @@ height="180"></a>
 
 <marquee  behavior="alternate" direction="center">
 
-    <b>Desarrollador Web y creador de texturas</b>
+    <b style="font-size:82%">Desarrollador Web y creador de texturas</b>
 
 </marquee>
 
@@ -141,19 +172,8 @@ height="180"></a>
 				
 			 	<a style="font-size:75%" class="current-demo" href="aboutScreen.html">English</a>
 </div>
-	<!--Adds Animated menu icons-->
-			<nav id="bt-menu" class="bt-menu">
-				<a class="bt-menu-trigger"><span>Menu</span></a>
-				<ul>
-	      	<li>Inicio<a href="index.html" class="bt-icon icon-home">Inicio</a></li>
-					<li>Twitter<a href="http://www.twitter.com/CrazzyMCPE" class="bt-icon icon-twitter">Twitter</a></li>
-					<li>Facebook<a href="http://www.facebook.com/elCrazzy" class="bt-icon icon-facebook">Facebook</a></li>
-					<li>Descargas<a href="descargas.html" class="bt-icon icon-download">Descargas</a></li>
-				</ul>
-					
-							
-					 <hr>
-		 <h1 style="font-size:150%">@CrazzyMCPE Copyright Licence </h1>
+	--> <hr> 
+		 <h1 style="font-size:100%">@CrazzyMCPE Copyright Licence </h1>
 		
 		<hr>	 	
 
