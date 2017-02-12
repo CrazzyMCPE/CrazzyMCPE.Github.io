@@ -1,0 +1,170 @@
+@media screen and (min-width: 800px)
+  {  
+
+#button
+{
+    color: #eee8ed;
+    background: #dba233;
+    width: 13%;
+    height: 49;
+    font-size:  145%;
+    border-style: solid;
+    border-color: #fff;
+    border-width: 6px;
+    border-radius: 8px  5px;
+     box-shadow: 1px 1px 5px #000;
+    margin: 0.1%;
+     transition: all 0.3s ease 0s;
+     font-weight: bold;
+}
+#button:hover
+{
+    color:goldenrod;
+    background: #fff;
+    font-size:  140%;
+    border-style: solid;
+    border-color: #dba233;
+    border-width: 5px 5px 5px;
+    border-radius: 8px 8px;
+    box-shadow: 1px 2px 25px #000;
+     transition: all 0.3s ease 0s;
+     font-weight: bold;
+  /*blur
+    -webkit-filter: blur(5px);
+-moz-filter: blur(5px);
+-o-filter: blur(5px);
+-ms-filter: blur(5px);
+filter: blur(5px);*/
+}
+}
+@media screen and (max-width: 1024px)
+  {  
+
+#button
+{
+    color: #eee8ed;
+    background: #dba233;
+    width: 14%;
+    height: 40;
+    font-size:  145%;
+    border-style: solid;
+    border-color: #fff;
+    border-width: 6px;
+    border-radius: 8px  5px;
+     box-shadow: 1px 1px 5px #000;
+    margin: 0.1%;
+      transition: all 0.3s ease 0s;
+}
+      #button:hover
+{
+    color:goldenrod;
+    background: #fff;
+    font-size:  145%;
+    border-style: solid;
+    border-color: #dba233;
+    border-width: 6px;
+    border-radius: 5px 8px;
+    box-shadow: 1px 2px 25px #000;
+     transition: all 0.3s ease 0s;
+}
+}
+@media screen and (max-width: 720px)
+  {  
+
+#button
+{
+    color: #eee8ed;
+    background: #dba233;
+    width: 28%;
+    height: 42;
+    font-size:  145%;
+    border-style: solid;
+    border-color: #fff;
+    border-width: 6px;
+    border-radius: 8px  5px;
+     box-shadow: 1px 1px 5px #000;
+    margin: 0.1%;
+    font-weight: bold;
+      transition: all 0.3s ease 0s;
+}
+      #button:hover
+{
+    color:goldenrod;
+    background: #fff;
+    font-size:  145%;
+    border-style: solid;
+    border-color: #dba233;
+    border-width: 6px;
+    border-radius: 5px 8px;
+    box-shadow: 1px 2px 25px #000;
+     transition: all 0.3s ease 0s;
+    font-weight: bold;
+      transition: all 0.3s ease 0s;
+}
+}
+@media screen and (max-width: 480px)
+  {  
+
+#button
+{
+    color: #eee8ed;
+    background: #dba233;
+    width: 32.0%;
+    height: 40;
+    font-size:  80%;
+    border-style: solid;
+    border-color: #fff;
+    border-width: 6px;
+    border-radius: 8px  5px;
+     box-shadow: 1px 1px 5px #000;
+    margin: 0.1%;
+      transition: all 0.3s ease 0s;
+     font-weight: bold;
+}
+      #button:hover
+{
+    color:goldenrod;
+    background: #fff;
+    font-size:  145%;
+    border-style: solid;
+    border-color: #dba233;
+    border-width: 6px;
+    border-radius: 5px 8px;
+    box-shadow: 1px 2px 25px #000;
+     transition: all 0.3s ease 0s;
+}
+}
+@media screen and (max-width: 280px)
+  {  
+
+#button
+{
+    color: #eee8ed;
+    background: #dba233;
+    width: 30%;
+    height: 35;
+    font-size:  30%;
+    border-style: solid;
+    border-color: #fff;
+    border-width: 6px;
+    border-radius: 8px  5px;
+     box-shadow: 1px 1px 5px #000;
+    margin: 0.1%;
+}
+      #button:hover
+{
+    color:goldenrod;
+    background: #fff;
+    font-size:  145%;
+    border-style: solid;
+    border-color: #dba233;
+    border-width: 6px;
+    border-radius: 5px 8px;
+    box-shadow: 1px 2px 25px #000;
+     transition: all 0.3s ease 0s;
+}
+}
+body
+{
+    background: #2D2730;
+}
