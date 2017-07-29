@@ -1,0 +1,1 @@
+document.write('<center><div id="navflotante"><input id="button" type="button" onclick="location.href=`index.html`"    value="Inicio"/> <input id="button" type="button" onclick="location.href=`news.html`" value="Noticias"/> <input id="button" type="button" onclick="location.href=`about.html`" value="acerca de "/></div></center>');
