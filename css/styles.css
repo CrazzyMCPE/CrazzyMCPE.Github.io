@@ -5,7 +5,7 @@
 height: 110%;
 width: 94%;
 margin-top:2%;
-margin-bottom: 1%
+margin-bottom: 1%;
 }  
        }
 @media screen and (max-width: 1024px)
@@ -15,20 +15,29 @@ margin-bottom: 1%
 height: 94%;
 width: 94%;
 margin-top:2%;
-margin-bottom: 1%
+margin-bottom: 1%;
 }
  }
 @media screen and (max-width: 720px)
 { 
 #frame
 {
-height: 79%;
+height: 74%;
 width: 94%;
 margin-top:2%;
-margin-bottom: 1%
+margin-bottom: 1%;
+}
+    }
+@media screen and (max-width: 480px)
+{ 
+#frame
+{
+height: 73%;
+width: 94%;
+margin-top:10%;
+margin-bottom: 5%;
 }
  }
-
 #LandscapeImage
 {
 height: auto;
@@ -53,7 +62,6 @@ margin-bottom: 3%;
 }
 #profileicon:hover
 {
-
  width: 30%;
 height: auto;
 border-radius: 100%;
@@ -109,8 +117,9 @@ text-shadow: 3px 3px 8px #000;
 }
 #paragraph
 {
+font-size: 100%;
 color: #fff;
-text-shadow: 2px 3px 6px #000
+text-shadow: 2px 3px 6px #000;
 }
 #InterfaceLayout
 {
@@ -122,7 +131,7 @@ background: #E0B53E;
 box-shadow: 1px 2px 15px;
 height: auto;
 width: 90%;
-margin-top:16%;
+margin-top:4%;
 }
 @media screen and (min-width: 800px)
   {  
@@ -144,6 +153,7 @@ margin-top:16%;
      font-weight: bold;
     text-shadow: 1px 1px 3px #000;
 }
+      }
 #button:hover
 {
     color:goldenrod;
@@ -155,14 +165,13 @@ margin-top:16%;
     box-shadow: 1px 2px 25px #000;
      transition: all 0.6s ease 0s;
      font-weight: bold;
-    text-shadow: #000 2px 2px 3px
-  blur
-/* -webkit-filter: blur(1px);
+    text-shadow: #000 2px 2px 3px;
+ /* blur
+ -webkit-filter: blur(1px);
 -moz-filter: blur(1px);
 -o-filter: blur(5px);
 -ms-filter: blur(1px);
 filter: blur(1px);*/
-}
 }
 @media screen and (max-width: 1024px)
   {  
@@ -177,13 +186,14 @@ filter: blur(1px);*/
     border-style: solid;
     border-color: #fff;
     border-width: 6px;
-    border-radius: 8px  5px;
+    border-radius: 8px 5px;
      box-shadow: 1px 1px 5px #000;
     margin: 0.4%;
      transition: all 0.6s ease 0s;
      font-weight: bold;
     text-shadow: 1px 1px 3px #000;
 }
+      }
       #button:hover
 {
     color:goldenrod;
@@ -195,7 +205,6 @@ filter: blur(1px);*/
     box-shadow: 1px 2px 25px #000;
      transition: all 0.3s ease 0s;
      font-weight: bold;
-}
 }
 @media screen and (max-width: 720px)
   {  
@@ -218,6 +227,7 @@ filter: blur(1px);*/
      font-weight: bold;
     text-shadow: 1px 1px 3px #000;
 }
+  }    
       #button:hover
 {
     color:goldenrod;
@@ -231,7 +241,6 @@ filter: blur(1px);*/
      font-weight: bold;
     text-shadow: #000 2px 2px 3px;
 }
-}
 @media screen and (max-width: 480px)
   {  
 
@@ -239,7 +248,7 @@ filter: blur(1px);*/
 {
    color: #eee8ed;
     background: #dba233;
-    width: 38%;
+    width: 31%;
     height: 41;
     font-size:  100%;
     border-style: solid;
@@ -252,6 +261,7 @@ filter: blur(1px);*/
      font-weight: bold;
     text-shadow: 1px 1px 3px #000;
 }
+      }
       #button:hover
 {
     color:goldenrod;
@@ -263,8 +273,7 @@ filter: blur(1px);*/
     box-shadow: 1px 2px 25px #000;
      transition: all 0.6s ease 0s;
      font-weight: bold;
-    text-shadow: #000 2px 2px 3px
-}
+    text-shadow: #000 2px 2px 3px;
 }
 @media screen and (max-width: 280px)
   {  
@@ -273,9 +282,9 @@ filter: blur(1px);*/
 {
     color: #eee8ed;
     background: #dba233;
-    width: 44%;
-    height: 41;
-    font-size:  91%;
+    width: 3''%;
+    height: 35;
+    font-size:  84%;
     border-style: solid;
     border-color: #fff;
     border-width: 6px;
@@ -286,6 +295,7 @@ filter: blur(1px);*/
      font-weight: bold;
     text-shadow: 1px 1px 3px #000;
 }
+      }
       #button:hover
 {
     color:goldenrod;
@@ -298,23 +308,67 @@ filter: blur(1px);*/
      transition: all 0.3s ease 0s;
      font-weight: bold;
 }
-}
 body
 {
     background: #4C4C4C;
 }
+@media screen and (min-width: 800px)
+   { 
 #banner
 {
+    height: 35%;
+    width: 100%;
     color: goldenrod;
     font-size: 80px;
     text-shadow: 2px 2px 9px #000;
     box-shadow: 2px 2px 50px #000;
-    box-sizing: 1px 1px;
     background: #fff;
     border-radius: 20px 20px;
+    margin-top: -0.2%;
 }
-#banner:hover
+}
+@media screen and (max-width: 1024px)
+   { 
+#banner
 {
- background: #dba233;
- color: #fff;
+    height: 34%;
+    width: 100%;
+    color: goldenrod;
+    font-size: 80px;
+    text-shadow: 2px 2px 9px #000;
+    box-shadow: 2px 2px 50px #000;
+    background: #fff;
+    border-radius: 20px 20px;
+    margin-top: -0.4%;
+}
+}
+@media screen and (max-width: 720px)
+   { 
+#banner
+{
+    height: 25%;
+    width: 100%;
+    color: goldenrod;
+    font-size: 80px;
+    text-shadow: 2px 2px 9px #000;
+    box-shadow: 2px 2px 50px #000;
+    background: #fff;
+    border-radius: 20px 20px;
+    margin-top: -0.9%;
+}
+}
+@media screen and (max-width: 480px)
+   { 
+#banner
+{
+    height: 21%;
+    width: 100%;
+    color: goldenrod;
+    font-size: 80px;
+    text-shadow: 2px 2px 9px #000;
+    box-shadow: 2px 2px 50px #000;
+    background: #fff;
+    border-radius: 20px 20px;
+    margin-top: -1%;
+}
 }
