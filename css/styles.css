@@ -1,3 +1,18 @@
+#navbar
+{
+height: 60%;
+width: 13%;
+position: fixed;
+margin-top: 35%;
+margin-left: 0%;
+background: #eaeaea;
+opacity: 0.9;
+box-shadow: 1px 2px 15px;
+border-style: groove;
+border-width: 8px;
+border-radius: 8px;
+border-color:   #eaea #eaea #f5a3fa #eaea;
+}
 body
 {
 background: #4C4C4C;
@@ -37,7 +52,7 @@ margin-left: -72%;
 }
  }
 @media screen and (max-width: 1024px)
-  {  
+  { 
 #BoxLayout
 {
 background: #eaeaea;
@@ -87,6 +102,38 @@ border-color: #fff #fff #fff #fff;
 margin-left: -0%;
 }
  }
+@media screen and (min-width: 800px)
+  { 
+#Twitter-button
+{ 
+margin-left: -63%;
+margin-bottom: 0.5%;
+      }
+      }
+@media screen and (max-width: 1024px)
+  { 
+#Twitter-button
+{ 
+margin-left: -53%;
+margin-bottom: 0.5%;
+      }
+      }
+@media screen and (max-width: 720px)
+  { 
+#Twitter-button
+{ 
+margin-left: -33%;
+margin-bottom: 0.5%;
+      }
+      }
+@media screen and (max-width: 480px)
+  { 
+#Twitter-button
+{ 
+margin-left: -1%;
+margin-bottom: 2%;
+      }
+      }
 @media screen and (min-width: 800px)
   {  
    #frame

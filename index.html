@@ -6,9 +6,18 @@
         <link rel="shortcut icon" href="img/favicon.ico">
 <script type="text/javascript">document.write('<center><div id="navflotante"><input id="button" type="button" onclick="location.href=`index.html`"    value="Inicio"/> <input id="button" type="button" onclick="location.href=`news.html`" value="Noticias"/> <input id="button" type="button" onclick="location.href=`about.html`" value="acerca de "/></div></center>');</script>
              <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
-   </head>
+ <SCRIPT language="Javascript">
+<!--
+function muestra(){
+document.getElementById("Prueba").innerHTML="Esto es una prueba de que se cambia al pulsar sobre el enlace";
+
+};
+
+-->
+</SCRIPT>
+    </head>
    
-<body>
+<body><!--<h1 id="navbar"></h1>-->
 <!--<h1 id="banner" onclick="location.href=`index.html`">CrazzyMCPE</h1></center>--> <script>
      $("button").click(function(){
     $("p").slideToggle();
@@ -19,6 +28,8 @@
   <center> <h3 id="InterfaceLayout">
   
    <iframe id="frame" src="news.html">      </iframe> <br><br>
-   
-      <a class="twitter-timeline" data-width="90%" data-height="90%" href="https://twitter.com/Crazzymcpe"></a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script><br><br></h3></center></body>
+  <p id="Twitter-button"> <a  href="https://twitter.com/CrazzyMCPE" class="twitter-follow-button" data-show-count="true">
+      
+      <script  async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></a></p>
+      <a class="twitter-timeline" data-width="90%" data-height="90%" href="https://twitter.com/Crazzymcpe"></a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script><br> <iframe hidden src="http://www.facebook.com" width="5%" height="5%"> </iframe>     <br></h3></center></body>
     </html>
