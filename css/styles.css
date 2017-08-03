@@ -1,3 +1,20 @@
+::-webkit-scrollbar {
+  width: 0.8em;
+  height: 0.5%;
+}
+
+::-webkit-scrollbar-thumb {
+  background: slategray;
+}
+
+::-webkit-scrollbar-track {
+  background: #b8c0c8;
+}
+
+body {
+  scrollbar-face-color: slategray;
+  scrollbar-track-color: #b8c0c8;
+}
 #navbar
 {
 height: 60%;
