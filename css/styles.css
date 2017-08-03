@@ -4,16 +4,18 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: slategray;
+  background: #333333;
+  border-radius: 8px;
+  box-shadow: 2px 2px 15px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #b8c0c8;
+  background: #5a5a5a;
 }
 
 body {
-  scrollbar-face-color: slategray;
-  scrollbar-track-color: #b8c0c8;
+  scrollbar-face-color: #333333;
+  scrollbar-track-color: #5a5a5a;
 }
 #navbar
 {
@@ -31,7 +33,7 @@ border-radius: 8px;
 border-color:   #eaea #eaea #f5a3fa #eaea;
 }
 body
-{
+{ 
 background: #4C4C4C;
 }
 #InterfaceLayout
