@@ -6,18 +6,90 @@
         <link rel="shortcut icon" href="img/favicon.ico">
 <script type="text/javascript">document.write('<center><div id="navflotante"><input id="button" type="button" onclick="location.href=`index.html`"    value="Inicio"/>  <input id="button" type="button" onclick="location.href=`about.html`" value="acerca de "/><input id="button" type="button" onclick="location.href=`changelogs.html`" value="Cambios"/></div></center>');</script>
              <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
- <SCRIPT language="Javascript">
-<!--
-function muestra(){
-document.getElementById("Prueba").innerHTML="Esto es una prueba de que se cambia al pulsar sobre el enlace";
-
-};
-
--->
-</SCRIPT>
+<style>
+           @media screen and (min-width: 800px)
+  { 
+div#splashscreen{
+	position: fixed;
+	width: 100%;
+	height: 105%;
+    margin-top: -0.5%;
+    margin-left: -1.2%;
+    margin-bottom: 8%;
+    background: 10px 10px #333333;
+  border-width: 6px;
+    border-radius: 8px 8px;
+    box-shadow: 1px 2px 25px #000;
+     transition: all 0.6s ease 0s;
+}
+      }
+        @media screen and (max-width: 1024px)
+  { 
+div#splashscreen{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+    margin-top: -1%;
+    margin-left: -1.5%;
+    margin-bottom: 8%;
+    background: 10px 10px #333333;
+  border-width: 6px;
+    border-radius: 8px 8px;
+    box-shadow: 1px 2px 25px #000;
+     transition: all 0.6s ease 0s;
+}
+      }
+    @media screen and (max-width: 720px)
+  { 
+div#splashscreen{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+    margin-top: -1%;
+    margin-left: -2%;
+    margin-bottom: 8%;
+    background: 10px 10px #333333;
+  border-width: 6px;
+    border-radius: 8px 8px;
+    box-shadow: 1px 2px 25px #000;
+     transition: all 0.6s ease 0s;
+}
+      }
+      @media screen and (max-width: 480px)
+  { 
+div#splashscreen{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+    margin-top: -2%;
+    margin-left: -2%;
+    margin-bottom: 8%;
+    background: 10px 10px #333333;
+  border-width: 6px;
+    border-radius: 8px 8px;
+    box-shadow: 1px 2px 25px #000;
+     transition: all 0.6s ease 0s;
+}
+      }
+    /*
+div#load_screen > div#loading{
+	color:#000;
+	width:auto;
+	height:2.5%;
+	/*margin: 30px auto;
+    transition: all 0.6s ease 0s;
+    }*/
+</style>
+<script>
+window.addEventListener("load", function(){
+	var load_screen = document.getElementById("splashscreen");
+	document.body.removeChild(splashscreen);
+});
+</script>
     </head>
    
-<body scrolling="yes"><!--<h1 id="navbar"></h1>-->
+<body scrolling="yes">
+    <div id="splashscreen"><br><br><br><br><br><br><br><div id="loading"><img id="imgbox" height="60%" width="100%" src="img/splashscreen-landscape.jpg"/></div></div><!--<h1 id="navbar"></h1>-->
 <!--<h1 id="banner" onclick="location.href=`index.html`">CrazzyMCPE</h1></center>--> <script>
      $("button").click(function(){
     $("p").slideToggle();
