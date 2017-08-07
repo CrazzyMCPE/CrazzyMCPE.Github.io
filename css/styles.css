@@ -676,7 +676,7 @@ text-shadow: 1px 1px 3px #000, -1px -1px 3px #333333;
 @media screen and (max-width: 480px)
    { 
 #banner
-{
+{ 
     height: 18%;
     width: 100%;
     box-shadow: 2px 2px 50px #000;
