@@ -555,6 +555,36 @@ text-shadow: 3px 4px 4px gray;
 margin: 5%;
 }
      }
+@media screen and (min-width: 800px)
+  {  
+#paragraph_1
+{
+font-size: 90%;
+color: #fff;
+text-shadow: 1px 3px 2px black, -1px -1px 2px black;
+margin: 5%;
+}
+     }
+@media screen and (max-width: 1024px)
+  {  
+#paragraph_1
+{
+font-size: 90%;
+color: #fff;
+text-shadow: 1px 3px 2px black, -1px -1px 2px black;
+margin: 5%;
+}
+     }
+@media screen and (max-width: 720px)
+  {  
+#paragraph_1
+{
+font-size: 90%;
+color: #fff;
+text-shadow: 1px 3px 2px black, -1px -1px 2px black;
+margin: 5%;
+}
+     }
 @media screen and (max-width: 480px)
   {  
 #paragraph_1
