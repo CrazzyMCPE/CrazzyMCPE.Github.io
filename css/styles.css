@@ -1,4 +1,10 @@
-   @media screen and (min-width: 800px)
+@font-face
+{
+font-family: "Kristen itc";
+src: url('font/KristenITC.ttf');
+}
+
+@media screen and (min-width: 800px)
   { 
 #imgbox
 {
@@ -63,19 +69,19 @@ border-width: 500px;
 ::-webkit-scrollbar-thumb {
   background: #eaeaea;
   border-radius: 3px 3px;
-  box-shadow: 3px 5px 19px;
+  box-shadow: 1px 1px 8px;
   transition: all 0.6s ease 0s;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #AFAFAF;
   border-radius: 3px 3px;
-  box-shadow: 3px 5px 19px;
+  box-shadow: 3px 2px 9px;
   transition: all 0.6s ease 0s;
 }
 ::-webkit-scrollbar-thumb:active {
   background: #7A7A7A;
   border-radius: 3px 3px;
-  box-shadow: 3px 5px 19px;
+  box-shadow: 3px 5px 11px;
 }
 
 ::-webkit-scrollbar-track {
@@ -86,6 +92,7 @@ border-width: 500px;
 body {
   scrollbar-face-color: #333333;
   scrollbar-track-color: #5a5a5a;
+  background: #4C4C4C;
 }
 #navbar
 {
@@ -102,16 +109,13 @@ border-width: 8px;
 border-radius: 8px;
 border-color: #eaea #eaea #f5a3fa #eaea;
 }
-body
-{ 
-background: #4C4C4C;
-}
+
 #InterfaceLayout
 {
-border: ridge 6px;
-border-top-style: groove;
-border-left-style: groove;
-border-width: 5px 6px 6px 5px;
+border: groove 6px;
+border-top-style: ridge;
+border-left-style: ridge;
+border-width: 5px 4px 4px 4px;
 border-radius: 8px;
 border-color: #DBDBDB #DBDBDB #DBDBDB #DBDBDB;
 background: #E0B53E;
@@ -119,6 +123,8 @@ box-shadow: 1px 2px 15px;
 height: auto;
 width: 90%;
 margin-top:1%;
+font-family: "Kristen itc";
+
    }
 #InsideBox
 {
@@ -135,6 +141,7 @@ border-width: 5px 4px 4px 4px;
 border-radius: 8px;
 border-color:  #fff #fff #fff #fff;
 color: black;
+
     }
 }
 #fb-buttons
@@ -281,7 +288,7 @@ box-shadow: 1px 2px 15px #000;
 #frame
 {
 height: 60%;
-width: 89%;
+width: 88.5%;
 margin-top:2%;
 margin-bottom: 1%;
 border: groove 6px;
@@ -298,7 +305,7 @@ box-shadow: 1px 2px 15px #000;
 #frame
 {     
 height: 46%;
-width: 89.9%;
+width: 89.5%;
 margin-top:2%;
 margin-bottom: 1%;
 border: groove 6px;
@@ -316,11 +323,9 @@ box-shadow: 1px 2px 15px #000;
 {
 height: auto;
 width: 90%;
-border:ridge 7px;
-border-radius: 2%;
-border-color: #B3BECC #B3BECC #B3BECC #B3BECC;
-border-top-style: groove;
-border-left-style: groove;
+border: groove 6px;
+border-top-style: ridge;
+border-left-style: ridge;
 margin-top: 4%;
 margin-bottom: 5%;
 box-shadow: 1px 8px 70px #000;
@@ -332,10 +337,9 @@ box-shadow: 1px 8px 70px #000;
 {
 height: auto;
 width: 88%;
-border-style: groove 8px;
-border-color: #B3BECC #B3BECC #B3BECC #B3BECC;
-border-top-style: groove;
-border-left-style: groove;
+border: groove 6px;
+border-top-style: ridge;
+border-left-style: ridge;
 border-radius: 2%;
 margin-top: 3%;
 margin-bottom: 5%;
@@ -348,10 +352,10 @@ box-shadow: 1px 8px 50px #000;
 {
 height: auto;
 width: 88%;
-border: groove 6px;
-border-color: #D3D3D3 #D3D3D3 #D3D3D3 #D3D3D3;
+border: groove 5px;
 border-top-style: ridge;
 border-left-style: ridge;
+border-width: 5px 4px 4px 4px;
 border-radius: 2%;
 margin-top: 3%;
 margin-bottom: 5%;
@@ -364,10 +368,9 @@ box-shadow: 1px 8px 45px #000;
 {
 height: auto;
 width: 85%;
-order: ridge 6px;
-border-color: #B3BECC #B3BECC #B3BECC #B3BECC;
-border-top-style: groove;
-border-left-style: groove;
+border: groove 6px;
+border-top-style: ridge;
+border-left-style: ridge;
 border-radius: 2%;
 margin-top: 3%;
 margin-bottom: 6%;
@@ -463,7 +466,7 @@ margin-top:auto;
 #title
 {
 color: #fff;
-font-size: 75%;
+font-size: 100%;
 text-shadow: 1px 1px 10px #000, -1px -2px #333333;
 margin-top:auto;
 }
@@ -549,6 +552,16 @@ text-shadow: 3px 4px 4px gray;
 font-size: 85%;
 color: #333333;
 text-shadow: 3px 4px 4px gray;
+margin: 5%;
+}
+     }
+@media screen and (max-width: 480px)
+  {  
+#paragraph_1
+{
+font-size: 90%;
+color: #fff;
+text-shadow: 1px 3px 2px black, -1px -1px 2px black;
 margin: 5%;
 }
      }
@@ -655,6 +668,7 @@ border-width: 5px 4px 4px 4px;
      transition: all 1.3s ease 0s;
      font-weight: bold;
     text-shadow: 1px 1px 2px #000;
+    font-family: "Kristen itc";
 }
   }  
       #button:hover
@@ -711,48 +725,125 @@ border-width: 5px 4px 4px 4px;
      font-weight: bold;
     text-shadow: 1px 1px 10px #000, -1px -2px #333333;
 }
+@media screen and (min-width: 200px)
+   { 
+#banner
+{
+  color: white;
+    font-size: 3010%;
+    font-family: "Kristen itc";
+    height: 50%;
+    width: 100%;
+    box-shadow: 2px 10px 60px #000;
+    border-radius: 20px 20px;
+    margin-bottom: -0;
+    padding: 6% 33.5%;
+    background-image:  url("../img/banner/banner_background_x3.png");
+}
+}
 @media screen and (min-width: 800px)
    { 
 #banner
 {
-    height: 37%;
+  color: white;
+    font-size: 475%;
+    font-family: "Kristen itc";
+    height: 50%;
     width: 100%;
-    box-shadow: 2px 2px 50px #000;
+    box-shadow: 2px 10px 60px #000;
     border-radius: 20px 20px;
-    margin-top: -0.1%;
+    margin-left: -0.3%;
+    padding: 5% 28%;
+    background-image:  url("../img/banner/banner_background_x3.png");
+    background-position: right;
+}
+}
+@media screen and (max-width: 1200px)
+   { 
+#banner
+{
+  color: white;
+    font-size: 400%;
+    font-family: "Kristen itc";
+    height: 50%;
+    width: 100%;
+    box-shadow: 2px 10px 60px #000;
+    border-radius: 20px 20px;
+    margin-left: -0.3%;
+    padding: 5% 28%;
+    background-image:  url("../img/banner/banner_background_x3.png");
 }
 }
 @media screen and (max-width: 1024px)
    { 
 #banner
 {
-    height: 30%;
+    color: white;
+    font-size: 325%;
+    font-family: "Kristen itc";
+    height: 50%;
     width: 100%;
-    box-shadow: 2px 2px 50px #000;
+    box-shadow: 2px 10px 60px #000;
     border-radius: 20px 20px;
-    margin-top: -0.4%;
+    padding: 5.5% 25%;
+    margin-left: -0.0%;
+    background-image:  url("../img/banner/banner_background_x2.png");
+    background-position: right;
 }
 }
 @media screen and (max-width: 720px)
    { 
 #banner
 {
-    height: 24%;
-    width: 100%;
-    box-shadow: 2px 2px 50px #000;
+    color: white;
+    font-size: 290%;
+    font-family: "Kristen itc";
+    height: 50%;
+    width: auto;
+    box-shadow: 2px 10px 60px #000;
     border-radius: 20px 20px;
-    margin-top: -0.9%;
+    margin-bottom: -20;
+    padding: 7.5% 20%;
+    margin-left: -1%;
+    background-image:  url("../img/banner/banner_background_x1.png");
+    text-align: center;
+    background-position: right;
 }
 }
 @media screen and (max-width: 480px)
    { 
 #banner
 { 
-    height: 18%;
+     color: white;
+    font-size: 189%;
+    font-family: "Kristen itc";
+    height: 50%;
     width: 100%;
-    box-shadow: 2px 2px 50px #000;
+    box-shadow: 2px 10px 60px #000;
     border-radius: 20px 20px;
-    margin-top: -1%;
+    margin-left: -0.5%;
+    padding: 8% 19%;
+    padding-top: 10%;
+    background-image:  url("../img/banner/banner_background_x1.png");
+    background-position: -444444px -10px;
+}
+}
+@media screen and (max-width: 338px)
+   { 
+#banner
+{ 
+     color: white;
+    font-size: 184%;
+    font-family: "Kristen itc";
+    height: 50%;
+    width: 100%;
+    box-shadow: 2px 10px 60px #000;
+    border-radius: 10px 10px;
+    margin-left: -0.5%;
+    padding: 4% 11.1%;
+    padding-top: 15%;
+    background-image:  url("../img/banner/banner_background_x1.png");
+    background-position: -444444px -10px;
 }
 }
 #Sub-Text
