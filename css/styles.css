@@ -1,3 +1,72 @@
+          @media screen and (min-width: 800px)
+  { 
+font { 
+  padding-bottom: 5%;
+  padding-top: 8%;
+  padding-left: 35%;
+  padding-right: 30%;
+  width: 80%;
+  height: auto;
+  margin: 0px auto;
+  border-radius: 7px;
+  color: #fff;
+  font-size: 15%;
+  background-size: cover;
+}
+}
+ @media screen and (max-width: 1024px)
+  { 
+font { 
+  padding-bottom: 7%;
+  padding-top: 8%;
+  padding-left: 30%;
+  padding-right: 30%;
+  width: 80%;
+  height: auto;
+  margin: 0px auto;
+  border-radius: 7px;
+  color: #fff;
+  font-size: 15%;
+  background-size: cover;
+  position:static;
+}
+}   
+       @media screen and (max-width: 720px)
+  { 
+font { 
+  padding-bottom: 12%;
+  padding-top: 9%;
+  padding-left: 30%;
+  padding-right: 45%;
+  width: 80%;
+  height: auto;
+  margin: 0px auto;
+  border-radius: 7px;
+  color: #fff;
+  font-size: 15%;
+  background-size: cover;
+}
+}   
+
+                @media screen and (max-width: 480px)
+  { 
+font { 
+  padding-bottom: 12%;
+  padding-top: 15%;
+  padding-left: 30%;
+  padding-right: 55%;
+  width: 80%;
+  height: auto;
+  margin: 0px auto;
+  border-radius: 7px;
+  color: #fff;
+  font-size: 15%;
+  background-size: cover;
+}
+}   
+.day { background-image: url(../img/banner/day-banner.jpg) }
+.sunset { background-image: url(../img/banner/sunset-banner.jpeg) }
+.night { background-image: url(../img/banner/night-banner.jpeg); }
 @media screen and (min-width: 800px)
   { 
 #LandscapeLI
@@ -72,11 +141,7 @@ box-shadow: 1px 1px 9px;
 margin-bottom: 25%;
 } 
 }
-/*@font-face
-{
-/*font-family: "Kristen itc"*/
-/*src: url('font/KristenITC2.ttf');*/
-}*/
+
 
 @media screen and (min-width: 800px)
   { 
