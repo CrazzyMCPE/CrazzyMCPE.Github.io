@@ -1,50 +1,368 @@
-          @media screen and (min-width: 800px)
+           @media screen and (min-width: 800px)
+  { 
+#SplashScreen_img
+{
+ 	margin-top: -12%;
+    margin-left: -8%;
+    width: 100%;
+	height: auto;   
+}
+}      
+
+           @media screen and (max-width: 1024px)
+  { 
+#SplashScreen_img
+{
+ 	width: 100%;
+	height: auto;   
+}
+}  
+
+           @media screen and (max-width: 720px)
+  { 
+#SplashScreen_img
+{
+ 	width: 100%;
+	height: auto;   
+}
+}  
+
+           @media screen and (max-width: 480px)
+  { 
+#SplashScreen_img
+{
+ 	width: 100%;
+	height: auto;   
+}
+}  
+.dropbtn {
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    font-family: Comic sans MS;
+    font-weight: 800;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+      transition: all 0.6s ease 0s;
+    
+    
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    -o-animation: fadein 2s;
+      transition: all 0.6s ease 0s;
+}
+.dropdown-content-pressed a {
+    color: #fff;
+    background-color: dimgray;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    -o-animation: fadein 2s;
+      transition: all 0.6s ease 0s;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;
+      transition: all 0.6s ease 0s;}    
+
+#animation {
+   -webkit-animation-name: girando;
+   -webkit-animation-timing-function: linear;
+   -webkit-animation-iteration-count: infinite;
+   -webkit-animation-duration: 3s;
+   -webkit-transform-style: preserve-3d;
+    animation: 5px 5px 9px;
+    column-rule-color: aqua;
+}
+
+@media screen and (min-width: 800px)
+  { 
+#selector
+{
+margin-left: -0%;
+margin-top: 0.5%;
+border-style: groove;
+border-left-width: 5px;  
+border-width: 15px 500%;
+border-color: white;
+box-shadow: 2px 5px 30px #000;
+height: auto;
+width: 30%;
+padding: 2%;
+background-color: darkgoldenrod;
+ border-radius: 8px  5px;
+ transition: all 0.6s ease 0s;
+font-size: 99%;
+}
+}
+@media screen and (min-width: 800px)
+  { 
+#selector:hover
+{
+border-style: ridge goldenrod;
+background-color:  #fff;
+box-shadow: 2px 5px 30px #000, 5px 5px  80px #000 inset;
+border-color: goldenrod;
+border-radius: 5px;
+color: gold;
+border-radius: 8px 5px;
+transition: all 0.50s ease 0s;
+color: goldenrod;
+}
+      }
+@media screen and (max-width: 1024px)
+  { 
+#selector{
+margin-left: -0%;
+margin-top: 0.5%;
+border-style: groove;
+border-left-width: 5px;  
+border-width: 15px 500%;
+border-color: white;
+box-shadow: 2px 5px 30px #000;
+height: auto;
+width: 30%;
+padding: 5%;
+background-color: darkgoldenrod;
+ border-radius: 8px  5px;
+ transition: all 0.6s ease 0s;
+font-size: 89%;
+}
+  } 
+@media screen and (max-width: 1024px)
+  { 
+#selector:hover
+{
+border-style: ridge goldenrod;
+background-color:  #fff;
+box-shadow: 2px 5px 30px #000, 5px 5px  80px #000 inset;
+border-color: goldenrod;
+border-radius: 5px;
+color: gold;
+border-radius: 8px 5px;
+transition: all 0.50s ease 0s;
+color: goldenrod;
+}
+      }
+@media screen and (max-width: 720px)
+  { 
+#selector{
+margin-left: -0%;
+margin-top: 0.5%;
+border-style: groove;
+border-left-width: 5px;  
+border-width: 15px 500%;
+border-color: white;
+box-shadow: 2px 5px 30px #000;
+height: auto;
+width: 30%;
+padding: 3%;
+background-color: darkgoldenrod;
+ border-radius: 8px  5px;
+ transition: all 0.6s ease 0s;
+font-size: 69%;
+}
+  } 
+@media screen and (max-width: 720px)
+  { 
+#selector:hover
+{
+border-style: ridge goldenrod;
+background-color:  #fff;
+box-shadow: 2px 5px 30px #000, 5px 5px  55px #000 inset;
+border-color: goldenrod;
+border-radius: 5px;
+color: gold;
+border-radius: 8px 5px;
+transition: all 0.50s ease 0s;
+color: goldenrod;
+}
+      }
+@media screen and (max-width: 480px)
+  { 
+#selector{
+ padding: 1%;   
+width: 60%;
+height: auto;
+ font-size: 60%;
+font-weight: 500;
+text-rendering:optimizeLegibility;
+margin-left: -0%;
+margin-top: 0%;
+}
+  } 
+@media screen and (max-width: 480px)
+  { 
+#selector:hover{
+   margin-left: -0%;
+border-style: ridge goldenrod;
+background-color:  #fff;
+box-shadow: 2px 5px 30px #000, 6px 6px  65px #000 inset;
+border-color: goldenrod;
+border-radius: 5px;
+color: gold;
+border-radius: 8px  5px;
+transition: all 0.50s ease 0s;
+color: goldenrod;
+    }
+  } 
+@media screen and (min-width: 800px)
+  {
+#landscapeimgmini
+{
+height: auto;
+width: 30%;
+margin: -1em 0 -7.9 -0.9em;
+margin-right: 0%;
+box-shadow: 2px 5px 30px #000;
+margin-bottom: -7%;    
+    }
+      }
+ @media screen and (max-width: 1024px)
+  {
+#landscapeimgmini
+{
+height: auto;
+width: 30%;
+margin: -1em 0 -7.9 -0.9em;
+margin-right: 0%;
+box-shadow: 2px 5px 30px #000;
+margin-bottom: -7%;    
+    }
+      }
+@media screen and (max-width: 720px)
+  {
+#landscapeimgmini
+{
+height: auto;
+width: 30%;
+margin: 0em 0 6.9 -0.90em;
+margin-right: 0%;
+box-shadow: 2px 5px 30px #000;
+margin-bottom: -0%;
+background-size: cover;
+    }   
+      }
+@media screen and (min-width: 800px)
+  { 
+div span{
+    position: relative;
+    margin: 3.9em 0 0 2em;
+    color: #fff;
+    font-family: Comic Sans MS;
+    text-shadow: 1px 2px 5px #000, -1px -3px 4px #000;
+    font-size: 100%;   
+}
+}     
+@media screen and (max-width: 1024px)
+  { 
+div span{
+    position: absolute;
+    margin: 3em 0 0 0em;
+    color: #fff;
+    font-family: Comic Sans MS;
+    text-shadow: 1px 2px 5px #000, -1px -3px 4px #000;
+    font-size: 100%;
+}
+}   
+@media screen and (max-width: 720px)
+  { 
+div span{
+    position: inherit;
+    margin: -0.75em 0 0 0em;
+    margin-left: 7%;
+    color: #fff;
+    font-family: Comic Sans MS;
+    text-shadow: 1px 2px 5px #000, -1px -3px 4px #000;
+    font-size: 109%;  
+}
+} 
+
+@media screen and (max-width: 480px)
+  { 
+div span{
+    position:relative;
+    margin: 0.95em 0 0 5%em;
+    color: #fff;
+    font-family: Comic Sans MS;
+    text-shadow: 1px 2px 5px #000, -1px -3px 4px #000;
+    font-size: 98%;
+}
+   }   
+
+
+@media screen and (min-width: 800px)
   { 
 font { 
-  padding-bottom: 5.6%;
-  padding-top: 8%;
-  padding-left: 35%;
-  padding-right: 30%;
+   padding-bottom: 5%;
+  padding-right: 5%;
+  padding-top: -10%;
+  padding: 25%;
   width: 80%;
   height: auto;
-  margin: 0px auto;
-  border-radius: 7px;
+  margin-top: -60%;
   color: #fff;
-  font-size: 15%;
   background-size: cover;
-  position: static;
+  margin-left: -6%;  
 }
 }
  @media screen and (max-width: 1024px)
   { 
 font { 
-  padding-bottom: 7.9%;
-  padding-top: 8.9%;
-  padding-left: 38%;
-  padding-right: 38%;
+   padding-bottom: 5%;
+  padding-right: 5%;
+  padding-top: -10%;
+  padding: 25%;
   width: 80%;
   height: auto;
-  margin: 0px auto;
-  border-radius: 7px;
+  margin-top: -60%;
   color: #fff;
-  font-size: 15%;
   background-size: cover;
-  position:static;
 }
 }   
        @media screen and (max-width: 720px)
   { 
 font { 
-  padding-bottom: 7%;
-  padding-top: 11%;
-  padding-left: 30%;
-  padding-right: 45%;
-  width: 80%;
-  height: auto;
-  margin: 0px auto;
-  border-radius: 9px;
+  padding-bottom: 0%;
+  padding-right: 5%;
+  padding-top: -10%;
+  padding: 22%;
+  width: 50%;
+  height: 50%;
+  margin-top: -60%;
+  margin-left: -6%;
   color: #fff;
-  font-size: 15%;
   background-size: cover;
 }
 }   
@@ -52,22 +370,23 @@ font {
 @media screen and (max-width: 480px)
   { 
 font { 
-  padding-bottom: 6%;
-  padding-top: 18%;
-  padding-left: 30%;
-  padding-right: 55%;
+  padding-bottom: 0%;
+  padding-right: 5%;
+  padding-top: 0%;
+  padding: 15%;
   width: 80%;
   height: auto;
-  margin: 0px auto;
-  border-radius: 7px;
+  margin-top: -60%;
   color: #fff;
-  font-size: 15%;
   background-size: cover;
+  margin-left: -8%;  
 }
 }   
-.day { background-image: url(../img/banner/day-banner.jpg) }
-.sunset { background-image: url(../img/banner/sunset-banner.jpeg) }
-.night { background-image: url(../img/banner/night-banner.jpeg); }
+.day { background-image: url(../img/banner/day-banner_new.png);
+padding-right: 80%;
+}
+.sunset { background-image: url(../img/banner/sunset-banner.png) }
+.night { background-image: url(../img/banner/night-banner.png); }
 @media screen and (min-width: 800px)
   { 
 #LandscapeLI
@@ -232,7 +551,7 @@ border-width: 500px;
 body {
   scrollbar-face-color: #333333;
   scrollbar-track-color: #5a5a5a;
-  background: #4C4C4C;
+  background: #fff;
   /*font-family: "Kristen itc";*/
 }
 #navbar
@@ -278,40 +597,17 @@ border-radius: 100px;
 border-color: #DBDBDB #DBDBDB #DBDBDB #DBDBDB;
 box-shadow: 1px 1px 9px;
 }
-#InterfaceLayout
-{
-border: groove 6px;
-border-top-style: ridge;
-border-left-style: ridge;
-border-width: 5px 4px 4px 4px;
-border-radius: 8px;
-border-color: #DBDBDB #DBDBDB #DBDBDB #DBDBDB;
-background: #E0B53E;
-box-shadow: 1px 2px 15px;
-height: auto;
-width: 90%;
-margin-top:1%;
-font-family: "Comic Sans MS";
 
-   }
 #InsideBox
 {
-background: #eaeaea;
-box-shadow: 1px 2px 15px #000;
+background-color: #fff;
 height: auto;
-width: 90%;
-margin-top: 3%;
-margin-bottom: 3%;
-border: groove 6px;
-border-top-style: ridge;
-border-left-style: ridge;
-border-width: 5px 4px 4px 4px;
-border-radius: 8px;
-border-color:  #fff #fff #fff #fff;
+width: 100%;
 color: black;
-
+font-family: comic sans MS;
+padding-bottom: 9%;
+margin-bottom: -0%;
     }
-}
 #fb-buttons
 {
 margin-right: -15%;
@@ -424,14 +720,7 @@ margin-bottom: 2%;
 height: 105%;
 width: 89.9%;
 margin-top:2%;
-margin-bottom: 1%;
-border: groove 6px;
-border-top-style: ridge;
-border-left-style: ridge;
-border-width: 5px 4px 4px 4px;
-border-color:  #fff #fff #fff #fff;
-border-radius: 8px 13px 13px 8px;
-box-shadow: 1px 2px 15px #000;  
+margin-bottom: 1%; 
 }  
        }
 @media screen and (max-width: 1024px)
@@ -441,14 +730,7 @@ box-shadow: 1px 2px 15px #000;
 height: 77%;
 width: 89.9%;
 margin-top:2%;
-margin-bottom: 1%;
-border: groove 6px;
-border-top-style: ridge;
-border-left-style: ridge;
-border-width: 5px 4px 4px 4px;
-border-color:  #fff #fff #fff #fff;
-border-radius: 8px 13px 13px 8px;
-box-shadow: 1px 2px 15px #000;  
+margin-bottom: 1%;  
 }
  }
 @media screen and (max-width: 720px)
@@ -459,13 +741,6 @@ height: 60%;
 width: 88.5%;
 margin-top:2%;
 margin-bottom: 1%;
-border: groove 6px;
-border-top-style: ridge;
-border-left-style: ridge;
-border-width: 5px 4px 4px 4px;
-border-color:  #fff #fff #fff #fff;
-border-radius: 8px 13px 13px 8px;
-box-shadow: 1px 2px 15px #000;    
 }
     }
 @media screen and (max-width: 480px)
@@ -475,14 +750,7 @@ box-shadow: 1px 2px 15px #000;
 height: 46%;
 width: 89.5%;
 margin-top:2%;
-margin-bottom: 1%;
-border: groove 6px;
-border-top-style: ridge;
-border-left-style: ridge;
-border-width: 5px 4px 4px 4px;
-border-color:  #fff #fff #fff #fff;
-border-radius: 8px 13px 13px 8px;
-box-shadow: 1px 2px 15px #000;  
+margin-bottom: 1%;  
 }
  }
 @media screen and (min-width: 800px)
@@ -491,13 +759,8 @@ box-shadow: 1px 2px 15px #000;
 {
 height: auto;
 width: 90%;
-border: groove 6px;
-border-top-style: ridge;
-border-left-style: ridge;
-border-radius: 2%;
 margin-top: 1%;
 margin-bottom: 1%;
-box-shadow: 1px 8px 70px #000;
 }
  }   
 @media screen and (max-width: 1024px)
@@ -506,13 +769,9 @@ box-shadow: 1px 8px 70px #000;
 {
 height: auto;
 width: 88%;
-border: groove 6px;
-border-top-style: ridge;
-border-left-style: ridge;
-border-radius: 2%;
 margin-top: 1%;
 margin-bottom: 1%;
-box-shadow: 1px 8px 50px #000;
+
 }
  }   
 @media screen and (max-width: 720px)
@@ -521,14 +780,8 @@ box-shadow: 1px 8px 50px #000;
 {
 height: auto;
 width: 88%;
-border: groove 5px;
-border-top-style: ridge;
-border-left-style: ridge;
-border-width: 5px 4px 4px 4px;
-border-radius: 2%;
 margin-top: 1%;
 margin-bottom: 1%;
-box-shadow: 1px 8px 45px #000;
 
 }
  }   
@@ -539,12 +792,10 @@ box-shadow: 1px 8px 45px #000;
 height: auto;
 width: 85%;
 border: groove 6px;
-border-top-style: ridge;
-border-left-style: ridge;
 border-radius: 7px;
 margin-top: 1%;
 margin-bottom: 2%;
-box-shadow: 6px 6px 35px #000;
+
 }
  }   
 .IconText
@@ -568,7 +819,7 @@ border-style: solid;
 border-width: 1.3px;
 transition: all 0.2s ease 0s;
 margin-bottom: 2%;
-margin-left: -73%;
+margin-left: 0%;
 }
 #SocialMediaIcon:hover
 {
@@ -614,7 +865,7 @@ margin-left: -70%;
 {
 color: #fff;
 font-size: 200%;
-text-shadow: 1px 1px 10px #000, -1px -2px #333333;
+text-shadow: 1px 8px 10px #000, -1px -4px #333333;
 margin-top:auto;
 }
 }
@@ -634,7 +885,7 @@ margin-top:auto;
  { 
 color: #fff;
 font-size: 140%;
-text-shadow: 1px 1px 10px #000, -1px -2px #333333;
+text-shadow: 1px 5px 10px #000, -1px -2px #333333;
 margin-top:auto;   
 }
     }
@@ -654,7 +905,7 @@ margin-top:auto;
 {
 color: #fff;
 font-size: 250%;
-text-shadow: 1px 1px 10px #000, -1px -2px #333333;
+text-shadow: 1px 9px 15px #000, -1px -4px #333333;
 
 }
 }
@@ -674,7 +925,7 @@ margin-top:auto;
 {
 color: #fff;
 font-size: 140%;
-text-shadow: 1px 1px 10px #000, -1px -2px #333333;
+text-shadow: 1px 5px 10px #000, -1px -2px #333333;
 margin-top:auto;
 }
 }
@@ -783,30 +1034,21 @@ margin: 5%;
     width: 19%;
     height: 49;
     font-size:  123%;
-    border: ridge 6px;
-border-top-style: groove;
-border-left-style: groove;
-border-width: 5px 4px 4px 4px;
-    border-color: #fff;
-    border-width: 6px;
     border-radius: 8px  5px;
-     box-shadow: 1px 1px 5px #000;
-    margin: 0.3%;
+        margin: 0.3%;
      transition: all 0.6s ease 0s;
      font-weight: bold;
      text-shadow: 1px 1px 3px #000;
+     font-family: "Kristen itc";
+     text-decoration: none; 
 }
       }
 #button:hover
 {
     color:goldenrod;
     background: #fff;
-    border-style: ridge;
-    border-color: #dba233;
-    border-width: 6px;
     border-radius: 5px 8px;
-    box-shadow: 1px 2px 25px #000;
-    transition: all 0.6s ease 0s;
+     transition: all 0.6s ease 0s;
     font-weight: bold;
     text-shadow: 1px 1px 10px #000, -1px -2px #333333;
  /* blur
@@ -826,29 +1068,21 @@ filter: blur(1px);*/
     width: 28%;
     height: 46;
     font-size:  105%;
-     border: ridge 6px;
-border-top-style: groove;
-border-left-style: groove;
-border-width: 5px 4px 4px 4px;
-    border-color: #fff;
-    border-width: 6px;
+     
     border-radius: 8px 5px;
-     box-shadow: 1px 1px 5px #000;
-    margin: 0.4%;
+   margin: 0.4%;
      transition: all 0.6s ease 0s;
      font-weight: bold;
     text-shadow: 1px 1px 2px #000;
+     font-family: "Kristen itc";
+   text-decoration: none; 
 }
       }
       #button:hover
 {
     color:goldenrod;
     background: #fff;
-    border-style: ridge;
-    border-color: #dba233;
-    border-width: 6px;
     border-radius: 5px 8px;
-    box-shadow: 1px 2px 25px #000;
      transition: all 0.3s ease 0s;
      font-weight: bold;
     text-shadow: 1px 1px 10px #000, -1px -2px #333333;
@@ -859,37 +1093,22 @@ border-width: 5px 4px 4px 4px;
 {
     
   color: #eee8ed;
-    background: #dba233;
+    background: #6A2F27;
     width: 29%;
     height: 43;
     font-size:  105%;
-   border: ridge 6px;
-border-top-style: groove;
-border-left-style: groove;
-border-width: 5px 4px 4px 4px;
-    border-color: #fff;
-    border-width: 5px;
-    border-radius: 8px  5px;
-     box-shadow: 1px 1px 5px #000;
     margin: 0.4%;
      transition: all 1.3s ease 0s;
      font-weight: bold;
     text-shadow: 1px 1px 2px #000;
-    font-family: "Kristen itc";
+    font-family: "Comic Sans MS";
+    text-decoration: none;
 }
   }  
       #button:hover
 {
     color:goldenrod;
     background: #fff;
-   border: groove 6px;
-border-top-style: ridge;
-border-left-style: ridge;
-border-width: 5px 4px 4px 4px;
-    border-color: #dba233;
-    border-width: 5px;
-    border-radius:  5px 8px;
-    box-shadow: 1px 2px 12px #000;
      transition: all 0.8s ease 0s;
      font-weight: bold;
 text-shadow: 1px 1px 0px #000, 10px 1px 2px #333333;
@@ -900,36 +1119,26 @@ text-shadow: 1px 1px 0px #000, 10px 1px 2px #333333;
 
 #button
 {
-   color: #eee8ed;
-    background: #dba233;
+   color: white;
+    background: #1F8F7D;
     width: 31%;
     height: 34;
     font-size:  97%;
-    border-style: groove;
-    border-color: #fff;
-    border-width: 4px;
-    border-radius: 8px  5px;
-     box-shadow: 1px 1px 5px #000;
+     border-style: none;
     margin: 0.4%;
      transition: all 0.6s ease 0s;
      font-weight: bold;
     text-shadow: 1px 1px 3px #000;
     font-family: "Kristen itc";
+    text-decoration: none;    
 }
       }
       #button:hover
 {
     color:goldenrod;
     background: #fff;
-   border: groove 6px;
-border-top-style: ridge;
-border-left-style: ridge;
-border-width: 5px 4px 4px 4px;
-    border-color: #dba233;
-    border-width: 4px;
     border-radius: 5px 8px;
-    box-shadow: 1px 2px 25px #000;
-     transition: all 0.6s ease 0s;
+    transition: all 0.6s ease 0s;
      font-weight: bold;
     text-shadow: 1px 1px 10px #000, -1px -2px #333333;
 }
@@ -944,9 +1153,12 @@ border-width: 5px 4px 4px 4px;
     width: 100%;
     box-shadow: 2px 10px 60px #000;
     border-radius: 20px 20px;
-    margin-bottom: -0;
+    margin-bottom: -5%;
     padding: 6% 33.5%;
     background-image:  url("../img/banner/banner_background_x3.png");
+    border: groove 6px;
+border-top-style: ridge;
+border-left-style: ridge;
 }
 }
 @media screen and (min-width: 800px)
@@ -961,9 +1173,12 @@ border-width: 5px 4px 4px 4px;
     box-shadow: 2px 10px 60px #000;
     border-radius: 20px 20px;
     margin-left: -0.3%;
-    padding: 5% 28%;
+    padding: 6% 28%;
     background-image:  url("../img/banner/banner_background_x3.png");
     background-position: right;
+  border: groove 6px;
+border-top-style: ridge;
+border-left-style: ridge;  
 }
 }
 @media screen and (max-width: 1200px)
@@ -1004,7 +1219,7 @@ border-width: 5px 4px 4px 4px;
 #banner
 {
     color: white;
-    font-size: 290%;
+    font-size: 200%;
     font-family: "Kristen itc";
     height: 50%;
     width: auto;
