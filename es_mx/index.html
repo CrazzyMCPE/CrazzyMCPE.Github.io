@@ -1,0 +1,190 @@
+<html lang=es>
+    <head><meta name="theme-color" content="#333333">
+    <title>CrazzyMCPE</title>
+   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+	<link rel="StyleSheet" href="../css/styles.css" type="text/css">
+        <link rel="shortcut icon" href="../img/favicon.ico">
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+        
+<script type="text/javascript">document.write('<center><div id="navflotante"><input id="button" type="button" onclick="location.href=`index.html`"    value="Inicio"/>  <input id="button" type="button" onclick="location.href=`about.html`" value="acerca de "/><input id="button" type="button" onclick="location.href=`changelogs.html`" value="Cambios"/></div></center>');
+        
+   Element.prototype.backgroundClipPolyfill = function () {
+  var a = arguments[0],
+      d = document,
+      b = d.body,
+      el = this;
+
+  function hasBackgroundClip() {
+    return b.style.webkitBackgroundClip != undefined;
+  };
+  
+  function addAttributes(el, attributes) {
+    for (var key in attributes) {
+      el.setAttribute(key, attributes[key]);
+    }
+  }
+  
+  function createSvgElement(tagname) {
+    return d.createElementNS('http://www.w3.org/2000/svg', tagname);
+  }
+  
+  function createSVG() {
+    var a = arguments[0],
+        svg = createSvgElement('svg'),
+        pattern = createSvgElement('pattern'),
+        image = createSvgElement('image'),
+        text = createSvgElement('text');
+      
+    addAttributes(pattern, {
+      'id' : a.id,
+      'patternUnits' : 'userSpaceOnUse',
+      'width' : a.width,
+      'height' : a.height
+    });
+    
+    addAttributes(image, {
+      'width' : a.width,
+      'height' : a.height
+    });
+    image.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', a.url);
+    
+    addAttributes(text, {
+      'x' : 0,
+      'y' : 80,
+      'class' : a['class'],
+      'style' : 'fill:url(#' + a.id + ');'
+    });
+    
+    text.textContent = a.text;
+      
+    pattern.appendChild(image);
+      
+    // Add elements to SVG
+    svg.appendChild(pattern);
+    svg.appendChild(text);
+    
+    return svg;
+  };
+  
+  /*
+   * Replace the element if background-clip
+   * is not available.
+   */
+  if (!hasBackgroundClip()) {
+    var img = new Image();
+    img.onload = function() {
+      var svg = createSVG({
+        'id' : a.patternID,
+        'url' : a.patternURL,
+        'class' : a['class'],
+        'width' : this.width,
+        'height' : this.height,
+        'text' : el.textContent
+      });
+      
+      el.parentNode.replaceChild(svg, el);
+    }
+    img.src = a.patternURL;
+  }
+};
+
+var element = document.querySelector('.headline'); 
+
+/*
+ * Call the polyfill
+ *
+ * patternID : the unique ID of the SVG pattern
+ * patternURL : the URL to the background-image
+ * class : the css-class applied to the SVG
+ */
+element.backgroundClipPolyfill({
+  'patternID' : 'mypattern',
+  'patternURL' : '../img/bg_empty.png',
+  'class' : 'headline'
+});     
+        </script>
+             <script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
+         <script type="text/javascript" src="../js/banner.js"></script>
+        <script type="text/javascript" src="../js/splashscreen_bg_grid.js"></script>
+<style>
+           @media screen and (min-width: 800px)
+  { 
+div#splashscreen{
+      
+	position: fixed;
+	width: 110%;
+	height: 110%;
+    background-color: #fff;      
+    transition: all 0.6s ease 0s;
+}
+      }
+        @media screen and (max-width: 1024px)
+  { 
+div#splashscreen{
+      
+	position: fixed;
+	width: 110%;
+	height: 110%;
+    background-color: #fff;      
+    transition: all 0.6s ease 0s;
+    
+
+}
+      }
+    @media screen and (max-width: 720px)
+  { 
+div#splashscreen
+      {
+	position: fixed;
+	width: 110%;
+	height: 110%;
+    background-color: #fff;      
+    transition: all 0.6s ease 0s;
+    
+
+}
+      }
+      @media screen and (max-width: 480px)
+  { 
+div#splashscreen{
+      
+	position: fixed;
+	width: 110%;
+	height: 110%;
+    background-color: #fff;      
+    transition: all 0.6s ease 0s;
+    
+
+}
+      }
+</style>
+<script> 
+window.addEventListener("load", function(){
+	var load_screen = document.getElementById("splashscreen");
+	document.body.removeChild(splashscreen);
+});
+</script>
+    </head>
+   
+<body scrolling="yes">
+    <div id="splashscreen"><br><br><br><br><br><br><br><center><img id="SplashScreen_img" src="../img/Splashscreen/bg.png"/> </center></div><br><br><br><br><br><br>
+
+    <!--<h1 id="navbar">
+</h1>-->
+<!--<h1 id="banner" onclick="location.href=`index.html`">CrazzyMCPE</h1></center>--> <script>
+     $("button").click(function(){
+    $("p").slideToggle();
+});
+        </script>
+     <br><br><br><br><center> <font id="logo" face="Comic Sans MS" size="80%" color="#fff"></font></center><br><br>
+    <!--<center><font face="kristen itc" id="banner">CrazzyMCPE</font></center>--><br><br>
+  <center> <h3 id="InterfaceLayout">
+  
+   <iframe id="frame" src="news.html" frameborder="0%"></iframe>
+  <p id="Twitter-button"> <a  href="https://twitter.com/CrazzyMCPE" class="twitter-follow-button" data-show-count="true">
+      
+      <script  async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></a></p>
+      <a class="twitter-timeline" data-width="90%" data-height="90%" href="https://twitter.com/Crazzymcpe"></a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script><br> <!--<iframe hidden src="http://www.facebook.com" width="5%" height="5%"> </iframe> -->    <br></h3></center></body>
+    </html>

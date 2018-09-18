@@ -1,0 +1,143 @@
+<script> 
+Element.prototype.backgroundClipPolyfill = function () {
+  var a = arguments[0],
+      d = document,
+      b = d.body,
+      el = this;
+
+  function hasBackgroundClip() {
+    return b.style.webkitBackgroundClip != undefined;
+  };
+  
+  function addAttributes(el, attributes) {
+    for (var key in attributes) {
+      el.setAttribute(key, attributes[key]);
+    }
+  }
+  
+  function createSvgElement(tagname) {
+    return d.createElementNS('http://www.w3.org/2000/svg', tagname);
+  }
+  
+  function createSVG() {
+    var a = arguments[0],
+        svg = createSvgElement('svg'),
+        pattern = createSvgElement('pattern'),
+        image = createSvgElement('image'),
+        text = createSvgElement('text');
+      
+    addAttributes(pattern, {
+      'id' : a.id,
+      'patternUnits' : 'userSpaceOnUse',
+      'width' : a.width,
+      'height' : a.height
+    });
+    
+    addAttributes(image, {
+      'width' : a.width,
+      'height' : a.height
+    });
+    image.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', a.url);
+    
+    addAttributes(text, {
+      'x' : 0,
+      'y' : 80,
+      'class' : a['class'],
+      'style' : 'fill:url(#' + a.id + ');'
+    });
+    
+    text.textContent = a.text;
+      
+    pattern.appendChild(image);
+      
+    // Add elements to SVG
+    svg.appendChild(pattern);
+    svg.appendChild(text);
+    
+    return svg;
+  };
+  
+  /*
+   * Replace the element if background-clip
+   * is not available.
+   */
+  if (!hasBackgroundClip()) {
+    var img = new Image();
+    img.onload = function() {
+      var svg = createSVG({
+        'id' : a.patternID,
+        'url' : a.patternURL,
+        'class' : a['class'],
+        'width' : this.width,
+        'height' : this.height,
+        'text' : el.textContent
+      });
+      
+      el.parentNode.replaceChild(svg, el);
+    }
+    img.src = a.patternURL;
+  }
+};
+
+var element = document.querySelector('.headline'); 
+
+/*
+ * Call the polyfill
+ *
+ * patternID : the unique ID of the SVG pattern
+ * patternURL : the URL to the background-image
+ * class : the css-class applied to the SVG
+ */
+element.backgroundClipPolyfill({
+  'patternID' : 'mypattern',
+  'patternURL' : 'img/bg_empty.png',
+  'class' : 'headline'
+});</script>
+<style>
+    @import "compass/css3";
+
+
+h1 {
+  color: red;
+  -webkit-text-fill-color: transparent;
+  background: -webkit-linear-gradient(transparent, transparent),
+             url(img/bg_empty.png) repeat;
+  background: -o-linear-gradient(transparent, transparent);
+  -webkit-background-clip: text;
+    background-size:contain;
+}
+
+   @media screen and (min-width: 800px)
+  { 
+    .headline {
+  font: bold 8em Kristen ITC;
+    font-weight: 6000;
+} 
+   }    
+@media screen and (max-width: 1024px)
+  { 
+    .headline {
+  font: bold 6em Kristen ITC;
+    font-weight: 6000;
+    
+}
+   }    
+@media screen and (max-width: 720px)
+  { 
+    .headline {
+  font: bold 4em Kristen ITC;
+    font-weight: 6000;
+    
+}
+    }   
+     @media screen and (max-width: 480px)
+  { 
+    .headline {
+  font: bold 3em Kristen ITC;
+    font-weight: 6000;
+  font-size: 40px;  
+} 
+     }  
+
+</style><br><br><br><br><br><br><br><br><br><br>
+<center><h1 class="headline">CrazzyMCPE</h1></center>

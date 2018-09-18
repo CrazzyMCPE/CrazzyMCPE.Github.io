@@ -1,0 +1,431 @@
+<html lang="es">
+    <head><meta name="theme-color" content="#333333">
+    <title>CrazzyMCPE</title>
+   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>       
+
+	<link rel="StyleSheet" href="../css/styles.css" type="text/css">
+        <link rel="shortcut icon" href="../img/favicon.ico">
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+         <script src="../js/jquery-3.1.1.min.js"></script>
+        <script src="../js/banner.js"></script> 
+        
+<script type="text/javascript">document.write('<center><div id="navflotante"><input id="button" type="button" onclick="location.href=`index.html`"    value="Home"/>  <input draggable="true" id="button" type="button" onclick="location.href=`about.html`" value="About"/><input id="button" type="button" onclick="location.href=`changelogs.html`" value="Page Changes"/></div></center>');</script>
+<script>
+      function startTime() {
+    var today = new Date();
+    var hr = today.getHours();
+    var min = today.getMinutes();
+    var sec = today.getSeconds();
+    ap = (hr < 12) ? "<span>AM</span>" : "<span>PM</span>";
+    hr = (hr == 0) ? 12 : hr;
+    hr = (hr > 12) ? hr - 12 : hr;
+    //Add a zero in front of numbers<10
+    hr = checkTime(hr);
+    min = checkTime(min);
+    sec = checkTime(sec);
+    document.getElementById("clock").innerHTML = hr + ":" + min + ":" + sec + " " + ap;
+    
+    var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    var days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+    var curWeekDay = days[today.getDay()];
+    var curDay = today.getDate();
+    var curMonth = months[today.getMonth()];
+    var curYear = today.getFullYear();
+    var date = curWeekDay+", "+curDay+" "+curMonth+" "+curYear;
+    document.getElementById("date").innerHTML = date;
+    
+    var time = setTimeout(function(){ startTime() }, 500);
+}
+function checkTime(i) {
+    if (i < 10) {
+        i = "0" + i;
+    }
+    return i;
+}  </script>	
+<script language="javascript">
+		function doSearch()
+		{
+			var tableReg = document.getElementById('datos');
+			var searchText = document.getElementById('searchTerm').value.toLowerCase();
+			var cellsOfRow="";
+			var found=false;
+			var compareWith="";
+ 
+			// Recorremos todas las filas con contenido de la tabla
+			for (var i = 1; i < tableReg.rows.length; i++)
+			{
+				cellsOfRow = tableReg.rows[i].getElementsByTagName('span');
+				found = false;
+				// Recorremos todas las celdas
+				for (var j = 0; j < cellsOfRow.length && !found; j++)
+				{
+					compareWith = cellsOfRow[j].innerHTML.toLowerCase();
+					// Buscamos el texto en el contenido de la celda
+					if (searchText.length == 0 || (compareWith.indexOf(searchText) > -1))
+					{
+						found = true;
+					}
+				}
+				if(found)
+				{
+					tableReg.rows[i].style.display = '';
+				} else {
+					// si no ha encontrado ninguna coincidencia, esconde la
+					// fila de la tabla
+					tableReg.rows[i].style.display = 'none';
+				}
+			}
+		}
+   </script>
+	<style>
+        input[type="text"]::-webkit-input-placeholder {
+color: #fff;
+}
+	input:focus[type="text"]::-webkit-input-placeholder {
+color: #fff!important;
+}
+ input:hover
+        {
+            color:darkgray;
+        }
+        input:hover[type="text"]::-webkit-input-placeholder {
+            color:darkgray
+        }
+		#datos tr:nth-child(even) 
+		#datos td {padding:0px;}
+        .searchtype
+        {
+        background-color: dodgerblue;
+        width: 50%;
+        height: 50%;
+        border-style: groove;
+        border-bottom-style: ridge;
+        border-right-style: ridge;
+        border-width: 7px; 
+        padding-top: 0.0%;
+        padding: 0.8%;
+        font-family: Comic Sans MS;
+        font-size: 105%; 
+        border-radius: 7%;
+        border-color: #fff;
+        text-align: center;
+        font-weight: 800;
+        text-shadow: 2px 0px 0.5px dimgray;
+        transition: all 0.8s ease 0s;
+        animation: fadein 2.5s;  
+        }
+        .searchtype:focus
+        {
+        background-color: #fff;
+        border-style: groove;
+        border-bottom-style: ridge;
+        border-right-style: ridge;
+        border-color: #fff;
+        font-family: Comic Sans MS;
+        color: black;
+        transition: all 3s ease 0s;
+        border-radius: 7%;
+        box-shadow: 8px 8px 50px #000 inset;
+         animation: fadein 2.5s;    
+        }
+        @media screen and (max-width: 480px)
+  {
+        .searchtype
+        {
+        background-color: red;
+        width: 5%;
+        height: 50%;
+        border-style: groove;
+        border-bottom-style: ridge;
+        border-right-style: ridge;
+        border-width: 7px; 
+        padding-top: 0.0%;
+        padding: 0.8%;
+        font-family: Comic Sans MS;
+        font-size: 70%; 
+        border-radius: 7%;
+        border-color: #fff;
+        text-align: center;
+        font-weight: 500;
+        text-shadow: 2px 0px 0.5px dimgray;
+        transition: all 0.8s ease 0s;
+        animation: fadein 2.5s;  
+        }
+      }
+        @keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+	
+   .modalDialog {
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+
+}
+.modalDialog:target {
+	opacity:1;
+	pointer-events: auto;
+    
+}
+      @media screen and (min-width: 480px)
+  {       
+.modalDialog > div {
+	font-size: 87%;
+    width: 560px;
+    height: auto;
+	position: relative;
+	margin: 20% auto;
+	padding: 5px 20px 13px 20px;
+	border-radius: 10px;
+	background: red;
+    font-family: Comic Sans MS;
+    border-color: #fff;
+    border-style: groove;
+    text-align: center;
+  -webkit-transition: opacity 400ms ease-in;
+-moz-transition: opacity 400ms ease-in;
+transition: opacity 400ms ease-in;
+    /*box-shadow: 0px 0px 5000000px #fff;*/ 
+    
+}
+  }      
+     @media screen and (max-width: 1024px)
+  {       
+.modalDialog > div {
+	font-size: 90%;
+    width: 365px;
+    height: auto;
+	position: relative;
+	margin: 40% auto;
+	padding: 5px 20px 13px 20px;
+	border-radius: 10px;
+	background: red;
+    font-family: Comic Sans MS;
+    border-color: #fff;
+    border-style: groove;
+    text-align: center;
+  -webkit-transition: opacity 400ms ease-in;
+-moz-transition: opacity 400ms ease-in;
+transition: opacity 400ms ease-in;
+    /*box-shadow: 0px 0px 5000000px #fff;*/ 
+    
+}
+  }       
+   @media screen and (max-width: 720px)
+  {       
+.modalDialog > div {
+	font-size: 80%;
+    width: 300px;
+    height: auto;
+	position: relative;
+	margin: 40% auto;
+	padding: 5px 20px 13px 20px;
+	border-radius: 10px;
+	background: red;
+    font-family: Comic Sans MS;
+    border-color: #fff;
+    border-style: groove;
+    text-align: center;
+  -webkit-transition: opacity 400ms ease-in;
+-moz-transition: opacity 400ms ease-in;
+transition: opacity 400ms ease-in;
+    /*box-shadow: 0px 0px 5000000px #fff;*/
+   
+    
+}
+  }   
+   @media screen and (max-width: 480px)
+  {       
+.modalDialog > div {
+	font-size: 55%;
+    width: 175px;
+    height: auto;
+	position: relative;
+	margin: 40% auto;
+	padding: 5px 20px 13px 20px;
+	border-radius: 10px;
+	background: red;
+    font-family: Comic Sans MS;
+    border-color: #fff;
+    border-style: groove;
+    text-align: center;
+  -webkit-transition: opacity 400ms ease-in;
+-moz-transition: opacity 400ms ease-in;
+transition: opacity 400ms ease-in;
+    /*box-shadow: 0px 0px 5000000px #fff;*/ 
+    
+}
+  }       
+.close {
+	background: #fff;
+	color: #000;
+    font-size: 104%;
+    font-family: Comic Sans MS;
+    text-decoration: none;
+    padding: 2%;
+    background-position:top;
+    padding-top: -0%;
+    border-top-right-radius: 500%;
+    border-bottom-left-radius: 500%;
+    border-bottom-right-radius: 500%;
+    border-top-left-radius: 500%;
+    margin-right: -105%;
+    margin-top: 5%;
+    }
+         .clockdate-wrapper {
+    background-color: #333;
+    padding:9.9px;
+    max-width:90px;
+    width:99%;
+    text-align:center;
+    border-radius:5px;
+    margin:0 0;
+    margin-top:-18%;
+    position: fixed;
+    margin-left: -5.9%;
+    opacity: 0.8;
+}
+#clock{
+    background-color:#fff;
+    font-family: sans-serif;
+    font-size:20px;
+    text-shadow:0px 0px 1px #fff;
+    color:#333;
+    font-family: Comic Sans MS;
+    
+}
+#clock span {
+    color:#888;
+    text-shadow:0px 0px 1px #333;
+    opacity: 0;
+    font-size:10px;
+    position:inherit;
+    top:-0px;
+    left:-10px;
+    margin-right: -50%;
+}
+#date {
+    letter-spacing:5px;
+    font-size:7.6px;
+    font-family: Comic Sans MS;
+    color:#fff;   </style>
+     <br><br><br><br><br><center> <font id="logo" face="Comic Sans MS" size="80%" color="#fff"><a style="position:static"></a></font></center><br>
+   <br>
+          
+        
+     </head>
+ 
+<body onload="startTime()">
+      <center>  <h3 id="InterfaceLayout">
+   <div id="clockdate">
+  <div class="clockdate-wrapper">
+    <div id="clock"></div>
+    <div id="date"></div>
+  </div>
+</div>   
+          
+          
+   <div id="InsideBox">
+       
+       
+       
+		<table id="datos">
+		<th><input id="searchTerm"  class="searchtype" type="text" onkeyup="doSearch()" placeholder="Search version"/></th>
+       
+            
+            
+    <tr><td>
+                 <div onclick="location.href=`#openModal`" id="selector" type=button><img src="../img/CTP-Images/03.13.40.png" id="landscapeimgmini"><span >CrazzyMCPE v26</span>
+        </div>
+       
+<div id="openModal" class="modalDialog">
+	<div>
+		<a href="#close" title="Close" class="close">X</a>
+		<h2>Sorry</h2>
+		<p>This version is not avaliable yet</p>
+	</div>
+</div></td>
+			</tr>
+            <br>
+         	<tr><td>
+                          <div onclick="location.href=`#openModal`" id="selector" type=button><img src="../img/CTP-Images/03.13.40.png" id="landscapeimgmini"><span >CrazzyMCPE v25</span>
+        </div></td>
+                
+</tr>
+              
+<tr><td>
+                 <div href="#close" title="Close" class="close" id="selector" type=button onclick="location.href=`v24Update71020181.html`"><img src="../img/CTP-Images/03.13.40.png" id="landscapeimgmini"><span >CrazzyMCPE v24</span>
+             </div></td>
+                
+</tr>
+             <tr><td>
+                 <div id="selector" type=button><img src="../img/CTP-Images/03.13.40.png" id="landscapeimgmini"><span >CrazzyMCPE v23</span>
+        </div></td>
+			</tr>
+              <tr><td>
+                 <div id="selector" type=button><img src="../img/CTP-Images/03.13.40.png" id="landscapeimgmini"><span >CrazzyMCPE v22</span>
+        </div></td>
+			</tr>
+              <tr><td>
+                 <div id="selector" type=button><img src="../img/CTP-Images/03.13.40.png" id="landscapeimgmini"><span >CrazzyMCPE v21</span>
+        </div></td>
+			</tr>
+             <tr><td> 
+                 <div id="selector" type=button><img src="../img/CTP-Images/03.13.40.png" id="landscapeimgmini"><span >CrazzyMCPE v20</span>
+        </div></td>
+			</tr>
+              <tr><td>
+                 <div id="selector" type=button><img src="../img/CTP-Images/03.13.40.png" id="landscapeimgmini"><span >CrazzyMCPE v19</span>
+        </div></td>
+			</tr>
+              <tr><td>
+                 <div id="selector" type=button><img src="../img/CTP-Images/03.13.40.png" id="landscapeimgmini"><span >CrazzyMCPE v18</span>
+        </div></td>
+			</tr>
+              <tr><td>
+                 <div id="selector" type=button><img src="../img/CTP-Images/03.13.40.png" id="landscapeimgmini"><span style="margin-top:-0%" >CrazzyMCPE v17</span>
+        </div></td>
+			</tr>
+              <tr><td>
+                 <div id="selector" type=button><img src="../img/CTP-Images/03.13.40.png" id="landscapeimgmini"><span >CrazzyMCPE v16</span>
+        </div></td>
+			</tr>
+       </table></div></h3>
+    </center> <center> <div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Idioma-Language</button>
+  <div id="myDropdown" class="dropdown-content">
+   <a 
+href="es_mx/index.html">Español</a>
+    <a href="en_us/index.html">English</a>
+  </div>
+</div> </center></body></html>
