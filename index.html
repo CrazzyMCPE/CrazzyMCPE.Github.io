@@ -281,7 +281,8 @@ window.addEventListener("load", function(){
   <center>  <h3 style="margin-top:-1%" id="InterfaceLayout">
 
       <div id="InsideBox"><br>  <center> <div class="dropdown">
-  <button onclick="myFunction()" class="dropbtn">Idioma-Language</button>
+  <button hidden=hidden onclick="myFunction()" class="dropbtn">Idioma-Language</button>
+  <h1 style="color:red">This page is currently offline</h1>
   <div id="myDropdown" class="dropdown-content">
    <a 
 href="es_mx/index.html">Español</a>
@@ -300,8 +301,283 @@ href="es_mx/index.html">Español</a>
 
          </h3></center>
 <br><br><br><br>
-    <p id=div>
-   2017-2018</p>
+  <center><p id=div>
+   2017-2018</p></center>
+
+    </body>
+ </html>
+		var date_split = part_of_split.split("=");
+		var last = date_split[1];
+		last=fixTheDate(last);
+		alert (" Hola de nuevo! Tu última visita fue: "+last);
+		writeCookie();
+	} // Close if (find_name==-1)
+      }
+} // Close function readCookie()
+
+
+function writeCookie() {
+     var today = new Date();
+     var the_date = new Date("December 31, 2023");
+     var the_cookie_date = the_date.toGMTString();
+     var the_cookie = "nfti_date="+escape(today);
+     var the_cookie = the_cookie + ";expires=" + the_cookie_date;
+     document.cookie=the_cookie
+}
+
+function alertMessage(){
+     alert ("Bienvenido!")
+}
+
+function fixTheDate(date) {
+     var split = date.split(" ");
+     var fix_the_time = split[3].split(":")
+     var hours = fix_the_time[0]
+     if (hours>=12) {
+	var ampm="PM"
+     } else {
+	var ampm="AM"
+     }
+     if (hours > 12) {
+	hours = hours-12
+     }
+     var new_time = hours+":"+fix_the_time[1]+" "+ampm
+     var new_date = split[0]+" "+split[1]+", "+split[2]+" at "+new_time+", "+split[5]
+     return new_date;
+}
+
+</script>
+
+<script src="js/slide.js"></script>
+             <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+        <script>/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+      $("#LgButton").click(function(){
+    $("#myDropdown").fadeIn();
+    $("#tstn").fadeIn("slow");
+    $("#tstn").fadeIn(3000);
+});  
+        </script>
+<style>
+           @media screen and (min-width: 800px)
+  { 
+div#splashscreen{
+position: fixed;
+	width: 102%;
+	height: 150%;
+    margin-top: -1%;
+    margin-left: -2%;
+    margin-bottom: 8%;
+    background: 100% -180px -webkit-radial-gradient( circle, #fff 10% ,#000 105% , #000 80% );
+  border-width: 6px;
+    border-radius: 8px 8px;
+    box-shadow: 3px 3px 3px #000, -30px -20px #333333;
+     transition: all 0.6s ease 0s;
+}
+      }
+        @media screen and (max-width: 1024px)
+  { 
+div#splashscreen{
+	position: fixed;
+	width: 102%;
+	height: 150%;
+    margin-top: -1%;
+    margin-left: -2%;
+    margin-bottom: 8%;
+    background: 100% -180px -webkit-radial-gradient( circle, #fff 38% ,#000 105% , #000 80% );
+  border-width: 6px;
+    border-radius: 8px 8px;
+    box-shadow: 3px 3px 3px #000, -30px -20px #333333;
+     transition: all 0.6s ease 0s;
+}
+      }
+    @media screen and (max-width: 720px)
+  { 
+div#splashscreen{
+    font-family: "Kristen itc";
+    font-size: 130%;
+    text-emphasis-position: left;
+    color: #fff;
+    font-weight: bold;
+	position: fixed;
+	width: 102%;
+	height: 162%;
+    margin-top: -1%;
+    margin-left: -2%;
+    margin-bottom: 8%;
+    background: 100% -270px -webkit-radial-gradient( circle, #fff 8% ,#000 125% , #000 80% );
+  border-width: 6px;
+    border-radius: 8px 8px;
+    box-shadow: 3px 3px 3px #000, -30px -20px #333333;
+     transition: all 0.6s ease 0s;
+    text-shadow: 1px 1px 10px #000, -1px -2px #333333;
+}
+      }
+      @media screen and (max-width: 480px)
+  { 
+div#splashscreen{
+	position: fixed;
+	width: 105%;
+	height: 150%;
+    margin-top: -4%;
+    margin-left: -5%;
+    margin-bottom: 8%;
+    background: 100% -190px -webkit-radial-gradient( circle, #fff 4% ,#000 100% , #000 80% );
+  border-width: 6px;
+    border-radius: 8px 8px;
+    box-shadow: 3px 3px 3px #000, -30px -20px #333333;
+     transition: all 0.6s ease 0s;
+}
+      }
+/* Dropdown Button */
+.dropbtn {
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    font-family: Comic sans MS;
+    font-weight: 800;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+      transition: all 0.6s ease 0s;
+    
+    
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    -o-animation: fadein 2s;
+      transition: all 0.6s ease 0s;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;
+      transition: all 0.6s ease 0s;}    
+
+        
+        
+        
+        
+    margin-top: 25px;
+    font-size: 21px;
+    text-align: center;
+
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 2s; /* Firefox < 16 */
+        -ms-animation: fadein 2s; /* Internet Explorer */
+         -o-animation: fadein 2s; /* Opera < 12.1 */
+            animation: fadein 2s;
+}
+    #myDropdown
+    {   
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {     
+        </style>
+<script> 
+window.addEventListener("load", function(){
+	var load_screen = document.getElementById("splashscreen");
+	document.body.removeChild(splashscreen);
+});
+</script>
+    </head>
+   
+<body>
+   <div id="splashscreen"><br><br><br><br><br><br><br><div id="loading"><img id="imgbox" height="60%" width="100%" src="../img/CrazzyMCPE.png"/></div><br><center>Beta</center></div>  
+    <center> <img id="LandscapeImage" src="img/banner/day-banner.png"></center>
+  <center>  <h3 style="margin-top:-1%" id="InterfaceLayout">
+
+      <div id="InsideBox"><br>  <center> <div class="dropdown">
+  <button hidden=hidden onclick="myFunction()" class="dropbtn">Idioma-Language</button>
+  <h1 style="color:red">This page is currently offline</h1>
+  <div id="myDropdown" class="dropdown-content">
+   <a 
+href="es_mx/index.html">Español</a>
+    <a href="en_us/index.html">English</a>
+  </div>
+</div> </center><br>
+    <form hidden=hidden name="form1" method="post" action="mailto:crazzygamermcpe@gmail.com">
+<label for="nombre">Nombre: </label><input type="text" name="nombre" id="nombre"><br />
+<label for="email">Email: </label><input type="text" name="nombre" id="email"><br />
+&iquest;Qu&eacute; te pareci&oacute; la p&aacute;gina?<br />
+<textarea id="opinion" name="opinion"></textarea><br />
+<input type="submit" name="Submit" value="Enviar">
+</form> </div>   
+<button hidden="hidden">Click to fade in boxes</button>
+
+
+         </h3></center>
+<br><br><br><br>
+  <center><p id=div>
+   2017-2018</p></center>
 
     </body>
  </html>
