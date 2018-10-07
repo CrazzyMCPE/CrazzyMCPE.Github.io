@@ -1,5 +1,5 @@
 <html lang=es>
-    <head><meta name="theme-color" content="#333333">
+    <head><meta name="theme-color" content="#fff">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>    
     <title>CrazzyMCPE</title>
    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -102,6 +102,16 @@ window.onclick = function(event) {
 });  
         </script>
 <style>
+	#Counter
+	{
+font-family: Font;
+}
+	
+	@font-face {
+    font-family: Font;
+    src: url(font/font.ttf);
+    font-weight: bold;
+}
            @media screen and (min-width: 800px)
   { 
 div#splashscreen{
@@ -111,7 +121,7 @@ position: fixed;
     margin-top: -1%;
     margin-left: -2%;
     margin-bottom: 8%;
-    background: 100% -180px -webkit-radial-gradient( circle, #fff 10% ,#000 105% , #000 80% );
+    background-color: #fff;
   border-width: 6px;
     border-radius: 8px 8px;
     box-shadow: 3px 3px 3px #000, -30px -20px #333333;
@@ -127,7 +137,7 @@ div#splashscreen{
     margin-top: -1%;
     margin-left: -2%;
     margin-bottom: 8%;
-    background: 100% -180px -webkit-radial-gradient( circle, #fff 38% ,#000 105% , #000 80% );
+    background-color: #fff;
   border-width: 6px;
     border-radius: 8px 8px;
     box-shadow: 3px 3px 3px #000, -30px -20px #333333;
@@ -148,7 +158,7 @@ div#splashscreen{
     margin-top: -1%;
     margin-left: -2%;
     margin-bottom: 8%;
-    background: 100% -270px -webkit-radial-gradient( circle, #fff 8% ,#000 125% , #000 80% );
+    background-color: #fff;
   border-width: 6px;
     border-radius: 8px 8px;
     box-shadow: 3px 3px 3px #000, -30px -20px #333333;
@@ -165,7 +175,7 @@ div#splashscreen{
     margin-top: -4%;
     margin-left: -5%;
     margin-bottom: 8%;
-    background: 100% -190px -webkit-radial-gradient( circle, #fff 4% ,#000 100% , #000 80% );
+    background-color: white;
   border-width: 6px;
     border-radius: 8px 8px;
     box-shadow: 3px 3px 3px #000, -30px -20px #333333;
@@ -180,10 +190,9 @@ div#splashscreen{
     font-size: 16px;
     border: none;
     cursor: pointer;
-    font-family: Comic sans MS;
+    font-family: Font;
     font-weight: 800;
 }
-
 /* Dropdown button on hover & focus */
 .dropbtn:hover, .dropbtn:focus {
     background-color: #2980B9;
@@ -204,7 +213,7 @@ div#splashscreen{
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
       transition: all 0.6s ease 0s;
-    
+    font-family: Font;
     
 }
 
@@ -276,15 +285,17 @@ window.addEventListener("load", function(){
     </head>
    
 <body>
-   <div id="splashscreen"><br><br><br><br><br><br><br><div id="loading"><img id="imgbox" height="60%" width="100%" src="../img/CrazzyMCPE.png"/></div><br><center>Beta</center></div>  
-    <center> <img id="LandscapeImage" src="img/banner/day-banner.png"></center>
+    <div id="splashscreen"><br><br><br><br><br><br><br><center><img id="SplashScreen_img" src="img/Splashscreen/bg.png"/> </center></div>
+    <center> <img id="IndexBanner" src="img/banner/day-banner.png"></center>
   <center>  <h3 style="margin-top:-1%" id="InterfaceLayout">
+<iframe id="Counter" style='border;' width='100%' height='auto' src='https://aportavalor.com/wp-content/herramientas/cronometro/cronometro.php?f=Oct%2020%202018,%2009:28:18&pre=Nueva%20futura%20Actualización!!!
+
+Tiempo%20restante&pst=Hoy%20nueva%20actualización!!!&c=000000&b=ffffff&s=12&r='>No soporta iframe</iframe>
 
       <div id="InsideBox"><br>  <center> <div class="dropdown">
-  <button hidden=hidden onclick="myFunction()" class="dropbtn">Idioma-Language</button>
-  <h1 style="color:red">This page is currently offline</h1>
+  <button hidden=hidden  onclick="myFunction()" class="dropbtn">Idioma-Language</button>
   <div id="myDropdown" class="dropdown-content">
-   <a 
+   <a
 href="es_mx/index.html">Español</a>
     <a href="en_us/index.html">English</a>
   </div>
@@ -300,10 +311,9 @@ href="es_mx/index.html">Español</a>
 
 
          </h3></center>
-<br><br><br><br>
-  <center><p id=div>
+
+<center>    <p id=Paragraph>
    2017-2018</p></center>
 
     </body>
  </html>
-		
