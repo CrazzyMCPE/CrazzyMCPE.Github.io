@@ -1,4 +1,4 @@
-           @media screen and (min-width: 800px)
+    @media screen and (min-width: 800px)
   { 
 #SplashScreen_img
 {
@@ -279,7 +279,7 @@ background-size: cover;
 div span{
     position: relative;
     margin: 3.9em 0 0 2em;
-    color: #fff;
+    color: #303940;
     font-family: Comic Sans MS;
     text-shadow: 1px 2px 5px #000, -1px -3px 4px #000;
     font-size: 100%;   
@@ -290,7 +290,7 @@ div span{
 div span{
     position: absolute;
     margin: 3em 0 0 0em;
-    color: #fff;
+    color: #303940;
     font-family: Comic Sans MS;
     text-shadow: 1px 2px 5px #000, -1px -3px 4px #000;
     font-size: 100%;
@@ -302,7 +302,7 @@ div span{
     position: inherit;
     margin: -0.75em 0 0 0em;
     margin-left: 7%;
-    color: #fff;
+color: #303940;
     font-family: Comic Sans MS;
     text-shadow: 1px 2px 5px #000, -1px -3px 4px #000;
     font-size: 109%;  
@@ -314,7 +314,7 @@ div span{
 div span{
     position:relative;
     margin: 0.95em 0 0 5%em;
-    color: #fff;
+    color: #303940;
     font-family: Comic Sans MS;
     text-shadow: 1px 2px 5px #000, -1px -3px 4px #000;
     font-size: 98%;
@@ -385,8 +385,12 @@ font {
 .day { background-image: url(../img/banner/day-banner_new.png);
 padding-right: 80%;
 }
-.sunset { background-image: url(../img/banner/sunset-banner.png) }
-.night { background-image: url(../img/banner/night-banner.png); }
+.sunset { background-image: url(../img/banner/sunset-banner.png);
+padding-right: 80%;
+ }
+.night { background-image: url(../img/banner/night-banner.png); 
+padding-right: 80%;
+}
 @media screen and (min-width: 800px)
   { 
 #LandscapeLI
@@ -552,7 +556,7 @@ body {
   scrollbar-face-color: #333333;
   scrollbar-track-color: #5a5a5a;
   background: #fff;
-  /*font-family: "Kristen itc";*/
+  font-family: "Font";
 }
 #navbar
 {
@@ -791,11 +795,58 @@ margin-bottom: 1%;
 {
 height: auto;
 width: 85%;
-border: groove 6px;
+border: solid 2px;
 border-radius: 7px;
 margin-top: 1%;
 margin-bottom: 2%;
+border-color: #505E73;
 
+}
+ }   
+ @media screen and (min-width: 800px)
+{ 
+#IndexBanner
+{
+height: auto;
+width: 90%;
+margin-top: 1%;
+margin-bottom: 1%;
+}
+ }   
+@media screen and (max-width: 1024px)
+{ 
+#IndexBanner
+{
+height: auto;
+width: 88%;
+margin-top: 1%;
+margin-bottom: 1%;
+
+}
+ }   
+@media screen and (max-width: 720px)
+{ 
+#IndexBanner
+{
+height: auto;
+width: 88%;
+margin-top: 1%;
+margin-bottom: 1%;
+
+}
+ }   
+@media screen and (max-width: 480px)
+{ 
+#IndexBanner
+{
+height: 18.2%;
+width: 100%;
+border: solid 2px;
+border-radius: 7px;
+margin-top: 1%;
+margin-top: 40%;
+border-color: #505E73;
+margin-left: -0.5%;
 }
  }   
 .IconText
@@ -895,8 +946,9 @@ margin-top:auto;
 {
 color: #fff;
 font-size: 100%;
-text-shadow: 1px 1px 10px #000, -1px -2px #333333;
+text-shadow: 1px 1px 2px #000, -1px -1px 2px #000;
 margin-top:auto;
+font-family: Font;
 }
 }
 @media screen and (min-width: 800px)
@@ -937,6 +989,7 @@ color: #fff;
 font-size: 100%;
 text-shadow: 1px 1px 10px #000, -1px -2px #333333;
 margin-top:auto;
+font-family: Font;
 }
 }
 p
@@ -944,6 +997,7 @@ p
 color: #fff;
 font-size: 110%;
 text-shadow: 3px 3px 8px #000;
+font-family: Font;
 }
 @media screen and (min-width: 800px)
   {  
@@ -953,6 +1007,7 @@ font-size: 130%;
 color: #333333;
 text-shadow: 3px 4px 4px gray;
 margin: 5%;
+font-family: Font;
 }
      }
 @media screen and (max-width: 1024px)
@@ -979,8 +1034,9 @@ text-shadow: 3px 4px 4px gray;
 {
 font-size: 85%;
 color: #333333;
-text-shadow: 3px 4px 4px gray;
+text-shadow: 1px 2px 2px gray;
 margin: 5%;
+font-family: Font;
 }
      }
 @media screen and (min-width: 800px)
@@ -1129,7 +1185,7 @@ text-shadow: 1px 1px 0px #000, 10px 1px 2px #333333;
      transition: all 0.6s ease 0s;
      font-weight: bold;
     text-shadow: 1px 1px 3px #000;
-    font-family: "Kristen itc";
+    font-family: "Font";
     text-decoration: none;    
 }
       }
@@ -1272,4 +1328,5 @@ border-left-style: ridge;
 #Sub-Text
 {
 text-shadow: 0px 0px;
+font-family: Font;
 }
