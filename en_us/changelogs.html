@@ -1,17 +1,52 @@
 <html lang=es>
-    <head><meta name="theme-color" content="#333333">
+    <head><meta name="theme-color" content="#DF000F">
     <title>CrazzyMCPE</title>
    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  
 
 	<link rel="StyleSheet" href="../css/styles.css" type="text/css">
-        <link rel="shortcut icon" href="img/favicon.ico">
+        <link rel="shortcut icon" href="../img/favicon.ico">
          <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
-        
-<script type="text/javascript">document.write('<center><div id="navflotante"><input id="button" type="button" onclick="location.href=`index.html`"    value="Home"/>  <input id="button" type="button" onclick="location.href=`about.html`" value="About"/></div></center>');</script>
+     <script>/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+      $("#LgButton").click(function(){
+    $("#myDropdown").fadeIn();
+    $("#tstn").fadeIn("slow");
+    $("#tstn").fadeIn(3000);
+});  
+        </script>        
+<script type="text/javascript">document.write('<center><div id="navflotante"><input id="ButtonRed" type="button" onclick="location.href=`index.html`"    value="Home"/><input id="ButtonRed" type="button" onclick="location.href=`about.html`" value="About"/><input id="ButtonRed" type="button" onclick="location.href=`changelogs.html`" value="Updates"/></div></center>');</script>
              <script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
-         <script type="text/javascript" src="../js/banner.js"></script>
+      <img  id=BannerMenu src="../img/banner/banner_white.png">
+      
 <style>
+	body
+	{ 
+background-color: #DF000F;
+}
+	@font-face {
+    font-family: Font;
+    src: url(../font/font.ttf);
+    font-weight: bold;
+}
            @media screen and (min-width: 800px)
   { 
 div#splashscreen{
@@ -118,62 +153,66 @@ window.onclick = function(event) {
     </head>
    
 <body scrolling="yes">
-    <div id="splashscreen"><br><br><br><br><br><br><br><div id="loading"><img id="imgbox" height="60%" width="100%" src="../img/CrazzyMCPE.png"/></div><br><center>Beta</center></div>
-     <br><br><br><br><br><center> <font id="logo" face="Comic Sans MS" size="80%" color="#fff"></font></center><br>
-    <!--<center><font face="kristen itc" id="banner">CrazzyMCPE</font></center>--><br><br>
-  <center> <h3 id="InterfaceLayout">
-         <p id="InsideBox"><a id="title">Changelogs</a>
-           <br><br><a class="title">V0.7.0</a>
+
+  <center> <h3 style="font-family: Font" id="InterfaceLayout">
+         <p id="InsideBox"><a class="title">Changelogs</a>
+            <br>
+       <a style="color: lime" id="title">v0.7.0 changes</a><br>
              <a id="paragraph">
-                         <br>New home menu
-<br>Added languages option(English)
-<br>Added a history of CrazzyMCPE's TP versions
-<br>Added a search option to search versions of CrazzyMCPE TP
-<br>Added an alert if a version is not available
-             </a>
- <br>
-          <br><a class="title">V0.6.0</a>
+   New design(material design)
+ <br>New menu with language options
+<br>Added  new language(English)
+<br>Now the new banner system is exclusive for the main menu due to the new design
+<br>Shadows and nonsense borders are gone 
+!!! 😊
+<br>Added new splash screen
+<br>Fixed multiple bugs with design
+<br>New button designs
+
+             </a><br><br><a id="title">v0.6.0 changes</a><br>
              <a id="paragraph">
-                 <br>New banner system
+            when the time changes the banner color changes!
              </a>
-           <br> 
-            <br><a class="title">V0.5.0</a>
+            <br>
+            <br><a id="title">v0.5.0</a>
              <a id="paragraph">
-                 <br>New scrollbar design
-                 <br>Changed icon
+                 <br>New border menu style
+                 <br>Cambiado el diseño de los bordes de los botones
+                 <br>Nuevo diseño de los scrollbars
+                 <br>Cambiado el icono de la página
              </a>
-        <br><br><a class="title">V 0.4.0</a>
-             <br><a id="paragraph">Added splashcreen
-             <br>Changed menus design
-             <br>Changed buttons border
-             <br>Fixed pictures
-             <br>New color(title text)
+        <br><br><a id="title">Versión 0.4.0</a>
+             <br><a id="paragraph">Agregado  el splashcreen
+             <br>Cambios en el diseño de los menús
+             <br>Cambiados los bordes de los botones
+             <br>Ajustado y adaptado el tamaño de las imagenes
+             <br>Cambiado el color de el texto superior(título)
              <br>
              </a>
              
              
-             <br><br><a class="title">V 0.3.1</a><br> <a id="paragraph">
-          Twitter timeline
+             <br><br><a id="title">Versión 0.3.1</a><br> <a id="paragraph">
+        Timeline de mi perfíl de twitter
           <br>
-          Twitter Follow button
+           Botón para seguir mi perfíl de twitter
         <br>
         </a>
      
-        <br><a class="title">V0.3.0</a><br> <a id="paragraph">fixed lots of bugs<br>Added page´s banner <br>full mobile support<br>Added page´s icon
-    <br>Added page´s name</a>
-        <br><br><a class="title">V0.2.0</a><br>
-        <a id="paragraph">ReWorked interface
-            <br>Buttons now are in a floating Nav
-         <br>Added a darker background<br>
-    Added news page<br>Added about page<br>New buttons design<br>Added new buttons animations<br>Added shadows to text<br>Added shadows to buttons and menus<br>Kind of added mobile support
+        <br><a id="title">Versión 0.3.0</a><br> <a id="paragraph">Reparados muchos bugs en el diseño<br>Agregado el banner de la página<br>Adaptación en dispositivos moviles<br>Agregado el logo de la página
+    <br>Agregado el nombre de la página</a>
+        <br><br><a class="title">Versión 0.2.0</a><br>
+        <a id="paragraph">Cambiada la interfáz por completo
+            <br>Ahora los botónes son flotantes(Nav)
+         <br>Se cambió el background por uno mas oscuro<br>
+        Se agregó la sección  de noticias<br>Se agregó la sección acerca de<br>Se cambió el diseño de los botones<br>Se cambió la animación de los botones<br>Se le agregaron sombras a las fuentes<br>Se le agregaron sombras a los botones y menús<br>Agregada parcialmente la adaptación con dispositivos moviles
         </a><br><br>
-        <a class="title">V0.1.0</a><br> <a id="paragraph">First version<br><br>
-        </p></h3></center>        <center> <div class="dropdown">
-  <button onclick="myFunction()" class="dropbtn">Idioma-Language</button>
+        <a id="title">Versión 0.1.0</a><br> <a id="paragraph">Primera versión</a> <br><br>
+ </p></h3></center><br>        <center style=font-family: Font" > <div  class="dropdown">
+  <button style=font-family: Font" onclick="myFunction()" class="dropbtn">Idioma-Language</button>
   <div id="myDropdown" class="dropdown-content">
-   <a 
-href="../es_mx/changelogs.html">Español</a>
-    <a href="#es_mx/changelogs.html">English</a>
+   <a
+href="#">Español</a>
+    <a href="../en_us/changelogs.html">English</a>
   </div>
-</div> </center></body><br>
+</div> </center></body>
     </html>

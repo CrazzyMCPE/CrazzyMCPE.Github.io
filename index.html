@@ -1,78 +1,19 @@
 <html lang=es>
-    <head><meta name="theme-color" content="#fff">
+    <head><meta name="theme-color" content="#59000B">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>    
     <title>CrazzyMCPE</title>
    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    
-
+    <script> 
+window.addEventListener("load", function(){
+	var load_screen = document.getElementById("splashscreen");
+	document.body.removeChild(splashscreen);
+});
+</script>
+    <div id="splashscreen"><br><br><br><br><br><br><br><center><img id="SplashScreen_img" src="img/Splashscreen/bg.png"/> </center></div><br><br><br><br><br><br>
 	<link rel="StyleSheet" href="css/styles.css" type="text/css">
         <link rel="shortcut icon" href="img/favicon.ico">
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script language="JavaScript" type="text/javascript">
-
-
-readCookie();
-
-function readCookie() {
-     if (document.cookie == "") {
-	writeCookie();
-        alertMessage();
-     } else {
-	var the_cookie = document.cookie;
-	the_cookie = unescape(the_cookie);
-	the_cookie_split = the_cookie.split(";");
-	for (loop=0;loop<the_cookie_split.length;loop++) {
-		var part_of_split = the_cookie_split[loop];
-		var find_name = part_of_split.indexOf("nfti_date")
-		if (find_name!=-1) {
-			break;
-		} // Close if
-	} // Close for
-	if (find_name==-1) {
-		writeCookie();
-	} else {
-		var date_split = part_of_split.split("=");
-		var last = date_split[1];
-		last=fixTheDate(last);
-		alert (" Hola de nuevo! Tu última visita fue: "+last);
-		writeCookie();
-	} // Close if (find_name==-1)
-      }
-} // Close function readCookie()
-
-
-function writeCookie() {
-     var today = new Date();
-     var the_date = new Date("December 31, 2023");
-     var the_cookie_date = the_date.toGMTString();
-     var the_cookie = "nfti_date="+escape(today);
-     var the_cookie = the_cookie + ";expires=" + the_cookie_date;
-     document.cookie=the_cookie
-}
-
-function alertMessage(){
-     alert ("Bienvenido!")
-}
-
-function fixTheDate(date) {
-     var split = date.split(" ");
-     var fix_the_time = split[3].split(":")
-     var hours = fix_the_time[0]
-     if (hours>=12) {
-	var ampm="PM"
-     } else {
-	var ampm="AM"
-     }
-     if (hours > 12) {
-	hours = hours-12
-     }
-     var new_time = hours+":"+fix_the_time[1]+" "+ampm
-     var new_date = split[0]+" "+split[1]+", "+split[2]+" at "+new_time+", "+split[5]
-     return new_date;
-}
-
-</script>
-
+    
 <script src="js/slide.js"></script>
              <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
         <script>/* When the user clicks on the button, 
@@ -101,12 +42,16 @@ window.onclick = function(event) {
     $("#tstn").fadeIn(3000);
 });  
         </script>
+    <img  id=BannerMenu src="img/banner/banner_white.png">
+      
 <style>
-	#Counter
-	{
-font-family: Font;
-}
-	
+	body
+	{ 
+		    background-image: url("img/BgEmpty.png");
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 100% 100%;
+		}
 	@font-face {
     font-family: Font;
     src: url(font/font.ttf);
@@ -276,28 +221,22 @@ div#splashscreen{
 /* Opera < 12.1 */
 @-o-keyframes fadein {     
         </style>
-<script> 
-window.addEventListener("load", function(){
-	var load_screen = document.getElementById("splashscreen");
-	document.body.removeChild(splashscreen);
-});
-</script>
+
     </head>
    
-<body>
-    <div id="splashscreen"><br><br><br><br><br><br><br><center><img id="SplashScreen_img" src="img/Splashscreen/bg.png"/> </center></div>
-    <center> <img id="IndexBanner" src="img/banner/day-banner.png"></center>
+<body scrolling="yes">
+    <center> <img hidden=hidden id="IndexBanner" src="img/banner/day-banner.png"></center>
   <center>  <h3 style="margin-top:-1%" id="InterfaceLayout">
-<iframe id="Counter" style='border;' width='100%' height='auto' src='https://aportavalor.com/wp-content/herramientas/cronometro/cronometro.php?f=Oct%2020%202018,%2009:28:18&pre=Nueva%20futura%20Actualización!!!
+<iframe hidden=hidden id="Counter" style='border;' width='100%' height='auto' src='https://aportavalor.com/wp-content/herramientas/cronometro/cronometro.php?f=Oct%2020%202018,%2009:28:18&pre=Nueva%20futura%20Actualización!!!
 
 Tiempo%20restante&pst=Hoy%20nueva%20actualización!!!&c=000000&b=ffffff&s=12&r='>No soporta iframe</iframe>
 
       <div id="InsideBox"><br>  <center> <div class="dropdown">
-  <button hidden=hidden  onclick="myFunction()" class="dropbtn">Idioma-Language</button>
+  <button onclick="myFunction()" class="dropbtn">Idioma-Language</button>
   <div id="myDropdown" class="dropdown-content">
    <a
 href="es_mx/index.html">Español</a>
-    <a href="en_us/index.html">English</a>
+    <a HIDDEN=hidden href="#en_us/index.html">English</a>
   </div>
 </div> </center><br>
     <form hidden=hidden name="form1" method="post" action="mailto:crazzygamermcpe@gmail.com">
@@ -312,7 +251,7 @@ href="es_mx/index.html">Español</a>
 
          </h3></center>
 
-<center>    <p id=Paragraph>
+<center>    <p style="color:white" id=Paragraph>
    2017-2018</p></center>
 
     </body>
