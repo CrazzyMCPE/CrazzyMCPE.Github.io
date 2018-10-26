@@ -128,7 +128,7 @@ box-shadow: 2px 5px 30px #000;
 height: auto;
 width: 30%;
 padding: 2%;
-background-color: darkgoldenrod;
+background-color: #fff;
  border-radius: 8px  5px;
  transition: all 0.6s ease 0s;
 font-size: 99%;
@@ -154,15 +154,14 @@ color: goldenrod;
 #selector{
 margin-left: -0%;
 margin-top: 0.5%;
-border-style: groove;
+border-style: none;
 border-left-width: 5px;  
 border-width: 15px 500%;
 border-color: white;
-box-shadow: 2px 5px 30px #000;
 height: auto;
 width: 30%;
 padding: 5%;
-background-color: darkgoldenrod;
+background-color: #fff;
  border-radius: 8px  5px;
  transition: all 0.6s ease 0s;
 font-size: 89%;
@@ -174,7 +173,6 @@ font-size: 89%;
 {
 border-style: ridge goldenrod;
 background-color:  #fff;
-box-shadow: 2px 5px 30px #000, 5px 5px  80px #000 inset;
 border-color: goldenrod;
 border-radius: 5px;
 color: gold;
@@ -192,11 +190,10 @@ border-style: groove;
 border-left-width: 5px;  
 border-width: 15px 500%;
 border-color: white;
-box-shadow: 2px 5px 30px #000;
 height: auto;
 width: 30%;
 padding: 3%;
-background-color: darkgoldenrod;
+background-color: #fff;
  border-radius: 8px  5px;
  transition: all 0.6s ease 0s;
 font-size: 69%;
@@ -208,7 +205,6 @@ font-size: 69%;
 {
 border-style: ridge goldenrod;
 background-color:  #fff;
-box-shadow: 2px 5px 30px #000, 5px 5px  55px #000 inset;
 border-color: goldenrod;
 border-radius: 5px;
 color: gold;
@@ -228,6 +224,10 @@ font-weight: 500;
 text-rendering:optimizeLegibility;
 margin-left: -0%;
 margin-top: 0%;
+background-color: #fff;
+color: orange;
+border: none;
+
 }
   } 
 @media screen and (max-width: 480px)
@@ -236,7 +236,6 @@ margin-top: 0%;
    margin-left: -0%;
 border-style: ridge goldenrod;
 background-color:  #fff;
-box-shadow: 2px 5px 30px #000, 6px 6px  65px #000 inset;
 border-color: goldenrod;
 border-radius: 5px;
 color: gold;
@@ -253,7 +252,6 @@ height: auto;
 width: 30%;
 margin: -1em 0 -7.9 -0.9em;
 margin-right: 0%;
-box-shadow: 2px 5px 30px #000;
 margin-bottom: -7%;    
     }
       }
@@ -265,7 +263,6 @@ height: auto;
 width: 30%;
 margin: -1em 0 -7.9 -0.9em;
 margin-right: 0%;
-box-shadow: 2px 5px 30px #000;
 margin-bottom: -7%;    
     }
       }
@@ -277,7 +274,6 @@ height: auto;
 width: 30%;
 margin: 0em 0 6.9 -0.90em;
 margin-right: 0%;
-box-shadow: 2px 5px 30px #000;
 margin-bottom: -0%;
 background-size: cover;
     }   
@@ -299,8 +295,8 @@ div span{
     position: absolute;
     margin: 3em 0 0 0em;
     color: #303940;
-    font-family: Comic Sans MS;
-    text-shadow: 1px 2px 5px #000, -1px -3px 4px #000;
+    font-family:Font;
+    
     font-size: 100%;
 }
 }   
@@ -312,7 +308,8 @@ div span{
     margin-left: 7%;
 color: #303940;
     font-family: Comic Sans MS;
-    text-shadow: 1px 2px 5px #000, -1px -3px 4px #000;
+    
+    
     font-size: 109%;  
 }
 } 
@@ -323,8 +320,7 @@ div span{
     position:relative;
     margin: 0.95em 0 0 5%em;
     color: #303940;
-    font-family: Comic Sans MS;
-    text-shadow: 1px 2px 5px #000, -1px -3px 4px #000;
+    font-family: Font;
     font-size: 98%;
 }
    }   
@@ -1418,13 +1414,14 @@ font-family: Font;
     width: 31%;
     height: 34;
     font-size:  100%;
-     border-style: none;
+     
     margin: 0.4%;
      transition: all 0.6s ease 0s;
      font-weight: 00px;
     font-family: "Font";
     text-decoration: none;    
     border-radius: 8px;
+    border: 1px solid #00AA8B;
 }
       }
       #ButtonCyan:hover
@@ -1446,6 +1443,7 @@ border-width: 1px;
 border-radius: 5px;
 color: #00977B;
 font-size: 100%;
+margin-top: -9%;
 	}
 	#MenuIMG
 	{

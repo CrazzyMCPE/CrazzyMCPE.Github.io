@@ -7,7 +7,7 @@
         <link rel="shortcut icon" href="../img/favicon.ico">
          <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
         
-<script type="text/javascript">document.write('<center><div id="navflotante"><input id="button" type="button" onclick="location.href=`index.html`"    value="Inicio"/>  <input id="button" type="button" onclick="location.href=`about.html`" value="acerca de "/><input id="button" type="button" onclick="location.href=`changelogs.html`" value="Cambios"/></div></center>');
+<script type="text/javascript">document.write('<center><div id="navflotante"><input id="button" type="button" onclick="location.href=`../index.html`"    value="Inicio"/><input id="button" type="button" onclick="location.href=`about.html`" value="acerca de "/><input id="button" type="button" onclick="location.href=`changelogs.html`" value="Novedades"/></div></center>');
         
    Element.prototype.backgroundClipPolyfill = function () {
   var a = arguments[0],
@@ -75,8 +75,7 @@
     var img = new Image();
     img.onload = function() {
       var svg = createSVG({
-        'id' : a.patternID,
-        'url' : a.patternURL,
+       'url' : a.patternURL,
         'class' : a['class'],
         'width' : this.width,
         'height' : this.height,
