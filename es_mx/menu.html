@@ -1,5 +1,5 @@
 <html lang="es">
- <head>  <meta name="theme-color" content="#FFD100">
+ <head>  <meta name="theme-color" content="#fff">
     <title>CrazzyMCPE</title>
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>       
@@ -8,8 +8,9 @@
         <link rel="shortcut icon" href="../img/favicon.ico">
          <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
          <script src="../js/jquery-3.1.1.min.js"></script>
+         <script src="../js/UI-Size.js"></script>
          <img  id=BannerMenu src="../img/banner/banner_white.png">
-<script type="text/javascript">document.write('<center><div id="navflotante"><input id="ButtonYellow" type="button" onclick="location.href=`index.html`"    value="Inicio"/><input draggable="true" id="ButtonYellow" type="button" onclick="location.href=`about.html`" value="acerca de "/><inputw id="ButtonYellow" type="button" onclick="location.href=`changelogs.html`" value="Cambios"/></div></center>');</script>
+<script type="text/javascript">document.write('<center><div id="navflotante"><input id="ButtonCyan" type="button" onclick="location.href=`index.html`"    value="Inicio"/><input draggable="true" id="ButtonCyan" type="button" onclick="location.href=`about.html`" value="acerca de "/><inputw id="ButtonCyan" type="button" onclick="location.href=`changelogs.html`" value="Cambios"/></div></center>');</script>
 <script>
       function startTime() {
     var today = new Date();
@@ -80,7 +81,7 @@ function checkTime(i) {
 	<style>
 		body
 {
-	background-color: #FFD100;
+	background-color: #00977B;
 	font-family: Font;
 }
 @font-face {
@@ -281,31 +282,33 @@ transition: opacity 400ms ease-in;
     margin-top: 5%;   
     }
       .clockdate-wrapper {
-    background-color: #1200FF;
-    animation: fadein 4.5s;  
+    background-color: #980000;
     padding:9.9px;
-    max-width:90px;
-    width:99%;
+    height: 3%;
+    width:13%;
     text-align:center;
-    border-radius:8px;
-    margin:50 auto;
-    margin-top:-18%;
+    border-radius: 8px;
+    margin:9 auto;
+    margin-top: -53.5%;
     position: fixed;
-    margin-left: 5.9%;
+    margin-left: -3%;
     opacity: 1; 
     font-family: Font;
-}
-     
+    
+}   
     #clock{
     background-color:#fff;
     font-family: Font;
-    font-size:10px;
+    font-size:8px;
+    margin-top: -8%;
+    padding: -1%;
     border-radius: 5px;
     text-shadow:0px 0px 0px #fff;    
-    color:1200FF;
+    color:#00977B;
+    
 }
 #clock span {
-    color:#FF1100;
+    color:#00977B;
     text-shadow:0px 0px 0px #333;888;
     font-size:5px;
     position:inherit;
@@ -315,21 +318,32 @@ transition: opacity 400ms ease-in;
     font-family: Font;
 }
 #date {
-    letter-spacing:5px;
-    font-size:8px;
+    letter-spacing:0px;
+    font-size:6px;
     font-family: Font;
-    color:#FFCB00;  
-    
-    
-    
+    color:#fff; 
+    margin-left: -7.2%;
+    } 
+    #OutlineMenu
+    {
+    	border-color: #FFCA00;
+    	border-style: none;
+    	border-width: 2px;
+    	border-radius: 4px;
+    	background-color: #fff;
+    	font-family: Font;
+    	color: #00977B;
+    	font-size: 100%;
+    }
+    /*code menu*/
+    .onclick-menu { height: auto; width: 90%; background-color: #fff; position: relative; display: inline-block; } .onclick-menu:before { content: "Mostrar descargas";  } .onclick-menu:focus .onclick-menu-content { display: block; } .onclick-menu-content { position: absolute; z-index: 1; display: none; background-color: #fff; transition: all 0.6s ease 0s; }
         </style>
      </head>
  
 <body onload="startTime()">
       <center>  <h3 id="InterfaceLayout">
     
-
-
+     <div id="clockdate">
 
        <div  class="w3-center w3-animate-left">   
          <div class="clockdate-wrapper">
@@ -337,97 +351,15 @@ transition: opacity 400ms ease-in;
     <div id="date"></div>
   </div>
          </div>
-
-		
-	</div>
-</div></td>
-			</tr>
-            <br>
-
-
-
-
-
-
-
-
-
- <!--Clock Opened-->
-       <td><tr>
-<div id="openModal" class="modalDialog">
-	<div>
-		<a href="#close" title="Close" class="close">X</a>
-		<h2>Lo sentimos</h2>
-		<p>Esta versión aún no está disponible</p>
-	</div>
-</div></td>
-			</tr>       <br> 
-   <div id="InsideBox">
-       
-       
-       
-		<table id="datos">
-		<th><input id="searchTerm"  class="searchtype" type="text" onkeyup="doSearch()" placeholder="Buscar versión"/></th><br><br><br>
-       
-            
-            
-    <tr><td>
-                 <div onclick="location.href=`#openModal`" id="selector" type=button><img src="../img/CTP-Images/03.13.40.png" id="landscapeimgmini"><span >CrazzyMCPE v26</span>
-        </div>
-       </td></tr>
-     
-       <td><tr>
-<div id="openModal" class="modalDialog">
-	<div>
-		<a href="#close" title="Close" class="close">X</a>
-		<h2>Lo sentimos</h2>
-		<p>Esta versión aún no está disponible</p>
-	</div>
-</div></td>
-			</tr>
-            <br>
-       <tr><td>
-                 <div href="#close" title="Close" class="close" id="selector" type=button onclick="location.href=`v25Update7125102018.html`"><img src="../img/CTP-Images/03.13.40.png" id="landscapeimgmini"><span >CrazzyMCPE v25</span>
       
-                     </tr></div>
-              
-<tr><td>
-                 <div href="#close" title="Close" class="close" id="selector" type=button onclick="location.href=`v24Update71020181.html`"><img src="../img/CTP-Images/03.13.40.png" id="landscapeimgmini"><span >CrazzyMCPE v24</span>
-      
-                     </tr></div>
-             <tr><td>
-                 <div hidden="hidden" id="selector" type=button><img src="../img/CTP-Images/03.13.40.png" id="MenuIMG"><span >CrazzyMCPE v23</span>
-        </div></td>
-			</tr>
-              <tr><td>
-                 <div hidden="hidden" id="selector" type=button><img src="../img/CTP-Images/03.13.40.png" id="MenuIMG"><span >CrazzyMCPE v22</span>
-        </div></td>
-			</tr>
-              <tr><td>
-                 <div hidden="hidden" id="selector" type=button><img src="../img/CTP-Images/03.13.40.png" id="Menu"><span >CrazzyMCPE v21</span>
-        </div></td>
-			</tr>
-             <tr><td> 
-                 <div hidden="hidden" accesskey=""id="selector" type=button><img src="../img/CTP-Images/03.13.40.png" id="landscapeimgmini"><span >CrazzyMCPE v20</span>
-        </div></td>
-			</tr>
-              <tr><td>
-                 <div 
-                hidden="hidden" 
-            id="selector" type=button><img src="../img/CTP-Images/03.13.40.png" id="landscapeimgmini"><span >CrazzyMCPE v19</span>
-        </div></td>
-			</tr>
-              <tr><td>
-                 <div hidden="hidden" id="selector" type=button><img src="../img/CTP-Images/03.13.40.png" id="landscapeimgmini"><span>CrazzyMCPE v18</span>
-        </div></td>
-			</tr>
-              <tr><td>
-                 <div hidden="hidden" id="selector" type=button><img src="../img/CTP-Images/03.13.40.png" id="landscapeimgmini"><span style="margin-top:-0%" >CrazzyMCPE v17</span>
-        </div></td>
-			</tr>
-              <tr><td>
-                 <div hidden="hidden" id="selector" type=button><img src="../img/CTP-Images/03.13.40.png" id="landscapeimgmini"><span >CrazzyMCPE v16</span>
-        </div></td>
-			</tr>
-       </table></div></h3>
+          
+   <div style="font-size: 65%" tabindex="10" id="ButtonCyan" class="onclick-menu"><ul class="onclick-menu-content"><li><input id=ButtonCyan style="font-size: 80%" onclick="alert('click 1')" value="test"/></li> <li><button onclick="alert('click 2')">no JavaScript!</button></li> <li><button onclick="alert('click 3')">Pretty nice, right?</button></li></ul></div>			
+	<script> var colors = ["#4300EA", ,"#DF000F", "#00977B", "#88F000","#7900FF", "#FFFB00", "#DF00FF", "#00BBFF", "#ECA900",]; var colorIndex = 0; function changeColor() { var col = document.getElementById("body"); if( colorIndex >= colors.length ) { colorIndex = 0; } col.style.backgroundColor = colors[colorIndex]; colorIndex++; } </script><body id='body'><button id="ButtonCyan" style="font-size: 65%" onclick="changeColor();">Change color</button>
+	
+	<script type="text/javascript"> $( document ).ready(function() { if(localStorage.getItem('isCliked'){ $( "#mylink" ).addClass( 'btn-success' ); $( "#mylink" ).removeClass( 'btn-default' ); } $('#mylink').on('click',function() { $( this ).addClass( 'btn-success' ); $( this ).removeClass( 'btn-default' ); // set the value upon clicking localStorage.setItem('isCliked', true) }); }); </script> 
+	
+	</h1>
+		</div></h3>
+	
+	
     </center></body></html>  
