@@ -88,6 +88,8 @@ function checkTime(i) {
 	body
 	{ 
 background-color: #4300EA;
+transition: all 0.8s ease 0s;
+        animation: fadein 1.9s;  
 }
 	@font-face {
     font-family: Font;
@@ -187,7 +189,19 @@ div#splashscreen{
     font-size:8px;
     font-family: Font;
     color:#FFCB00;    
-      
+    }  
+  #ColorPalete
+  {
+  	
+  	border-radius: 5000000%;
+  	border-style: solid;
+  	border-width: 1px;
+  	background: #fff;
+  	height: 7.2%;
+  	width: 11%;
+  	margin-left: 45%;
+  	font-size: 150%;
+  }
       
 </style>
 <script> 
@@ -249,6 +263,6 @@ window.addEventListener("load", function(){
  <center>    <p id="VersionNumber">
    2015-2018</p></center>
  </h3></center>
- <script> var colors = ["#420505", "#DF000F", "#00977B", "#88F000","#7900FF", "#FFFB00", "#DF00FF", "#00BBFF", "#ECA900", "#FF7B00", "#17FF00", "#FF009F", "#00FFB9", "#344474", "#343434", "#000000", ]; var colorIndex = 0; function changeColor() { var col = document.getElementById("body"); if( colorIndex >= colors.length ) { colorIndex = 0; } col.style.backgroundColor = colors[colorIndex]; colorIndex++; } </script><body id='body'><button id="ButtonCyan" style="font-size: 65%" onclick="changeColor();">Change color</button>
+ <script> var colors = ["#420505", "#DF000F", "#00977B", "#88F000","#7900FF", "#FFFB00", "#DF00FF", "#00BBFF", "#ECA900", "#FF7B00", "#17FF00", "#FF009F", "#00FFB9", "#344474", "#343434", "#000000", ]; var colorIndex = 0; function changeColor() { var col = document.getElementById("body"); if( colorIndex >= colors.length ) { colorIndex = 0; } col.style.backgroundColor = colors[colorIndex]; colorIndex++; } </script><body id='body'><button id="ColorPalete" style="font-size: 125%" onclick="changeColor();">🎨</button>
  </body>
     </html>
