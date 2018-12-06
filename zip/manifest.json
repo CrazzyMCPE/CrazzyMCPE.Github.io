@@ -1,0 +1,30 @@
+{
+   "format_version": 1,
+   "header": {
+      "description": "Fixed grass,New bricks",
+      "name": "CrazzyMCPE",
+      "uuid": "7c386a30-abe8-11e8-98d0-529269fb1459",
+      "version": [2, 4, 4],
+      "min_engine_version": [1, 2, 6]
+   },
+   "modules": [
+      {
+         "description": "Update v25 New textures fixed grass,Added new Bricks",
+            "type": "resources",
+            "uuid": "7c386df0-abe8-11e8-98d0-529269fb1459",
+            "version": [2, 4, 4]
+      }
+   ],
+   "subpacks": [
+   {
+      "folder_name": "beta",
+      "name": "Beta (1.8.0.11)",
+      "memory_tier": 1
+      },
+   {
+      "folder_name": "release",
+      "name": "Default (1.6.0)",
+      "memory_tier": 2
+      }
+   ]
+}

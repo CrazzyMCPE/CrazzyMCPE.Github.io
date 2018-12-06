@@ -1,16 +1,46 @@
-<html lang="es">
- <head>  <meta name="theme-color" content="#fff">
+<html lang=es>
+    <head><meta name="theme-color" content="fff">
     <title>CrazzyMCPE</title>
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>       
+   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+         
 
 	<link rel="StyleSheet" href="../css/styles.css" type="text/css">
         <link rel="shortcut icon" href="../img/favicon.ico">
-         <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
-         <script src="../js/jquery-3.1.1.min.js"></script>
+  <script>
+      function startTime() {
+    var today = new Date();
+    var hr = today.getHours();
+    var min = today.getMinutes();
+    var sec = today.getSeconds();
+    ap = (hr < 12) ? "<span>AM</span>" : "<span>PM</span>";
+    hr = (hr == 0) ? 12 : hr;
+    hr = (hr > 12) ? hr - 12 : hr;
+    //Add a zero in front of numbers<10
+    hr = checkTime(hr);
+    min = checkTime(min);
+    sec = checkTime(sec);
+    document.getElementById("clock").innerHTML = hr + ":" + min + ":" + sec + " " + ap;
+    
+    var months = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+    var days = ['Dom', 'Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab'];
+    var curWeekDay = days[today.getDay()];
+    var curDay = today.getDate();
+    var curMonth = months[today.getMonth()];
+    var curYear = today.getFullYear();
+    var date = curWeekDay+", "+curDay+" "+curMonth+" "+curYear;
+    document.getElementById("date").innerHTML = date;
+    
+    var time = setTimeout(function(){ startTime() }, 500);
+}
+function checkTime(i) {
+    if (i < 10) {
+        i = "0" + i;
+    }
+    return i;
+}  </script>	         <script src="../js/jquery-3.1.1.min.js"></script>
          <script src="../js/UI-Size.js"></script>
          <img  id=BannerMenu src="../img/banner/banner_white.png">
-<script type="text/javascript">document.write('<center><div id="navflotante"><input id="ButtonCyan" type="button" onclick="location.href=`index.html`"    value="Inicio"/><input draggable="true" id="ButtonCyan" type="button" onclick="location.href=`about.html`" value="acerca de "/><inputw id="ButtonCyan" type="button" onclick="location.href=`changelogs.html`" value="Cambios"/></div></center>');</script>
+<script type="text/javascript">document.write('<center><div id="navflotante"><input id="ButtonCyan" type="button" onclick="location.href=`index.html`"    value="Inicio"/><input draggable="true" id="ButtonCyan" type="button" onclick="location.href=`about.html`" value="acerca de"/><input HIDDEN=hidden id="ButtonCyan" type="button" onclick="location.href=`changelogs.html`" value="Cambios"/></div></center>');</script>
 <script>
       function startTime() {
     var today = new Date();
@@ -81,8 +111,10 @@ function checkTime(i) {
 	<style>
 		body
 {
-	background-color: #00977B;
+	background-color: #D2AA00;
 	font-family: Font;
+	transition: all 0.8s ease 0.3s;
+        animation: fadein 1.5s;  
 }
 @font-face {
     font-family: Font;
@@ -202,7 +234,7 @@ transition: opacity 400ms ease-in;
   }      
      @media screen and (max-width: 1024px)
   {       
-.modalDialog > div {
+.modalDialog div {
 	font-size: 90%;
     width: 365px;
     height: auto;
@@ -293,9 +325,33 @@ transition: opacity 400ms ease-in;
     position: fixed;
     margin-left: -3%;
     opacity: 1; 
-    font-family: Font;
-    
-}   
+    font-family: Font;   
+    transition: all 0.3s ease 0.2s;
+        animation: fadeout 0.5s;  
+} 
+  .clockdate-wrapper:hover {
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(4.0);
+    margin-left: 137px;
+    transition: all 0.5s ease 0s;
+        animation: fadein 1.0s;  
+     margin-top: -38.5%;
+     cursor: pointer;
+     background-color: -5px red;
+     
+    z-index: 2;
+    top: 0; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+-webkit-filter: blur(-1%);
+-moz-filter: blur(-1%);
+-o-filter: blur(-50%);
+-ms-filter: blur(-1%);
+filter: blur(-1%);
+
+     }
     #clock{
     background-color:#fff;
     font-family: Font;
@@ -324,6 +380,20 @@ transition: opacity 400ms ease-in;
     color:#fff; 
     margin-left: -7.2%;
     } 
+    #overlay {
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+}
+
     #OutlineMenu
     {
     	border-color: #FFCA00;
@@ -337,6 +407,51 @@ transition: opacity 400ms ease-in;
     }
     /*code menu*/
     .onclick-menu { height: auto; width: 90%; background-color: #fff; position: relative; display: inline-block; } .onclick-menu:before { content: "Mostrar descargas";  } .onclick-menu:focus .onclick-menu-content { display: block; } .onclick-menu-content { position: absolute; z-index: 1; display: none; background-color: #fff; transition: all 0.6s ease 0s; }
+    /* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1; 
         </style>
      </head>
  
@@ -344,22 +459,43 @@ transition: opacity 400ms ease-in;
       <center>  <h3 id="InterfaceLayout">
     
      <div id="clockdate">
-
        <div  class="w3-center w3-animate-left">   
          <div class="clockdate-wrapper">
     <div id="clock"></div>
     <div id="date"></div>
   </div>
          </div>
-      
-          
-   <div style="font-size: 65%" tabindex="10" id="ButtonCyan" class="onclick-menu"><ul class="onclick-menu-content"><li><input id=ButtonCyan style="font-size: 80%" onclick="alert('click 1')" value="test"/></li> <li><button onclick="alert('click 2')">no JavaScript!</button></li> <li><button onclick="alert('click 3')">Pretty nice, right?</button></li></ul></div>			
-	<script> var colors = ["#4300EA", ,"#DF000F", "#00977B", "#88F000","#7900FF", "#FFFB00", "#DF00FF", "#00BBFF", "#ECA900",]; var colorIndex = 0; function changeColor() { var col = document.getElementById("body"); if( colorIndex >= colors.length ) { colorIndex = 0; } col.style.backgroundColor = colors[colorIndex]; colorIndex++; } </script><body id='body'><button id="ButtonCyan" style="font-size: 65%" onclick="changeColor();">Change color</button>
-	
+   </div><h3 id="InterfaceLayout">    
+   <div id="InsideBox">
+
+   	<p id="title" style="color: lime">Reviews</p>
+   	<h1 id="OutlineMenu">
+   		CrazzyMCPE
+   	<iframe id=MenuIMG width="90%" height="auto"frameborder="0%" src="https://www.youtube.com/embed/Qcfr0aCo7ts?disablekb=1" allowfullscreen></iframe>
+   	<br>DuvanCraft
+   	<iframe id=MenuIMG width="90%" height="auto"frameborder="0%" src="https://www.youtube.com/embed/sEINrZy4U9I?disablekb=1" allowfullscreen></iframe> 
+   	<br>DroiidGamerPro
+   	<iframe id=MenuIMG width="90%" height="auto"frameborder="0%" src="https://www.youtube.com/embed/9UV1WGyP89Q?disablekb=1" allowfullscreen></iframe> 
+   	<br>
+   	<iframe id=MenuIMG width="90%" height="auto"frameborder="0%" src="https://www.youtube.com/embed/s_LV-bRucbI?disablekb=1" allowfullscreen></iframe> 
+   	<br>Son Giovanni Dbz
+   		<iframe id=MenuIMG width="90%" height="auto"frameborder="0%" src="https://www.youtube.com/embed/bwuhw5fj1zI?disablekb=1" allowfullscreen></iframe> 
+   	<br>Chocorrol 25
+   		<iframe id=MenuIMG width="90%" height="auto"frameborder="0%" src="https://www.youtube.com/embed/N8TsecY1hls?disablekb=1" allowfullscreen></iframe> 
+   	
+   		<iframe HIDDEN=hidden id=MenuIMG width="90%" height="auto"frameborder="0%" src="https://www.youtube.com/embed/Qcfr0aCo7ts?disablekb=1" allowfullscreen></iframe> 
+   	
+   		<iframe HIDDEN=hidden id=MenuIMG width="90%" height="auto"frameborder="0%" src="https://www.youtube.com/embed/Qcfr0aCo7ts?disablekb=1" allowfullscreen></iframe> 
+   	
+       </h1>
+		</div></h3>
+    </center></body></html>  
+	<script> var colors = ["4300EA", "#DF000F", "#00977B", "#88F000","#7900FF", "#FFFB00", "#DF00FF", "#00BBFF", "#ECA900", "#FF7B00", "#17FF00", "#FF009F", "#00FFB9", "#344474", "#343434", "#000000", ]; var colorIndex = 0; function changeColor() { var col = document.getElementById("body"); if( colorIndex >= colors.length ) { colorIndex = 0; } col.style.backgroundColor = colors[colorIndex]; colorIndex++; } </script><body id='body'><button id="ButtonCyan" style="font-size: 65%" onclick="changeColor();">Change color</button>
+	<br><button onclick="location.href=`search.html`" id="ButtonCyan">Descargas</button>
 	<script type="text/javascript"> $( document ).ready(function() { if(localStorage.getItem('isCliked'){ $( "#mylink" ).addClass( 'btn-success' ); $( "#mylink" ).removeClass( 'btn-default' ); } $('#mylink').on('click',function() { $( this ).addClass( 'btn-success' ); $( this ).removeClass( 'btn-default' ); // set the value upon clicking localStorage.setItem('isCliked', true) }); }); </script> 
 	
 	</h1>
-		</div></h3>
-	
+		
+</div>
 	
     </center></body></html>  

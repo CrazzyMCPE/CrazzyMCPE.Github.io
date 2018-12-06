@@ -1,5 +1,5 @@
 <html lang="es">
- <head>  <meta name="theme-color" content="#00977B">
+ <head>  <meta name="theme-color" content="#8DCE00">
     <title>CrazzyMCPE</title>
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>       
@@ -9,7 +9,7 @@
          <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
          <script src="../js/jquery-3.1.1.min.js"></script>
          <img  id=BannerMenu src="../img/banner/banner_white.png">
-<script type="text/javascript">document.write('<center><div id="navflotante"><input id="ButtonCyan" type="button" onclick="location.href=`index.html`"    value="Inicio"/><input draggable="true" id="ButtonCyan" type="button" onclick="location.href=`about.html`" value="acerca de "/><inputw id="ButtonCyan" type="button" onclick="location.href=`changelogs.html`" value="Cambios"/></div></center>');</script>
+<script type="text/javascript">document.write('<center><div id="navflotante"><input id="ButtonCyan" type="button" onclick="location.href=`index.html`"    value="Inicio"/><input draggable="true" id="ButtonCyan" type="button" onclick="location.href=`about.html`" value="acerca de "/><input id="ButtonCyan" type="button" onclick="location.href=`changelogs.html`" value="Cambios"/></div></center>');</script>
 <script>
       function startTime() {
     var today = new Date();
@@ -25,7 +25,7 @@
     sec = checkTime(sec);
     document.getElementById("clock").innerHTML = hr + ":" + min + ":" + sec + " " + ap;
     
-    var months = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+    var months = ['Enero', 'Feb', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'];
     var days = ['Dom', 'Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab'];
     var curWeekDay = days[today.getDay()];
     var curDay = today.getDate();
@@ -80,7 +80,7 @@ function checkTime(i) {
 	<style>
 		body
 {
-	background-color: #00977B;
+	background-color: #8DCE00;
 	font-family: Font;
 }
 @font-face {
@@ -104,12 +104,14 @@ color: #fff!important;
         }
 		#datos tr:nth-child(even) 
 		#datos td {padding:0px;}
+       @media screen and (max-width: 1024px)
+  {       
         .searchtype
         {
         background-color: #D62400;
-        width: 50%;
-        height: 50%;
-        border: none;
+        width: 15%;
+        height: 20%;
+        border: solid;
         padding-top: 0.0%;
         padding: 0.8%;
         font-family: Font;
@@ -117,11 +119,15 @@ color: #fff!important;
         text-align: center;
         font-weight: 800;
         border-radius: 5px;
-        text-shadow: 2px 0px 0.5px dimgray;
+        border-color: #fff;
+        border-width: 2px;
+        
+        
         transition: all 0.8s ease 0s;
         animation: fadein 2.5s;  
         color: #4300EA;
         }
+       }      
         .searchtype:focus
         {
         background-color: #fff;
@@ -130,9 +136,43 @@ color: #fff!important;
         color: black;
         transition: all 3s ease 0s;
         border-radius: 7%;
-        box-shadow: 8px 8px 50px #000 inset;
+        
          animation: fadein 2.5s;    
         }
+         @media screen and (max-width: 480px)
+  {       
+        .searchtype
+        {
+        background-color: #D62400;
+        width: 35%;
+        height: 23%;
+        border: solid;
+        padding-top: 0.0%;
+        padding: 0.8%;
+        font-family: Font;
+        font-size: 85%; 
+        text-align: center;
+        font-weight: 800;
+        border-radius: 5px;
+        border-color: #fff;
+        border-width: 2px;
+        transition: all 0.8s ease 0s;
+        animation: fadein 1.9s;  
+        color: #fff;
+        }
+        }   
+       .searchtype:focus
+        {
+        background-color: #597F00;
+    
+    font-family: Font;
+        color: black;
+        transition: all 3s ease 0s;
+        border-radius: 7%;
+        
+        
+         animation: fadein 2.5s;    
+        }    
         @keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
@@ -280,35 +320,70 @@ transition: opacity 400ms ease-in;
     margin-right: -105%;
     margin-top: 5%;   
     }
-      .clockdate-wrapper {
-    background-color: red;
-    padding:9.9px;
-    height: 3%;
-    width:13%;
+       .clockdate-wrapper {
+    background-color: #E90000;
+    padding:5.9px;
+    height: 6%;
+    width:9%;
     text-align:center;
     border-radius: 8px;
-    margin:9 auto;
+    margin:90 auto; 
     margin-top: -53.5%;
     position: fixed;
-    margin-left: -3%;
+    margin-left: -1.8%;
     opacity: 1; 
-    font-family: Font;
-    
-}   
+    font-family: Font;   
+    transition: all 0.3s ease 0.2s;
+     animation: fadeout 0.5s; 
+     border-color: #fff;
+     border-width: 1px;
+     border-style: solid;
+     border-radius: 500%;
+     font-size: 100%;
+     text-align: right;
+} 
+  .clockdate-wrapper:hover {
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(5.9);
+    margin-left: 140.5px;
+    transition: all 0.5s ease 0s;
+        animation: fadein 1.0s;  
+     margin-top: 5.5%;
+     cursor: pointer;
+     background-color: #4E48FF;
+     border-color: #fff;
+     border-width: 1px;
+     border-style: solid;
+     position: fixed;
+     border-radius: 8%;
+     height: 8.7%;
+     width: 10%;
+     font-size: 10%;
+     text-align: bottom;
+     color: red;
+     object-fit: cover;
+     }
     #clock{
     background-color:#fff;
     font-family: Font;
-    font-size:8px;
-    margin-top: -8%;
-    padding: -1%;
-    border-radius: 5px;
-    text-shadow:0px 0px 0px #fff;    
-    color:#00977B;
-    
+    font-size:6px;
+    border-radius: 50% 50% 10% 50%;
+    color: 1200FF;
+    margin-top: -10%;  
+    padding: 10%;
 }
+ /*#clock:hover{
+    background-color:#fff;
+    font-family: Font;
+    font-size:6px;
+    border-radius: 500px;
+    color: #1200FF;
+    margin-top: -10%;  
+    padding: 1%;
+}*/
 #clock span {
-    color:#00977B;
-    text-shadow:0px 0px 0px #333;888;
+    color:#FF1100;
     font-size:5px;
     position:inherit;
     top:-2px;
@@ -317,58 +392,118 @@ transition: opacity 400ms ease-in;
     font-family: Font;
 }
 #date {
-    letter-spacing:0px;
-    font-size:6px;
+    letter-spacing:2px;
+    font-size:3.3px;
     font-family: Font;
     color:#fff; 
-    margin-left: -7.2%;
-    } 
-    #OutlineMenu
-    {
-    	border-color: #FFCA00;
-    	border-style: none;
-    	border-width: 2px;
-    	border-radius: 4px;
-    	background-color: #fff;
-    	font-family: Font;
-    	color: #00977B;
-    	font-size: 100%;
-    }
+    margin-top: 2px; 
+ }   
+   #TextOverClock
+   {
+  /* 	font-size: 7px;
+   	color: #333;*/
+   	top: -50%;
+   	padding: 5%;
+   margin-top: 5%;
+   margin-left: 50%;
+   
+  } 
+    j
         </style>
      </head>
  
 <body onload="startTime()">
-     <div id="clockdate">
-       <div  class="w3-center w3-animate-left">   
+      
+       <div  class="w3-center w3-animate-left"><br>
          <div class="clockdate-wrapper">
-    <div id="clock"></div>
+  <div id="clock"></div>
     <div id="date"></div>
+  <center></center>
   </div>
-         </div>
-     
-       <center>  <h3 id="InterfaceLayout">    
+         </div>		
+
+			<center>  <h3 id="InterfaceLayout">
+            <br>
+
+
+
+
+
+
+
+
+
+ <!--Clock Opened-->
+       <td><tr>
+<div id="openModal" class="modalDialog">
+	<div>
+		<a href="#close" title="Close" class="close">X</a>
+		<h2>Lo sentimos</h2>
+		<p>Esta versión aún no está disponible</p>
+	</div>
+</div></td>
+			</tr>       <br> 
    <div id="InsideBox">
-      <br> 
-   <h1 style="color:#5476FF" id=title>Paquete de texturas CrazzyMCPE</h1>  <br><br>
-   	<p id="title" style="color: lime">Reviews</p>
-   	<h1 id="OutlineMenu">
-   		CrazzyMCPE
-   	<iframe id=MenuIMG width="90%" height="auto"frameborder="0%" src="https://www.youtube.com/embed/Qcfr0aCo7ts?disablekb=1" allowfullscreen></iframe>
-   	<br>DuvanCraft
-   	<iframe id=MenuIMG width="90%" height="auto"frameborder="0%" src="https://www.youtube.com/embed/sEINrZy4U9I?disablekb=1" allowfullscreen></iframe> 
-   	<br>DroiidGamerPro
-   	<iframe id=MenuIMG width="90%" height="auto"frameborder="0%" src="https://www.youtube.com/embed/9UV1WGyP89Q?disablekb=1" allowfullscreen></iframe> 
-   	<br>
-   	<iframe id=MenuIMG width="90%" height="auto"frameborder="0%" src="https://www.youtube.com/embed/s_LV-bRucbI?disablekb=1" allowfullscreen></iframe> 
-   	<br>Son Giovanni Dbz
-   		<iframe id=MenuIMG width="90%" height="auto"frameborder="0%" src="https://www.youtube.com/embed/bwuhw5fj1zI?disablekb=1" allowfullscreen></iframe> 
-   	<br>Chocorrol 25
-   		<iframe id=MenuIMG width="90%" height="auto"frameborder="0%" src="https://www.youtube.com/embed/N8TsecY1hls?disablekb=1" allowfullscreen></iframe> 
-   	
-   		<iframe HIDDEN=hidden id=MenuIMG width="90%" height="auto"frameborder="0%" src="https://www.youtube.com/embed/Qcfr0aCo7ts?disablekb=1" allowfullscreen></iframe> 
-   	
-   		<iframe HIDDEN=hidden id=MenuIMG width="90%" height="auto"frameborder="0%" src="https://www.youtube.com/embed/Qcfr0aCo7ts?disablekb=1" allowfullscreen></iframe> 
-   	
-       </h1>
-		</div></h3>
+             
+		<table id="datos">
+		<th><input id="searchTerm"  class="searchtype" type="text" onkeyup="doSearch()" placeholder="Buscar versión"/></th><br><br><br><br>          
+   <tr><td>
+                 <div HIDDEN=hidden onclick="location.href=`#openModal`" id="selector" type=button><img src="../img/CTP-Images/03.13.40.png" id="landscapeimgmini"><span>CrazzyMCPE v26</span>
+        </div>
+       </td></tr>  
+    <tr><td>
+                 <div onclick="location.href=`v26Update26112018.html`" id="selector" type=button><img src="../img/CTP-Images/03.13.40.png" id="landscapeimgmini"><span>CrazzyMCPE v26</span>
+        </div>
+       </td></tr>  
+    
+<div id="openModal" class="modalDialog">
+		<div href="#close" title="Close" class="close">x</div>
+		<h2>Lo sentimos</h2>
+		<p>Esta versión aún no está disponible</p>
+</div>
+		    
+       <tr><td>
+                 <div href="#close" title="Close" class="close" id="selector" type=button onclick="location.href=`v25Update7125102018.html`"><img src="../img/CTP-Images/03.13.40.png" id="landscapeimgmini"><span >CrazzyMCPE v25</span>
+      
+                     </tr></div>
+              
+<tr><td>
+                 <div href="#close" title="Close" class="close" id="selector" type=button onclick="location.href=`v24Update71020181.html`"><img src="../img/CTP-Images/03.13.40.png" id="landscapeimgmini"><span >CrazzyMCPE v24</span>
+      
+                     </tr></div>
+             <tr><td>
+                 <div hidden="hidden" id="selector" type=button><img src="../img/CTP-Images/03.13.40.png" id="MenuIMG"><span >CrazzyMCPE v23</span>
+        </div></td>
+			</tr>
+              <tr><td>
+                 <div hidden="hidden" id="selector" type=button><img src="../img/CTP-Images/03.13.40.png" id="MenuIMG"><span >CrazzyMCPE v22</span>
+        </div></td>
+			</tr>
+              <tr><td>
+                 <div hidden="hidden" id="selector" type=button><img src="../img/CTP-Images/03.13.40.png" id="Menu"><span >CrazzyMCPE v21</span>
+        </div></td>
+			</tr>
+             <tr><td> 
+                 <div hidden="hidden" accesskey=""id="selector" type=button><img src="../img/CTP-Images/03.13.40.png" id="landscapeimgmini"><span >CrazzyMCPE v20</span>
+        </div></td>
+			</tr>
+              <tr><td>
+                 <div 
+                hidden="hidden" 
+            id="selector" type=button><img src="../img/CTP-Images/03.13.40.png" id="landscapeimgmini"><span >CrazzyMCPE v19</span>
+        </div></td>
+			</tr>
+              <tr><td>
+                 <div hidden="hidden" id="selector" type=button><img src="../img/CTP-Images/03.13.40.png" id="landscapeimgmini"><span>CrazzyMCPE v18</span>
+        </div></td>
+			</tr>
+              <tr><td>
+                 <div hidden="hidden" id="selector" type=button><img src="../img/CTP-Images/03.13.40.png" id="landscapeimgmini"><span style="margin-top:-0%" >CrazzyMCPE v17</span>
+        </div></td>
+			</tr>
+              <tr><td>
+                 <div hidden="hidden" id="selector" type=button><img src="../img/CTP-Images/03.13.40.png" id="landscapeimgmini"><span >CrazzyMCPE v16</span>
+        </div></td>
+			</tr>
+       </table></div></h3>
     </center></body></html>  

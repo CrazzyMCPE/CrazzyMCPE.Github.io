@@ -74,7 +74,7 @@ function checkTime(i) {
 		}
    </script>   
         
-<script type="text/javascript">document.write('<center><div id="navflotante"><input id="ButtonBlue" type="button" onclick="location.href=`index.html`"    value="Inicio"/><input id="ButtonBlue" type="button" onclick="location.href=`changelogs.html`" value="Novedades"/><input id="ButtonBlue" type="button" style="background: #FFB700" onclick="location.href=`search.html`" value="CrazzyMCPE"/><input id="ButtonBlue" type="button" style="background: #C6FF00" onclick="location.href=`menu.html`" value="Menu"/></div></center>');</script>
+<script type="text/javascript">document.write('<center><div id="navflotante"><input id="ButtonBlue" type="button" onclick="location.href=`index.html`"    value="Inicio"/><input id="ButtonBlue" type="button" onclick="location.href=`changelogs.html`" value="Novedades"/><input id="ButtonBlue" type="button" style="background: #FFB700" onclick="location.href=`search.html`" value="CrazzyMCPE"/><input HIDDEN=hidden id="ButtonBlue" type="button" style="background: #C6FF00" onclick="location.href=`menu.html`" value="Menu"/></div></center>');</script>
         <style>
         	#textgrid
         	{
@@ -212,8 +212,8 @@ window.addEventListener("load", function(){
      <div> <img id="SocialMediaIcon" src="../img/SocialMedia/twitterIcon.png" onclick="location.href=`http://www.twitter.com/CrazzyMCPE`"/></div>
     <div> <img id="SocialMediaIcon" src="../img/SocialMedia/facebookIcon.png" onclick="location.href=`https://www.facebook.com/CrazzyMCPE`"/></div>
     <div> <img id="SocialMediaIcon" src="../img/SocialMedia/youtubeIcon.png" onclick="location.href=`https://www.youtube.com/crazzymcpe`"/></div>    
-<p hidden=hidden>
-<br><a style=color:lime>
+<p HIDDEN=hidden>
+<br><a  style=color:lime>
  Reparar bugs con los botones e interfáz</a>
 <br><a style=#>Agregar una barra de navegación lateral</a>
 <br><a style=color:lime>Mejorar el diseño de los menús</a>
@@ -246,7 +246,9 @@ window.addEventListener("load", function(){
   </a>
     
  
- <center>    <p id=ParagraphMenu>
+ <center>    <p id="VersionNumber">
    2015-2018</p></center>
- </h3></center></body>
+ </h3></center>
+ <script> var colors = ["#420505", "#DF000F", "#00977B", "#88F000","#7900FF", "#FFFB00", "#DF00FF", "#00BBFF", "#ECA900", "#FF7B00", "#17FF00", "#FF009F", "#00FFB9", "#344474", "#343434", "#000000", ]; var colorIndex = 0; function changeColor() { var col = document.getElementById("body"); if( colorIndex >= colors.length ) { colorIndex = 0; } col.style.backgroundColor = colors[colorIndex]; colorIndex++; } </script><body id='body'><button id="ButtonCyan" style="font-size: 65%" onclick="changeColor();">Change color</button>
+ </body>
     </html>

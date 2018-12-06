@@ -51,6 +51,8 @@ window.onclick = function(event) {
     background-repeat: no-repeat;
     background-position: 50%;
     background-size: 100% 100%;
+        transition: all 100.5s ease 100s;
+        animation: fadein 20.0s;  
 		}
 	@font-face {
     font-family: Font;
@@ -69,8 +71,6 @@ position: fixed;
     background-color: #fff;
   border-width: 6px;
     border-radius: 8px 8px;
-    box-shadow: 3px 3px 3px #000, -30px -20px #333333;
-     transition: all 0.6s ease 0s;
 }
       }
         @media screen and (max-width: 1024px)
@@ -85,8 +85,7 @@ div#splashscreen{
     background-color: #fff;
   border-width: 6px;
     border-radius: 8px 8px;
-    box-shadow: 3px 3px 3px #000, -30px -20px #333333;
-     transition: all 0.6s ease 0s;
+
 }
       }
     @media screen and (max-width: 720px)
@@ -106,9 +105,7 @@ div#splashscreen{
     background-color: #fff;
   border-width: 6px;
     border-radius: 8px 8px;
-    box-shadow: 3px 3px 3px #000, -30px -20px #333333;
-     transition: all 0.6s ease 0s;
-    text-shadow: 1px 1px 10px #000, -1px -2px #333333;
+
 }
       }
       @media screen and (max-width: 480px)
@@ -124,7 +121,8 @@ div#splashscreen{
   border-width: 6px;
     border-radius: 8px 8px;
     box-shadow: 3px 3px 3px #000, -30px -20px #333333;
-     transition: all 0.6s ease 0s;
+     
+   animation: fadein 3.0s;   
 }
       }
 /* Dropdown Button */

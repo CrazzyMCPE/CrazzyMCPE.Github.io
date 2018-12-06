@@ -1,0 +1,535 @@
+<html lang="es">
+ <head>  <meta name="theme-color" content="#8DCE00">
+    <title>CrazzyMCPE</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>       
+
+	<link rel="StyleSheet" href="../../css/styles.css" type="text/css">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+         <script src="../../js/jquery-3.1.1.min.js"></script>
+         <img  id=BannerMenu src="../../img/banner/banner_white.png">
+<script type="text/javascript">document.write('<center><div id="navflotante"><input id="ButtonCyan" type="button" onclick="location.href=`index.html`"    value="Inicio"/><input draggable="true" id="ButtonCyan" type="button" onclick="location.href=`about.html`" value="acerca de "/><input id="ButtonCyan" type="button" onclick="location.href=`changelogs.html`" value="Cambios"/></div></center>');</script>
+<script>
+      function startTime() {
+    var today = new Date();
+    var hr = today.getHours();
+    var min = today.getMinutes();
+    var sec = today.getSeconds();
+    ap = (hr < 12) ? "<span>AM</span>" : "<span>PM</span>";
+    hr = (hr == 0) ? 12 : hr;
+    hr = (hr > 12) ? hr - 12 : hr;
+    //Add a zero in front of numbers<10
+    hr = checkTime(hr);
+    min = checkTime(min);
+    sec = checkTime(sec);
+    document.getElementById("clock").innerHTML = hr + ":" + min + ":" + sec + " " + ap;
+    
+    var months = ['Enero', 'Feb', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'];
+    var days = ['Dom', 'Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab'];
+    var curWeekDay = days[today.getDay()];
+    var curDay = today.getDate();
+    var curMonth = months[today.getMonth()];
+    var curYear = today.getFullYear();
+    var date = curWeekDay+", "+curDay+" "+curMonth+" "+curYear;
+    document.getElementById("date").innerHTML = date;
+    
+    var time = setTimeout(function(){ startTime() }, 500);
+}
+function checkTime(i) {
+    if (i < 10) {
+        i = "0" + i;
+    }
+    return i;
+}  </script>	
+<script language="javascript">
+		function doSearch()
+		{
+			var tableReg = document.getElementById('datos');
+			var searchText = document.getElementById('searchTerm').value.toLowerCase();
+			var cellsOfRow="";
+			var found=false;
+			var compareWith="";
+ 
+			// Recorremos todas las filas con contenido de la tabla
+			for (var i = 1; i < tableReg.rows.length; i++)
+			{
+				cellsOfRow = tableReg.rows[i].getElementsByTagName('span');
+				found = false;
+				// Recorremos todas las celdas
+				for (var j = 0; j < cellsOfRow.length && !found; j++)
+				{
+					compareWith = cellsOfRow[j].innerHTML.toLowerCase();
+					// Buscamos el texto en el contenido de la celda
+					if (searchText.length == 0 || (compareWith.indexOf(searchText) > -1))
+					{
+						found = true;
+					}
+				}
+				if(found)
+				{
+					tableReg.rows[i].style.display = '';
+				} else {
+					// si no ha encontrado ninguna coincidencia, esconde la
+					// fila de la tabla
+					tableReg.rows[i].style.display = 'none';
+				}
+			}
+		}
+   </script>
+	<style>
+		body
+{
+	background-color: #8DCE00;
+	font-family: Font;
+}
+@font-face {
+    font-family: Font;
+    src: url(../../font/font.ttf);
+    font-weight: bold;
+    }
+        input[type="text"]::-webkit-input-placeholder {
+color: #fff;
+}
+	input:focus[type="text"]::-webkit-input-placeholder {
+color: #fff!important;
+
+}
+ input:hover
+        {
+            color:darkgray;
+        }
+        input:hover[type="text"]::-webkit-input-placeholder {
+            color:darkgray
+        }
+		#datos tr:nth-child(even) 
+		#datos td {padding:0px;}
+       @media screen and (max-width: 1024px)
+  {       
+        .searchtype
+        {
+        background-color: #D62400;
+        width: 15%;
+        height: 20%;
+        border: solid;
+        padding-top: 0.0%;
+        padding: 0.8%;
+        font-family: Font;
+        font-size: 85%; 
+        text-align: center;
+        font-weight: 800;
+        border-radius: 5px;
+        border-color: #fff;
+        border-width: 2px;
+        
+        
+        transition: all 0.8s ease 0s;
+        animation: fadein 2.5s;  
+        color: #4300EA;
+        }
+       }      
+        .searchtype:focus
+        {
+        background-color: #fff;
+      background: red;
+    font-family: Font;
+        color: black;
+        transition: all 3s ease 0s;
+        border-radius: 7%;
+        
+         animation: fadein 2.5s;    
+        }
+         @media screen and (max-width: 480px)
+  {       
+        .searchtype
+        {
+        background-color: #D62400;
+        width: 35%;
+        height: 23%;
+        border: solid;
+        padding-top: 0.0%;
+        padding: 0.8%;
+        font-family: Font;
+        font-size: 85%; 
+        text-align: center;
+        font-weight: 800;
+        border-radius: 5px;
+        border-color: #fff;
+        border-width: 2px;
+        transition: all 0.8s ease 0s;
+        animation: fadein 1.9s;  
+        color: #fff;
+        }
+        }   
+       .searchtype:focus
+        {
+        background-color: #597F00;
+    
+    font-family: Font;
+        color: black;
+        transition: all 3s ease 0s;
+        border-radius: 7%;
+        
+        
+         animation: fadein 2.5s;    
+        }    
+        @keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+	
+   .modalDialog {
+	position: fixed;
+	font-family: Font;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+
+}
+.modalDialog:target {
+	opacity:1;
+	pointer-events: auto;
+    
+}
+      @media screen and (min-width: 480px)
+  {       
+.modalDialog > div {
+	font-size: 87%;
+    width: 560px;
+    height: auto;
+	position: relative;
+	margin: 20% auto;
+	padding: 5px 20px 13px 20px;
+	border-radius: 10px;
+	background: red;
+    font-family: Comic Sans MS;
+    border-color: #fff;
+    border-style: groove;
+    text-align: center;
+  -webkit-transition: opacity 400ms ease-in;
+-moz-transition: opacity 400ms ease-in;
+transition: opacity 400ms ease-in;
+    /*box-shadow: 0px 0px 5000000px #fff;*/ 
+    
+}
+  }      
+     @media screen and (max-width: 1024px)
+  {       
+.modalDialog > div {
+	font-size: 90%;
+    width: 365px;
+    height: auto;
+	position: relative;
+	margin: 40% auto;
+	padding: 5px 20px 13px 20px;
+	border-radius: 10px;
+	background: red;
+    font-family: Comic Sans MS;
+    border-color: #fff;
+    border-style: groove;
+    text-align: center;
+  -webkit-transition: opacity 400ms ease-in;
+-moz-transition: opacity 400ms ease-in;
+transition: opacity 400ms ease-in;
+    /*box-shadow: 0px 0px 5000000px #fff;*/ 
+    
+}
+  }       
+   @media screen and (max-width: 720px)
+  {       
+.modalDialog > div {
+	font-size: 80%;
+    width: 300px;
+    height: auto;
+	position: relative;
+	margin: 40% auto;
+	padding: 5px 20px 13px 20px;
+	border-radius: 10px;
+	background: red;
+    font-family: Font;
+    text-align: center;
+  -webkit-transition: opacity 400ms ease-in;
+-moz-transition: opacity 400ms ease-in;
+transition: opacity 400ms ease-in;
+    /*box-shadow: 0px 0px 5000000px #fff;*/
+   
+    
+}
+  }   
+   @media screen and (max-width: 480px)
+  {       
+.modalDialog div {
+	font-size: 55%;
+    width: 160px;
+    height: auto;
+	position: relative;
+	margin: 40% auto;
+	padding: 5px 20px 13px 20px;
+	border-radius: 10px;
+	background: red;
+    font-family: Comic Sans M;
+    border-color: #fff;
+    border-style: groove;
+    text-align: center;
+  -webkit-transition: opacity 400ms ease-in;
+-moz-transition: opacity 400ms ease-in;
+transition: opacity 400ms ease-in;
+    /*box-shadow: 0px 0px 5000000px #fff;*/ 
+    
+}
+  }       
+.close {
+	background: #fff;
+	color: #000;
+    font-size: 104%;
+    font-family: Font;
+    text-decoration: none;
+    padding: 2%;
+    background-position:top;
+    padding-top: -0%;
+    border-top-right-radius: 500%;
+    border-bottom-left-radius: 500%;
+    border-bottom-right-radius: 500%;
+    border-top-left-radius: 500%;
+    margin-right: -105%;
+    margin-top: 5%;   
+    }
+       .clockdate-wrapper {
+    background-color: #E90000;
+    padding:5.9px;
+    height: 6%;
+    width:9%;
+    text-align:center;
+    border-radius: 8px;
+    margin:90 auto; 
+    margin-top: -53.5%;
+    position: fixed;
+    margin-left: -1.8%;
+    opacity: 1; 
+    font-family: Font;   
+    transition: all 0.3s ease 0.2s;
+     animation: fadeout 0.5s; 
+     border-color: #fff;
+     border-width: 1px;
+     border-style: solid;
+     border-radius: 500%;
+     font-size: 100%;
+     text-align: right;
+} 
+  .clockdate-wrapper:hover {
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(5.9);
+    margin-left: 140.5px;
+    transition: all 0.5s ease 0s;
+        animation: fadein 1.0s;  
+     margin-top: 5.5%;
+     cursor: pointer;
+     background-color: #4E48FF;
+     border-color: #fff;
+     border-width: 1px;
+     border-style: solid;
+     position: fixed;
+     border-radius: 8%;
+     height: 8.7%;
+     width: 10%;
+     font-size: 10%;
+     text-align: bottom;
+     color: red;
+     object-fit: cover;
+     }
+    #clock{
+    background-color:#fff;
+    font-family: Font;
+    font-size:6px;
+    border-radius: 50% 50% 10% 50%;
+    color: 1200FF;
+    margin-top: -10%;  
+    padding: 10%;
+}
+ /*#clock:hover{
+    background-color:#fff;
+    font-family: Font;
+    font-size:6px;
+    border-radius: 500px;
+    color: #1200FF;
+    margin-top: -10%;  
+    padding: 1%;
+}*/
+#clock span {
+    color:#FF1100;
+    font-size:5px;
+    position:inherit;
+    top:-2px;
+    left:-10px;
+    margin-left: 5%;
+    font-family: Font;
+}
+#date {
+    letter-spacing:2px;
+    font-size:3.3px;
+    font-family: Font;
+    color:#fff; 
+    margin-top: 2px; 
+ }   
+   #TextOverClock
+   {
+  /* 	font-size: 7px;
+   	color: #333;*/
+   	top: -50%;
+   	padding: 5%;
+   margin-top: 5%;
+   margin-left: 50%;
+   
+  } 
+    
+        </style>
+     </head>
+ 
+<body onload="startTime()">
+      
+       <div  class="w3-center w3-animate-left"><br>
+         <div class="clockdate-wrapper">
+  <div id="clock"></div>
+    <div id="date"></div>
+  <center></center>
+  </div>
+         </div>		
+
+			<center>  <h3 id="InterfaceLayout">
+           
+ <!--Clock Opened-->
+       <td><tr>
+<div id="openModal" class="modalDialog">
+	<div>
+		<a href="#close" title="Close" class="close">X</a>
+		<h2>Lo sentimos</h2>
+		<p>Esta versión aún no está disponible</p>
+	</div>
+</div></td>
+			</tr>       <br> 
+   <div id="InsideBox">
+             
+		<table id="datos">
+		<th><input id="searchTerm"  class="searchtype" type="text" onkeyup="doSearch()" placeholder="Buscar versión"/></th>          
+   <tr><td>
+                 <div HIDDEN=hidden onclick="location.href=`#openModal`" id="ItemO" type=button><img src="../../img/CTP-Images/03.13.40.png" id="landscapeimgmini"><span>CrazzyMCPE v26</span>
+        </div>
+       </td></tr>  
+    <tr><td>
+                 <div onclick="location.href=`v26Update26112018.html`" id="ItemO" type=button><center><span>Brazaletes</span></center> <img src="../../img/items/brazaletes.png" id="landscapeimgmini">
+        </div>
+       </td></tr>  
+       
+        <tr><td>
+                 <div onclick="location.href=`v26Update26112018.html`" id="ItemO" type=button><center><span>Gorras</span></center> <img src="../../img/items/cap.png" id="landscapeimgmini">
+        </div>
+       </td></tr>  
+            <tr><td>
+                 <div onclick="location.href=`#v26Update26112018.html`" id="ItemO" type=button><center><span>Anillos</span></center> <img src="../../img/items/anillos.png" id="landscapeimgmini">
+        </div>
+       </td></tr>  
+         <tr><td>
+                 <div onclick="location.href=`#v26Update26112018.html`" id="ItemO" type=button><center><span>Pulseras</span></center> <img src="../../img/items/pulsera.png" id="landscapeimgmini">
+        </div>
+       </td></tr>    
+         <tr><td>
+                 <div onclick="location.href=`#v26Update26112018.html`" id="ItemO" type=button><center><span>llaveros</span></center> <img src="../../img/items/llaveros.png" id="landscapeimgmini">
+        </div>
+       </td></tr>    
+         <tr><td>
+                 <div onclick="location.href=`#v26Update26112018.html`" id="ItemO" type=button><center><span>Cables USB</span></center> <img src="../../img/items/USB.png" id="landscapeimgmini">
+        </div>
+       </td></tr>    
+         <tr><td>
+                 <div onclick="location.href=`#v26Update26112018.html`" id="ItemO" type=button><center><span>Cables AUX</span></center> <img src="../../img/items/AUX.png" id="landscapeimgmini">
+        </div>
+       </td></tr>    
+         <tr><td>
+                 <div onclick="location.href=`#v26Update26112018.html`" id="ItemO" type=button><center><span>OTG</span></center> <img src="../../img/items/OTG.png" id="landscapeimgmini">
+        </div>
+       </td></tr>  
+    
+    
+    
+    
+    
+       
+    
+<div id="openModal" class="modalDialog">
+		<div href="#close" title="Close" class="close">x</div>
+		<h2>Lo sentimos</h2>
+		<p>Esta versión aún no está disponible</p>
+</div>
+		    
+       <tr><td>
+                 <div HIDDEN=hidden href="#close" title="Close" class="close" id="ItemO" type=button onclick="location.href=`v25Update7125102018.html`"><img src="../../img/CTP-Images/03.13.40.png" id="landscapeimgmini"><span >CrazzyMCPE v25</span>
+      
+                     </tr></div>
+              
+<tr><td>
+                 <div HIDDEN=hidden href="#close" title="Close" class="close" id="ItemO" type=button onclick="location.href=`v24Update71020181.html`"><img src="../../img/CTP-Images/03.13.40.png" id="landscapeimgmini"><span >CrazzyMCPE v24</span>
+      
+                     </tr></div>
+             <tr><td>
+                 <div hidden="hidden" id="selector" type=button><img src="../../img/CTP-Images/03.13.40.png" id="MenuIMG"><span >CrazzyMCPE v23</span>
+        </div></td>
+			</tr>
+              <tr><td>
+                 <div hidden="hidden" id="selector" type=button><img src="../../img/CTP-Images/03.13.40.png" id="MenuIMG"><span >CrazzyMCPE v22</span>
+        </div></td>
+			</tr>
+              <tr><td>
+                 <div hidden="hidden" id="selector" type=button><img src="../../img/CTP-Images/03.13.40.png" id="Menu"><span >CrazzyMCPE v21</span>
+        </div></td>
+			</tr>
+             <tr><td> 
+                 <div hidden="hidden" accesskey=""id="selector" type=button><img src="../img/CTP-Images/03.13.40.png" id="landscapeimgmini"><span >CrazzyMCPE v20</span>
+        </div></td>
+			</tr>
+              <tr><td>
+                 <div 
+                hidden="hidden" 
+            id="selector" type=button><img src="../img/CTP-Images/03.13.40.png" id="landscapeimgmini"><span >CrazzyMCPE v19</span>
+        </div></td>
+			</tr>
+              <tr><td>
+                 <div hidden="hidden" id="selector" type=button><img src="../img/CTP-Images/03.13.40.png" id="landscapeimgmini"><span>CrazzyMCPE v18</span>
+        </div></td>
+			</tr>
+              <tr><td>
+                 <div hidden="hidden" id="selector" type=button><img src="../img/CTP-Images/03.13.40.png" id="landscapeimgmini"><span style="margin-top:-0%" >CrazzyMCPE v17</span>
+        </div></td>
+			</tr>
+              <tr><td>
+                 <div hidden="hidden" id="selector" type=button><img src="../img/CTP-Images/03.13.40.png" id="landscapeimgmini"><span >CrazzyMCPE v16</span>
+        </div></td>
+			</tr>
+       </table></div></h3>
+    </center></body></html>  
