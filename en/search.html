@@ -1,16 +1,15 @@
-<html lang="es">
-    <head><meta name="theme-color" content="#333333">
+<html lang="en">
+ <head>  <meta name="theme-color" content="#8DCE00">
     <title>CrazzyMCPE</title>
-   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>       
 
 	<link rel="StyleSheet" href="../css/styles.css" type="text/css">
         <link rel="shortcut icon" href="../img/favicon.ico">
          <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
          <script src="../js/jquery-3.1.1.min.js"></script>
-        <script src="../js/banner.js"></script> 
-        
-<script type="text/javascript">document.write('<center><div id="navflotante"><input id="button" type="button" onclick="location.href=`index.html`"    value="Home"/>  <input draggable="true" id="button" type="button" onclick="location.href=`about.html`" value="About"/><input id="button" type="button" onclick="location.href=`changelogs.html`" value="Page Changes"/></div></center>');</script>
+         <img  id=BannerMenu src="../img/banner/banner_white.png">
+<script type="text/javascript">document.write('<center><div id="navflotante"><input id="ButtonCyan" type="button" onclick="location.href=`https://crazzymcpe.github.io/en`" value="Home"/><input id="ButtonCyan" type="button" onclick="location.href=`https://crazzymcpe.github.io/en/about`" value="about"/><input HIDDEN=hidden id="ButtonCyan" type="button" onclick="location.href=`https://crazzymcpe.github.io/en/changelogs`" value="Updates"/></div></center>');</script>
 <script>
       function startTime() {
     var today = new Date();
@@ -26,8 +25,8 @@
     sec = checkTime(sec);
     document.getElementById("clock").innerHTML = hr + ":" + min + ":" + sec + " " + ap;
     
-    var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-    var days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+    var months = ['Enero', 'Feb', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'];
+    var days = ['Dom', 'Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab'];
     var curWeekDay = days[today.getDay()];
     var curDay = today.getDate();
     var curMonth = months[today.getMonth()];
@@ -79,11 +78,22 @@ function checkTime(i) {
 		}
    </script>
 	<style>
+		body
+{
+	background-color: #8DCE00;
+	font-family: Font;
+}
+@font-face {
+    font-family: Font;
+    src: url(../font/font.ttf);
+    font-weight: bold;
+    }
         input[type="text"]::-webkit-input-placeholder {
 color: #fff;
 }
 	input:focus[type="text"]::-webkit-input-placeholder {
 color: #fff!important;
+
 }
  input:hover
         {
@@ -94,65 +104,75 @@ color: #fff!important;
         }
 		#datos tr:nth-child(even) 
 		#datos td {padding:0px;}
+       @media screen and (max-width: 1024px)
+  {       
         .searchtype
         {
-        background-color: dodgerblue;
-        width: 50%;
-        height: 50%;
-        border-style: groove;
-        border-bottom-style: ridge;
-        border-right-style: ridge;
-        border-width: 7px; 
+        background-color: #D62400;
+        width: 15%;
+        height: 20%;
+        border: solid;
         padding-top: 0.0%;
         padding: 0.8%;
-        font-family: Comic Sans MS;
-        font-size: 105%; 
-        border-radius: 7%;
-        border-color: #fff;
+        font-family: Font;
+        font-size: 85%; 
         text-align: center;
         font-weight: 800;
-        text-shadow: 2px 0px 0.5px dimgray;
+        border-radius: 5px;
+        border-color: #fff;
+        border-width: 2px;
+        
+        
         transition: all 0.8s ease 0s;
         animation: fadein 2.5s;  
+        color: #4300EA;
         }
+       }      
         .searchtype:focus
         {
         background-color: #fff;
-        border-style: groove;
-        border-bottom-style: ridge;
-        border-right-style: ridge;
-        border-color: #fff;
-        font-family: Comic Sans MS;
+      background: red;
+    font-family: Font;
         color: black;
         transition: all 3s ease 0s;
         border-radius: 7%;
-        box-shadow: 8px 8px 50px #000 inset;
+        
          animation: fadein 2.5s;    
         }
-        @media screen and (max-width: 480px)
-  {
+         @media screen and (max-width: 480px)
+  {       
         .searchtype
         {
-        background-color: red;
-        width: 5%;
-        height: 50%;
-        border-style: groove;
-        border-bottom-style: ridge;
-        border-right-style: ridge;
-        border-width: 7px; 
+        background-color: #D62400;
+        width: 35%;
+        height: 23%;
+        border: solid;
         padding-top: 0.0%;
         padding: 0.8%;
-        font-family: Comic Sans MS;
-        font-size: 70%; 
-        border-radius: 7%;
-        border-color: #fff;
+        font-family: Font;
+        font-size: 85%; 
         text-align: center;
-        font-weight: 500;
-        text-shadow: 2px 0px 0.5px dimgray;
+        font-weight: 800;
+        border-radius: 5px;
+        border-color: #fff;
+        border-width: 2px;
         transition: all 0.8s ease 0s;
-        animation: fadein 2.5s;  
+        animation: fadein 1.9s;  
+        color: #fff;
         }
-      }
+        }   
+       .searchtype:focus
+        {
+        background-color: #597F00;
+    
+    font-family: Font;
+        color: black;
+        transition: all 3s ease 0s;
+        border-radius: 7%;
+        
+        
+         animation: fadein 2.5s;    
+        }    
         @keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
@@ -178,7 +198,7 @@ color: #fff!important;
 	
    .modalDialog {
 	position: fixed;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: Font;
 	top: 0;
 	right: 0;
 	bottom: 0;
@@ -252,9 +272,7 @@ transition: opacity 400ms ease-in;
 	padding: 5px 20px 13px 20px;
 	border-radius: 10px;
 	background: red;
-    font-family: Comic Sans MS;
-    border-color: #fff;
-    border-style: groove;
+    font-family: Font;
     text-align: center;
   -webkit-transition: opacity 400ms ease-in;
 -moz-transition: opacity 400ms ease-in;
@@ -268,14 +286,14 @@ transition: opacity 400ms ease-in;
   {       
 .modalDialog > div {
 	font-size: 55%;
-    width: 175px;
+    width: 160px;
     height: auto;
 	position: relative;
 	margin: 40% auto;
 	padding: 5px 20px 13px 20px;
 	border-radius: 10px;
 	background: red;
-    font-family: Comic Sans MS;
+    font-family: Comic Sans M;
     border-color: #fff;
     border-style: groove;
     text-align: center;
@@ -290,7 +308,7 @@ transition: opacity 400ms ease-in;
 	background: #fff;
 	color: #000;
     font-size: 104%;
-    font-family: Comic Sans MS;
+    font-family: Font;
     text-decoration: none;
     padding: 2%;
     background-position:top;
@@ -300,132 +318,183 @@ transition: opacity 400ms ease-in;
     border-bottom-right-radius: 500%;
     border-top-left-radius: 500%;
     margin-right: -105%;
-    margin-top: 5%;
+    margin-top: 5%;   
     }
-         .clockdate-wrapper {
-    background-color: #333;
-    padding:9.9px;
-    max-width:90px;
-    width:99%;
+       .clockdate-wrapper {
+    background-color: #E90000;
+    padding:5.9px;
+    height: 6%;
+    width:9%;
     text-align:center;
-    border-radius:5px;
-    margin:0 0;
-    margin-top:-18%;
+    border-radius: 8px;
+    margin:90 auto; 
+    margin-top: -53.5%;
     position: fixed;
-    margin-left: -5.9%;
-    opacity: 0.8;
-}
-#clock{
+    margin-left: -1.8%;
+    opacity: 1; 
+    font-family: Font;   
+    transition: all 0.3s ease 0.2s;
+     animation: fadeout 0.5s; 
+     border-color: #fff;
+     border-width: 1px;
+     border-style: solid;
+     border-radius: 500%;
+     font-size: 100%;
+     text-align: right;
+} 
+  .clockdate-wrapper:hover {
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(5.9);
+    margin-left: 140.5px;
+    transition: all 0.5s ease 0s;
+        animation: fadein 1.0s;  
+     margin-top: 5.5%;
+     cursor: pointer;
+     background-color: #4E48FF;
+     border-color: #fff;
+     border-width: 1px;
+     border-style: solid;
+     position: fixed;
+     border-radius: 8%;
+     height: 8.7%;
+     width: 10%;
+     font-size: 10%;
+     text-align: bottom;
+     color: red;
+     object-fit: cover;
+     }
+    #clock{
     background-color:#fff;
-    font-family: sans-serif;
-    font-size:20px;
-    text-shadow:0px 0px 1px #fff;
-    color:#333;
-    font-family: Comic Sans MS;
-    
+    font-family: Font;
+    font-size:6px;
+    border-radius: 50% 50% 10% 50%;
+    color: 1200FF;
+    margin-top: -10%;  
+    padding: 10%;
 }
+ /*#clock:hover{
+    background-color:#fff;
+    font-family: Font;
+    font-size:6px;
+    border-radius: 500px;
+    color: #1200FF;
+    margin-top: -10%;  
+    padding: 1%;
+}*/
 #clock span {
-    color:#888;
-    text-shadow:0px 0px 1px #333;
-    opacity: 0;
-    font-size:10px;
+    color:#FF1100;
+    font-size:5px;
     position:inherit;
-    top:-0px;
+    top:-2px;
     left:-10px;
-    margin-right: -50%;
+    margin-left: 5%;
+    font-family: Font;
 }
 #date {
-    letter-spacing:5px;
-    font-size:7.6px;
-    font-family: Comic Sans MS;
-    color:#fff;   </style>
-     <br><br><br><br><br><center> <font id="logo" face="Comic Sans MS" size="80%" color="#fff"><a style="position:static"></a></font></center><br>
-   <br>
-          
-        
+    letter-spacing:2px;
+    font-size:3.3px;
+    font-family: Font;
+    color:#fff; 
+    margin-top: 2px; 
+ }   
+   #TextOverClock
+   {
+  /* 	font-size: 7px;
+   	color: #333;*/
+   	top: -50%;
+   	padding: 5%;
+   margin-top: 5%;
+   margin-left: 50%;
+   
+  } 
+    j
+        </style>
      </head>
  
 <body onload="startTime()">
-      <center>  <h3 id="InterfaceLayout">
-   <div id="clockdate">
-  <div class="clockdate-wrapper">
-    <div id="clock"></div>
+      
+       <div  class="w3-center w3-animate-left"><br>
+         <div class="clockdate-wrapper">
+  <div id="clock"></div>
     <div id="date"></div>
+  <center></center>
   </div>
-</div>   
-          
-          
-   <div id="InsideBox">
-       
-       
-       
-		<table id="datos">
-		<th><input id="searchTerm"  class="searchtype" type="text" onkeyup="doSearch()" placeholder="Search version"/></th>
-       
-            
-            
-    <tr><td>
-                 <div onclick="location.href=`#openModal`" id="selector" type=button><img src="../img/CTP-Images/03.13.40.png" id="landscapeimgmini"><span >CrazzyMCPE v26</span>
-        </div>
-       
+         </div>		
+
+			<center>  <h3 id="InterfaceLayout">
+           
+ <!--Clock Opened-->
+       <td><tr>
 <div id="openModal" class="modalDialog">
 	<div>
 		<a href="#close" title="Close" class="close">X</a>
-		<h2>Sorry</h2>
-		<p>This version is not avaliable yet</p>
+		<h2>Lo sentimos</h2>
+		<p>Esta versión aún no está disponible</p>
 	</div>
 </div></td>
-			</tr>
-            <br>
-         	<tr><td>
-                          <div onclick="location.href=`#openModal`" id="selector" type=button><img src="../img/CTP-Images/03.13.40.png" id="landscapeimgmini"><span >CrazzyMCPE v25</span>
-        </div></td>
-                
-</tr>
+			</tr>       <br> 
+   <div id="InsideBox">
+             
+		<table id="datos">
+		<th><input id="searchTerm"  class="searchtype" type="text" onkeyup="doSearch()" placeholder="Search version"/></th><br><br><br><br>          
+   <tr><td>
+                 <div HIDDEN=hidden onclick="location.href=`#openModal`" id="selector" type=button><img src="../img/CTP-Images/03.13.40.png" id="landscapeimgmini"><span>CrazzyMCPE v26</span>
+        </div>
+       </td></tr>  
+    <tr><td>
+                 <div onclick="location.href=`https://crazzymcpe.github.io/esnv26CrazzyMCPE`" id="selector" type=button><img src="../img/CTP-Images/261118-1.png" id="landscapeimgmini"><span>CrazzyMCPE v26</span>
+        </div>
+       </td></tr>  
+    
+<div id="openModal" class="modalDialog">
+		<div href="#close" title="Close" class="close">x</div>
+		<h2>Lo sentimos</h2>
+		<p>Esta versión aún no está disponible</p>
+</div>
+		    
+       <tr><td>
+                 <div href="#close" title="Close" class="close" id="selector" type=button onclick="location.href=`https://crazzymcpe.github.io/esnv25CrazzyMCPE`"><img src="../img/CTP-Images/20181025.1.png" id="landscapeimgmini"><span >CrazzyMCPE v25</span>
+      
+                     </tr></div>
               
 <tr><td>
-                 <div href="#close" title="Close" class="close" id="selector" type=button onclick="location.href=`v24Update71020181.html`"><img src="../img/CTP-Images/03.13.40.png" id="landscapeimgmini"><span >CrazzyMCPE v24</span>
-             </div></td>
-                
-</tr>
+                 <div href="#close" title="Close" class="close" id="selector" type=button onclick="location.href=`https://crazzymcpe.github.io/esnv24CrazzyMCPE`"><img src="../img/CTP-Images/08.17.02.png" id="landscapeimgmini"><span >CrazzyMCPE v24</span>
+      
+                     </tr></div>
              <tr><td>
-                 <div id="selector" type=button><img src="../img/CTP-Images/03.13.40.png" id="landscapeimgmini"><span >CrazzyMCPE v23</span>
+                 <div hidden="hidden" id="selector" type=button><img src="../img/CTP-Images/03.13.40.png" id="MenuIMG"><span >CrazzyMCPE v23</span>
         </div></td>
 			</tr>
               <tr><td>
-                 <div id="selector" type=button><img src="../img/CTP-Images/03.13.40.png" id="landscapeimgmini"><span >CrazzyMCPE v22</span>
+                 <div hidden="hidden" id="selector" type=button><img src="../img/CTP-Images/03.13.40.png" id="MenuIMG"><span >CrazzyMCPE v22</span>
         </div></td>
 			</tr>
               <tr><td>
-                 <div id="selector" type=button><img src="../img/CTP-Images/03.13.40.png" id="landscapeimgmini"><span >CrazzyMCPE v21</span>
+                 <div hidden="hidden" id="selector" type=button><img src="../img/CTP-Images/03.13.40.png" id="Menu"><span >CrazzyMCPE v21</span>
         </div></td>
 			</tr>
              <tr><td> 
-                 <div id="selector" type=button><img src="../img/CTP-Images/03.13.40.png" id="landscapeimgmini"><span >CrazzyMCPE v20</span>
+                 <div hidden="hidden" accesskey=""id="selector" type=button><img src="../img/CTP-Images/03.13.40.png" id="landscapeimgmini"><span >CrazzyMCPE v20</span>
         </div></td>
 			</tr>
               <tr><td>
-                 <div id="selector" type=button><img src="../img/CTP-Images/03.13.40.png" id="landscapeimgmini"><span >CrazzyMCPE v19</span>
+                 <div 
+                hidden="hidden" 
+            id="selector" type=button><img src="../img/CTP-Images/03.13.40.png" id="landscapeimgmini"><span >CrazzyMCPE v19</span>
         </div></td>
 			</tr>
               <tr><td>
-                 <div id="selector" type=button><img src="../img/CTP-Images/03.13.40.png" id="landscapeimgmini"><span >CrazzyMCPE v18</span>
+                 <div hidden="hidden" id="selector" type=button><img src="../img/CTP-Images/03.13.40.png" id="landscapeimgmini"><span>CrazzyMCPE v18</span>
         </div></td>
 			</tr>
               <tr><td>
-                 <div id="selector" type=button><img src="../img/CTP-Images/03.13.40.png" id="landscapeimgmini"><span style="margin-top:-0%" >CrazzyMCPE v17</span>
+                 <div hidden="hidden" id="selector" type=button><img src="../img/CTP-Images/03.13.40.png" id="landscapeimgmini"><span style="margin-top:-0%" >CrazzyMCPE v17</span>
         </div></td>
 			</tr>
               <tr><td>
-                 <div id="selector" type=button><img src="../img/CTP-Images/03.13.40.png" id="landscapeimgmini"><span >CrazzyMCPE v16</span>
+                 <div hidden="hidden" id="selector" type=button><img src="../img/CTP-Images/03.13.40.png" id="landscapeimgmini"><span >CrazzyMCPE v16</span>
         </div></td>
 			</tr>
        </table></div></h3>
-    </center> <center> <div class="dropdown">
-  <button onclick="myFunction()" class="dropbtn">Idioma-Language</button>
-  <div id="myDropdown" class="dropdown-content">
-   <a 
-href="es_mx/index.html">EspaÃ±ol</a>
-    <a href="en_us/index.html">English</a>
-  </div>
-</div> </center></body></html>
+    </center></body></html>  
