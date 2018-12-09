@@ -99,21 +99,22 @@
 
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
-    position: relative;
+    position: inherit;
     display: inline-block;
 }
 
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
     display: none;
-    position: absolute;
-    background-color: #f1f1f1;
+    position: sticky;
+    
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
     z-index: 1;
       transition: all 0.6s ease 0s;
       family-font: Font;
     
+    background-color: color|transparent|initial|inherit;
     
 }
 
@@ -272,6 +273,8 @@ margin-bottom: -0%;
 background-color: #fff;
 color: orange;
 border: none;
+transition: all 2.8s ease 0s;
+       animation: fadein 1.0s;  
 }
   } 
 @media screen and (max-width: 480px)
@@ -418,6 +421,8 @@ margin-bottom: -0%;
 background-color: #fff;
 color: orange;
 border: none;
+transition: all 0.8s ease 0s;
+animation: fadein 1.9s;  
 }
   } 
 @media screen and (max-width: 480px)

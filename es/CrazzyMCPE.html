@@ -7,9 +7,10 @@
 	<link rel="StyleSheet" href="../css/styles.css" type="text/css">
         <link rel="shortcut icon" href="../img/favicon.ico">
          <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+           <script src="../js/dropmenu.js"></script>
          <script src="../js/jquery-3.1.1.min.js"></script>
          <img  id=BannerMenu src="../img/banner/banner_white.png">
-<script type="text/javascript">document.write('<center><div id="navflotante"><input id="ButtonCyan" type="button" onclick="location.href=`index.html`"    value="Inicio"/><input draggable="true" id="ButtonCyan" type="button" onclick="location.href=`about.html`" value="acerca de "/><input id="ButtonCyan" type="button" onclick="location.href=`changelogs.html`" value="Cambios"/></div></center>');</script>
+<script type="text/javascript">document.write('<center><div id="navflotante"><input id="ButtonCyan" type="button" onclick="location.href=`index.html`"    value="Inicio"/><input draggable="true" id="ButtonCyan" type="button" onclick="location.href=`about.html`" value="acerca de "/><input HIDDEN=hidden id="ButtonCyan" type="button" onclick="location.href=`changelogs.html`" value="Cambios"/></div></center>');</script>
 <script>
       function startTime() {
     var today = new Date();
@@ -330,7 +331,7 @@ transition: opacity 400ms ease-in;
     margin:90 auto; 
     margin-top: -53.5%;
     position: fixed;
-    margin-left: -1.8%;
+    margin-left: 0.8%;
     opacity: 1; 
     font-family: Font;   
     transition: all 0.3s ease 0.2s;
@@ -408,7 +409,34 @@ transition: opacity 400ms ease-in;
    margin-left: 50%;
    
   } 
-    j
+       #OutlineMenu
+    {
+    	border-color: #FFCA00;
+    	border-style: none;
+    	border-width: 2px;
+    	border-radius: 4px;
+    	background-color: #fff;
+    	font-family: Font;
+    	color: #00977B;
+    	font-size: 100%;
+    	margin-left: -0%;
+    	margin-top:-2%;
+    	width: 100%;
+
+    	transition: all 0.8s ease 0s;
+        animation: fadein 1.5s; 
+    }
+/*    .dropdown-content
+    {
+      display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+      transition: all 0.6s ease 0s;
+      family-font: Font;*/
+      }
         </style>
      </head>
  
@@ -423,15 +451,7 @@ transition: opacity 400ms ease-in;
          </div>		
 
 			<center>  <h3 id="InterfaceLayout">
-            <br>
-
-
-
-
-
-
-
-
+         
 
  <!--Clock Opened-->
        <td><tr>
@@ -442,35 +462,35 @@ transition: opacity 400ms ease-in;
 		<p>Esta versión aún no está disponible</p>
 	</div>
 </div></td>
-			</tr>       <br> 
+			</tr>       
    <div id="InsideBox">
              
 		<table id="datos">
-		<th><input id="searchTerm"  class="searchtype" type="text" onkeyup="doSearch()" placeholder="Buscar versión"/></th><br><br><br><br>          
+		<th><input id="searchTerm"  class="searchtype" type="text" onkeyup="doSearch()" placeholder="Buscar       🔎"/></th><br><br><br><br>          
    <tr><td>
                  <div HIDDEN=hidden onclick="location.href=`#openModal`" id="selector" type=button><img src="../img/CTP-Images/03.13.40.png" id="landscapeimgmini"><span>CrazzyMCPE v26</span>
         </div>
        </td></tr>  
     <tr><td>
-                 <div onclick="location.href=`v26Update26112018.html`" id="selector" type=button><img src="../img/CTP-Images/03.13.40.png" id="landscapeimgmini"><span>CrazzyMCPE v26</span>
+                 <div onclick="location.href=`https://crazzymcpe.github.io/es/v26CrazzyMCPE`" id="selector" type=button><img src="../img/CTP-Images/261118-1.png" id="landscapeimgmini"><span>CrazzyMCPE v26</span>
         </div>
        </td></tr>  
     
 <div id="openModal" class="modalDialog">
 		<div href="#close" title="Close" class="close">x</div>
 		<h2>Lo sentimos</h2>
-		<p>Esta versión aún no está disponible</p>
+		<p>Esta versi�n a�n no est� disponible</p>
 </div>
 		    
        <tr><td>
-                 <div href="#close" title="Close" class="close" id="selector" type=button onclick="location.href=`v25Update7125102018.html`"><img src="../img/CTP-Images/03.13.40.png" id="landscapeimgmini"><span >CrazzyMCPE v25</span>
+                 <div href="#close" title="Close" class="close" id="selector" type=button onclick="location.href=`https://crazzymcpe.github.io/es/v25CrazzyMCPE`"><img src="../img/CTP-Images/20181025.1.png" id="landscapeimgmini"><span >CrazzyMCPE v25</span>
       
                      </tr></div>
               
 <tr><td>
-                 <div href="#close" title="Close" class="close" id="selector" type=button onclick="location.href=`v24Update71020181.html`"><img src="../img/CTP-Images/03.13.40.png" id="landscapeimgmini"><span >CrazzyMCPE v24</span>
+                 <div href="#close" title="Close" class="close" id="selector" type=button onclick="location.href=`https://crazzymcpe.github.io/es/v24CrazzyMCPE`"><img src="../img/CTP-Images/08.17.02.png" id="landscapeimgmini"><span >CrazzyMCPE v24</span>
       
-                     </tr></div>
+                     </tr></div></td>
              <tr><td>
                  <div hidden="hidden" id="selector" type=button><img src="../img/CTP-Images/03.13.40.png" id="MenuIMG"><span >CrazzyMCPE v23</span>
         </div></td>
@@ -505,5 +525,31 @@ transition: opacity 400ms ease-in;
                  <div hidden="hidden" id="selector" type=button><img src="../img/CTP-Images/03.13.40.png" id="landscapeimgmini"><span >CrazzyMCPE v16</span>
         </div></td>
 			</tr>
-       </table></div></h3>
+       </table></div>
+       <center>   	<div id="InsideBox"><br>  <center> <div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Reviews</button>
+  <div id="myDropdown" class="dropdown-content">
+   <h1 id="OutlineMenu">
+   		CrazzyMCPE
+  <center> 	<iframe id=MenuIMG width="90%" height="auto"frameborder="0%" src="https://www.youtube.com/embed/Qcfr0aCo7ts?disablekb=1" allowfullscreen></iframe>
+   	<br>DroiidGamerPro
+   	<iframe id=MenuIMG width="90%" height="auto"frameborder="0%" src="https://www.youtube.com/embed/9UV1WGyP89Q?disablekb=1" allowfullscreen></iframe> 
+   	<br>
+   	<iframe id=MenuIMG width="90%" height="auto"frameborder="0%" src="https://www.youtube.com/embed/s_LV-bRucbI?disablekb=1" allowfullscreen></iframe> 
+   	<br>Son Giovanni Dbz
+   		<iframe id=MenuIMG width="90%" height="auto"frameborder="0%" src="https://www.youtube.com/embed/bwuhw5fj1zI?disablekb=1" allowfullscreen></iframe> 
+   	<br>Chocorrol 25
+   		<iframe id=MenuIMG width="90%" height="auto"frameborder="0%" src="https://www.youtube.com/embed/N8TsecY1hls?disablekb=1" allowfullscreen></iframe> 
+   	
+   		<iframe HIDDEN=hidden id=MenuIMG width="90%" height="auto"frameborder="0%" src="https://www.youtube.com/embed/Qcfr0aCo7ts?disablekb=1" allowfullscreen></iframe> 
+   	
+   		<iframe HIDDEN=hidden id=MenuIMG width="90%" height="auto"frameborder="0%" src="https://www.youtube.com/embed/Qcfr0aCo7ts?disablekb=1" allowfullscreen></iframe> 
+   	</center>
+       </h1>
+  </div>
+</div> </center><br>
+       
+    </h3>
+    
+    
     </center></body></html>  

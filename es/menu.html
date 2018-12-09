@@ -39,6 +39,7 @@ function checkTime(i) {
     return i;
 }  </script>	         <script src="../js/jquery-3.1.1.min.js"></script>
          <script src="../js/UI-Size.js"></script>
+      <script src="../js/dropmenu.js"></script>  
          <img  id=BannerMenu src="../img/banner/banner_white.png">
 <script type="text/javascript">document.write('<center><div id="navflotante"><input id="ButtonCyan" type="button" onclick="location.href=`index.html`"    value="Inicio"/><input draggable="true" id="ButtonCyan" type="button" onclick="location.href=`about.html`" value="acerca de"/><input HIDDEN=hidden id="ButtonCyan" type="button" onclick="location.href=`changelogs.html`" value="Cambios"/></div></center>');</script>
 <script>
@@ -469,7 +470,33 @@ filter: blur(-1%);
    <div id="InsideBox">
 
    	<p id="title" style="color: lime">Reviews</p>
-   	<h1 id="OutlineMenu">
+   	
+<center>   	<div id="InsideBox"><br>  <center> <div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Reviews</button>
+  <div id="myDropdown" class="dropdown-content">
+   <h1 id="OutlineMenu">
+   		CrazzyMCPE
+  <center> 	<iframe id=MenuIMG width="90%" height="auto"frameborder="0%" src="https://www.youtube.com/embed/Qcfr0aCo7ts?disablekb=1" allowfullscreen></iframe>
+   	<br>DroiidGamerPro
+   	<iframe id=MenuIMG width="90%" height="auto"frameborder="0%" src="https://www.youtube.com/embed/9UV1WGyP89Q?disablekb=1" allowfullscreen></iframe> 
+   	<br>
+   	<iframe id=MenuIMG width="90%" height="auto"frameborder="0%" src="https://www.youtube.com/embed/s_LV-bRucbI?disablekb=1" allowfullscreen></iframe> 
+   	<br>Son Giovanni Dbz
+   		<iframe id=MenuIMG width="90%" height="auto"frameborder="0%" src="https://www.youtube.com/embed/bwuhw5fj1zI?disablekb=1" allowfullscreen></iframe> 
+   	<br>Chocorrol 25
+   		<iframe id=MenuIMG width="90%" height="auto"frameborder="0%" src="https://www.youtube.com/embed/N8TsecY1hls?disablekb=1" allowfullscreen></iframe> 
+   	
+   		<iframe HIDDEN=hidden id=MenuIMG width="90%" height="auto"frameborder="0%" src="https://www.youtube.com/embed/Qcfr0aCo7ts?disablekb=1" allowfullscreen></iframe> 
+   	
+   		<iframe HIDDEN=hidden id=MenuIMG width="90%" height="auto"frameborder="0%" src="https://www.youtube.com/embed/Qcfr0aCo7ts?disablekb=1" allowfullscreen></iframe> 
+   	</center>
+       </h1>
+  </div>
+</div> </center><br>
+   	
+   	
+   	
+   	<h1 HIDDEN=hidden id="OutlineMenu">
    		CrazzyMCPE
    	<iframe id=MenuIMG width="90%" height="auto"frameborder="0%" src="https://www.youtube.com/embed/Qcfr0aCo7ts?disablekb=1" allowfullscreen></iframe>
    	<br>DuvanCraft
@@ -489,7 +516,7 @@ filter: blur(-1%);
    	
        </h1>
 		</div></h3>
-    </center></body></html>  
+    
 	<script> var colors = ["4300EA", "#DF000F", "#00977B", "#88F000","#7900FF", "#FFFB00", "#DF00FF", "#00BBFF", "#ECA900", "#FF7B00", "#17FF00", "#FF009F", "#00FFB9", "#344474", "#343434", "#000000", ]; var colorIndex = 0; function changeColor() { var col = document.getElementById("body"); if( colorIndex >= colors.length ) { colorIndex = 0; } col.style.backgroundColor = colors[colorIndex]; colorIndex++; } </script><body id='body'><button id="ButtonCyan" style="font-size: 65%" onclick="changeColor();">Change color</button>
 	<br><button onclick="location.href=`search.html`" id="ButtonCyan">Descargas</button>
 	<script type="text/javascript"> $( document ).ready(function() { if(localStorage.getItem('isCliked'){ $( "#mylink" ).addClass( 'btn-success' ); $( "#mylink" ).removeClass( 'btn-default' ); } $('#mylink').on('click',function() { $( this ).addClass( 'btn-success' ); $( this ).removeClass( 'btn-default' ); // set the value upon clicking localStorage.setItem('isCliked', true) }); }); </script> 
