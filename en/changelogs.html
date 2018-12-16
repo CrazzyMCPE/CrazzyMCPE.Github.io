@@ -3,7 +3,7 @@
     <title>CrazzyMCPE</title>
    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   
-
+ 	<link rel="image_src" href="https://crazzymcpe.github.io/img/thumbnail.png"/>   
 	<link rel="StyleSheet" href="../css/styles.css" type="text/css">
         <link rel="shortcut icon" href="../img/favicon.ico">
          <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
@@ -41,11 +41,15 @@ window.onclick = function(event) {
 	body
 	{ 
 background-color: #DF000F;
+transition: all 2s ease 0.1s;
+animation: fadein 1.9s; 
 }
 	@font-face {
     font-family: Font;
     src: url(../font/font.ttf);
     font-weight: bold;
+    transition: all 2s ease 0.1s;
+        animation: fadein 1.9s; 
 }
            @media screen and (min-width: 800px)
   { 
@@ -117,6 +121,10 @@ div#splashscreen{
      transition: all 0.6s ease 0s;
 }
       }
+   p { animation-duration: 3s; animation-name: slidein; } 
+   @keyframes slidein { from { margin-left: 100%; width: 300% } to { margin-left: 0%; width: 100%; } }  
+      
+      
 </style>
 <script> 
 window.addEventListener("load", function(){
@@ -207,7 +215,7 @@ window.onclick = function(event) {
         Se agreg贸 la secci贸n  de noticias<br>Se agreg贸 la secci贸n acerca de<br>Se cambi贸 el dise帽o de los botones<br>Se cambi贸 la animaci贸n de los botones<br>Se le agregaron sombras a las fuentes<br>Se le agregaron sombras a los botones y men煤s<br>Agregada parcialmente la adaptaci贸n con dispositivos moviles
         </a><br><br>
         <a id="title">Version 0.1.0</a><br> <a id="paragraph">Primera versi贸n</a> <br><br>
- </p></h3></center><br>        <center style=font-family: Font" > <br> <div class="dropdown">
+ </p></h3></center><br>        <center style=font-family: Font"> <br> <div class="dropdown">
   <button onclick="myFunction()" class="dropbtn">Idioma-Language</button>
   <div id="myDropdown" class="dropdown-content">
    <a

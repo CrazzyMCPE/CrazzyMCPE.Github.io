@@ -2,8 +2,7 @@
     <head><meta name="theme-color" content="#DF000F">
     <title>CrazzyMCPE</title>
    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  
-
+  <link rel="image_src" href="https://crazzymcpe.github.io/img/thumbnail.png"/>   
 	<link rel="StyleSheet" href="../css/styles.css" type="text/css">
         <link rel="shortcut icon" href="../img/favicon.ico">
         	
@@ -71,9 +70,12 @@ window.onclick = function(event) {
       <img  id=BannerMenu src="../img/banner/banner_white.png">
       
 <style>
+	
 	body
 	{ 
 background-color: #DF000F;
+transition: all 2s ease 0.1s;
+        animation: fadein 1.9s;  
 }
 	@font-face {
     font-family: Font;
@@ -150,6 +152,8 @@ div#splashscreen{
      transition: all 0.6s ease 0s;
 }
       }
+    #InsideBox { animation-duration: 1s; animation-name: slidein; } 
+   @keyframes slidein #InsideBox { from { margin-left: 100%; width: 300% } to #InsideBox{ margin-left: 0%; width: 100%; } }    
 </style>
 <script> 
 window.addEventListener("load", function(){
@@ -184,21 +188,12 @@ window.onclick = function(event) {
 });  
         </script>
     </head>
-   
 <body scrolling="yes">
-     <div id="clockdate">
-
-       <div  class="w3-center w3-animate-left">   
-         <div class="clockdate-wrapper">
-    <div id="clock"></div>
-    <div id="date"></div>
-  </div>
-         </div>
-</div>     
+ 
   <center> <h3 style="font-family: Font" id="InterfaceLayout">
          <p id="InsideBox"><a id="title">Listas de cambios</a>
-  <br>   <br><br>      
-  <br>   <br><br>      
+      
+  <br>   <br>     
            <a id="title">Versión 0.9.1</a>
  <br>  <a style="color:#00C1FF" id="Paragraph">07/12/2018</a><br>
      <font id="paragraph">
@@ -212,6 +207,7 @@ window.onclick = function(event) {
       	Agregado el protocolo de seguridad SSL(https)
       	Eliminada la extension .html y mejorada la longitud de los links
       	Reemplazado el botón cambiar background por un ícono
+      	Actualizado el diseño del menú de versiones de la textura
       	
   <br>
            	

@@ -1,0 +1,324 @@
+<html lang=es>
+    <head><meta name="theme-color" content="#00C4FF">
+    <title>CrazzyMCPE</title>
+   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+      	<link rel="image_src" href="https://crazzymcpe.github.io/img/thumbnail.png"/>      
+
+	<link rel="StyleSheet" href="../css/styles.css" type="text/css">
+        <link rel="shortcut icon" href="../img/favicon.ico">
+  <script>
+      function startTime() {
+    var today = new Date();
+    var hr = today.getHours();
+    var min = today.getMinutes();
+    var sec = today.getSeconds();
+    ap = (hr < 12) ? "<span>AM</span>" : "<span>PM</span>";
+    hr = (hr == 0) ? 12 : hr;
+    hr = (hr > 12) ? hr - 12 : hr;
+    //Add a zero in front of numbers<10
+    hr = checkTime(hr);
+    min = checkTime(min);
+    sec = checkTime(sec);
+    document.getElementById("clock").innerHTML = hr + ":" + min + ":" + sec + " " + ap;
+    
+    var months = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+    var days = ['Dom', 'Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab'];
+    var curWeekDay = days[today.getDay()];
+    var curDay = today.getDate();
+    var curMonth = months[today.getMonth()];
+    var curYear = today.getFullYear();
+    var date = curWeekDay+", "+curDay+" "+curMonth+" "+curYear;
+    document.getElementById("date").innerHTML = date;
+    
+    var time = setTimeout(function(){ startTime() }, 500);
+}
+function checkTime(i) {
+    if (i < 10) {
+        i = "0" + i;
+    }
+    return i;
+}  </script>	
+<script language="javascript">
+		function doSearch()
+		{
+			var tableReg = document.getElementById('datos');
+			var searchText = document.getElementById('searchTerm').value.toLowerCase();
+			var cellsOfRow="";
+			var found=false;
+			var compareWith="";
+ 
+			// Recorremos todas las filas con contenido de la tabla
+			for (var i = 1; i < tableReg.rows.length; i++)
+			{
+				cellsOfRow = tableReg.rows[i].getElementsByTagName('span');
+				found = false;
+				// Recorremos todas las celdas
+				for (var j = 0; j < cellsOfRow.length && !found; j++)
+				{
+					compareWith = cellsOfRow[j].innerHTML.toLowerCase();
+					// Buscamos el texto en el contenido de la celda
+					if (searchText.length == 0 || (compareWith.indexOf(searchText) > -1))
+					{
+						found = true;
+					}
+				}
+				if(found)
+				{
+					tableReg.rows[i].style.display = '';
+				} else {
+					// si no ha encontrado ninguna coincidencia, esconde la
+					// fila de la tabla
+					tableReg.rows[i].style.display = 'none';
+				}
+			}
+		}
+   </script>   
+        
+<script type="text/javascript">document.write('<center><div id="navflotante"><input id="ButtonLightBlue" type="button" onclick="location.href=`https://crazzymcpe.github.io/es`"    value="Inicio"/><input id="ButtonLightBlue" type="button" onclick="location.href=`https://crazzymcpe.github.io/es/changelogs`" value="Novedades"/><input id="BO" type="button" onclick="location.href=`https://crazzymcpe.github.io/es/CrazzyMCPE`" value="CrazzyMCPE"/><input HIDDEN=hidden id="BO" type="button" style="background: #C6FF00" onclick="location.href=`menu.html`" value="Menu"/></div></center>');</script>
+        <style>
+        	#textgrid
+        	{
+        	color: white;
+        	margin-top: 40px;
+        	}
+        </style>     <script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
+             <img  id=BannerMenu src="../img/banner/banner_white.png">
+             
+<style>
+	body
+	{ 
+background-color: #00C4FF;
+transition: all 2s ease 0s;
+        animation: fadein 1.9s;  
+}
+	@font-face {
+    font-family: Font;
+    src: url(../font/font.ttf);
+    font-weight: bold;
+    }
+           @media screen and (min-width: 800px)
+  { 
+div#splashscreen{
+position: fixed;
+	width: 102%;
+	height: 150%;
+    margin-top: -1%;
+    margin-left: -2%;
+    margin-bottom: 8%;
+    background: 100% -180px -webkit-radial-gradient( circle, #fff 10% ,#000 105% , #000 80% );
+  border-width: 6px;
+    border-radius: 8px 8px;
+    box-shadow: 3px 3px 3px #000, -30px -20px #333333;
+     transition: all 0.6s ease 0s;
+}
+      }
+        @media screen and (max-width: 1024px)
+  { 
+div#splashscreen{
+	position: fixed;
+	width: 102%;
+	height: 150%;
+    margin-top: -1%;
+    margin-left: -2%;
+    margin-bottom: 8%;
+    background: 100% -180px -webkit-radial-gradient( circle, #fff 38% ,#000 105% , #000 80% );
+  border-width: 6px;
+    border-radius: 8px 8px;
+    box-shadow: 3px 3px 3px #000, -30px -20px #333333;
+     transition: all 0.6s ease 0s;
+}
+      }
+    @media screen and (max-width: 720px)
+  { 
+div#splashscreen{
+    font-family: "Kristen itc";
+    font-size: 130%;
+    text-emphasis-position: left;
+    color: #fff;
+    font-weight: bold;
+	position: fixed;
+	width: 102%;
+	height: 162%;
+    margin-top: -1%;
+    margin-left: -2%;
+    margin-bottom: 8%;
+    background: 100% -270px -webkit-radial-gradient( circle, #fff 8% ,#000 125% , #000 80% );
+  border-width: 6px;
+    border-radius: 8px 8px;
+    box-shadow: 3px 3px 3px #000, -30px -20px #333333;
+     transition: all 0.6s ease 0s;
+    text-shadow: 1px 1px 10px #000, -1px -2px #333333;
+}
+      }
+      @media screen and (max-width: 480px)
+  { 
+div#splashscreen{
+	position: fixed;
+	width: 105%;
+	height: 150%;
+    margin-top: -4%;
+    margin-left: -5%;
+    margin-bottom: 8%;
+    background: 100% -190px -webkit-radial-gradient( circle, #fff 4% ,#000 100% , #000 80% );
+  border-width: 6px;
+    border-radius: 8px 8px;
+    box-shadow: 3px 3px 3px #000, -30px -20px #333333;
+     transition: all 0.6s ease 0s;
+}
+      }
+      #clock{
+    background-color:#fff;
+    font-family: Font;
+    font-size:10px;
+    border-radius: 5px;
+    text-shadow:0px 0px 0px #fff;    
+    color:1200FF;
+}
+#clock span {
+    color:#FF1100;
+    text-shadow:0px 0px 0px #333;888;
+    font-size:5px;
+    position:inherit;
+    top:-2px;
+    left:-10px;
+    margin-left: 5%;
+    font-family: Font;
+}
+#date {
+    letter-spacing:5px;
+    font-size:8px;
+    font-family: Font;
+    color:#FFCB00;    
+    }  
+ .WebDevMenu
+ {
+ 	background-color: #2C2C2C;
+ 	border-radius: 8px;
+ 	border-color: #fff;
+ 	border-style: solid;
+ 	border-width: 2px;
+ 	color: #00C4FF;
+ }
+ @media screen and (min-width: 800px)
+  {  
+#BO
+{
+   
+	color: #fff;
+    background: ##FFB700;
+    width: 10%;
+    height: 26%;
+    font-size:  100%;
+     border-style: solid;
+     border-color: #fff;
+    margin: 0.4%;
+     transition: all 0.6s ease 0s;
+     font-weight: 00px;
+    font-family: "Font";
+    text-decoration: none;    
+    border-radius: 8px;
+}
+      }
+@media screen and (max-width: 480px)
+  {  
+#BO
+{  
+	color: #fff;
+    background: #FFB700;
+    width: 31%;
+    height: 34;
+    font-size:  100%;
+     border-style: solid;
+     border-color: #fff;
+    margin: 0.4%;
+     transition: all 0.6s ease 0s;
+     font-weight: 00px;
+    font-family: "Font";
+    text-decoration: none;    
+    border-radius: 8px;
+}
+      }
+      #BO:hover
+{
+    color: #FFB700;
+    background-color: #fff;
+    border-radius: 5px 8px;
+    transition: all 0.6s ease 0s;
+    border-color: #fff;
+    border-width: 1px 1px;
+    font-weight: bold;
+    border-style: solid;
+    border-color: #FFB700;
+}
+</style>
+<script> 
+window.addEventListener("load", function(){
+	var load_screen = document.getElementById("splashscreen");
+	document.body.removeChild(splashscreen);
+});
+</script>
+    </head>
+   
+<body scrolling="yes">
+      <center>  <h3 id="InterfaceLayout" class="WebDevMenu">
+     	
+   <a>Desarrollo Web
+  </a> <br><br>
+  	  	
+     <button style="font-size: 50%" id=ButtonLightBlue>Descargas</button> 	
+      	
+      	
+      	
+      	
+      	
+      	
+   <div id="clockdate">
+
+       <div  class="w3-center w3-animate-left">   
+         <div class="clockdate-wrapper">
+    <div id="clock"></div>
+    <div id="date"></div>
+  </div>
+         </div>
+</div>     
+     
+<p HIDDEN=hidden>
+<br><a  style=color:lime>
+ Reparar bugs con los botones e interfÃ¡z</a>
+<br><a style=#>Agregar una barra de navegaciÃ³n lateral</a>
+<br><a style=color:lime>Mejorar el diseÃ±o de los menÃºs</a>
+<br><a style=color:lime>Agregar splashscreen</a>
+<br><a style=#>Agregar el like de facebook</a>
+<br><a style=#>Agregar vista previa de la pÃ¡gina de facebook</a>
+<br><a style=#>Agregar una vista previa de mi canal y botÃ³n para subscribirse</a>
+<br><a style=color:lime>Cambiar el borde de los botones </a>
+    <br><a style=color:lime>reparar la sombra de la fuente</a>
+<br><a style=#>Adaptar bien las imÃ¡genes en moviles</a>
+<br><a style=color:lime>MenÃº desplegable</a>
+<br><a style=#>Agregar reloj digital</a>
+<br><a style=color:lime>Agregar cambiar background dependiendo de la hora y fecha</a>
+<br><a style=color:lime>Agregar los presentaciÃ³n para CrazzyMCPE Java(importante)</a>
+ <br><a style=color:lime>Agregar los menÃºs de descarga</a>
+<br><a style=color:lime>Agregar un contador de descargas(usando contador de clicks)</a>
+<br><a style=#>Agregar botÃ³n de enviar sugerencia por correo</a>
+<br><a style=#>Agregar likes</a>
+â¦<br><a style=color:lime>Agregar opciÃ³n para buscar cosas en la pÃ¡gina</a>
+<br><a style=#>Agregar banners especiales para dÃ­as especiales</a>
+<br><a hidden="hidden" style=#>Agregar que aparezca un pastel(easter egg)</a>
+<br><a style=color:lime>Agregar idiomas</a>
+<br><a style=color:lime>Agregar menÃº oficial de la textura(java/bedrock)</a>
+<br><a style=#>Agregar reviews de la textura(videos)</a>
+
+<br><a  id="title">Bugs conocidos:</a>
+       
+
+<br><a style=color:red>fuente de seleccion de version en la lista se sobrepone en botÃ³n
+  </a>
+    
+ 
+ 
+ </h3></center>
+ <script> var colors = ["#420505", "#DF000F", "#00977B", "#88F000","#7900FF", "#FFFB00", "#DF00FF", "#00BBFF", "#ECA900", "#FF7B00", "#17FF00", "#FF009F", "#00FFB9", "#344474", "#343434", "#000000", ]; var colorIndex = 0; function changeColor() { var col = document.getElementById("body"); if( colorIndex >= colors.length ) { colorIndex = 0; } col.style.backgroundColor = colors[colorIndex]; colorIndex++; } </script><body id='body'><button id="ColorPalete" style="font-size: 125%" onclick="changeColor();">ðŸŽ¨</button>
+ </body><br><br><center>    <p id="VersionNumber">
+   2015-2018</p></center>
+    </html>

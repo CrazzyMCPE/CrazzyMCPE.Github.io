@@ -802,7 +802,21 @@ border-radius: 100px;
 border-color: #DBDBDB #DBDBDB #DBDBDB #DBDBDB;
 box-shadow: 1px 1px 9px;
 }
-
+    	#InsideBox {
+	transition: all 1.8s ease 0.3s;
+	 animation-duration: 1s; animation-name: slidein;  }
+   @keyframes slidein { from { margin-top: 150%; width: 100%; opacity: 0.1; } 
+ to { margin-bottom: 0%; width: 8%; opacity:0.2; } to
+{ margin-bottom: 0%; width: 5%; opacity: 0.4} to  
+ { margin-bottom: 0%; width: 31.3%; opacity: 0.5; }  to
+ { margin-bottom: 0%; width: 31.3%; opacity: 0.7;
+ }  to
+ { margin-bottom: 0%; width: 100%; opacity: 0.9;
+ animation-duration: 2s;
+ }  
+     }  
+      }
+      
 #InsideBox
 {
 height: auto;
@@ -810,13 +824,27 @@ width: 100%;
 color: black;
 font-family: comic sans MS;
 padding-bottom: 9%;
-margin-bottom: -0%;
+margin-top: -15%;
     }
 #fb-buttons
 {
 margin-right: -15%;
 margin-top: -19%;
 }
+#navflotante {
+	transition: all 1.8s ease 0.3s;
+	 animation-duration: 0.5s; animation-name: slidein;  }
+   @keyframes slidein { from { margin-top: 150%; width: 100%; opacity: 0.1; } 
+ to { margin-bottom: 0%; width: 8%; opacity:0.2; } to
+{ margin-bottom: 0%; width: 5%; opacity: 0.4} to  
+ { margin-bottom: 0%; width: 31.3%; opacity: 0.5; }  to
+ { margin-bottom: 0%; width: 31.3%; opacity: 0.7;
+ }  to
+ { margin-bottom: 0%; width: 100%; opacity: 0.9;
+ animation-duration: 2s;
+ }  
+     }  
+      }
 @media screen and (min-width: 800px)
   {  
 #BoxLayout
@@ -1725,9 +1753,10 @@ font-family: Font;
     width: 31%;
     height: 34;
     font-size:  100%;
-     
+     transition: all 0.8s ease 0s;
+        
     margin: 0.4%;
-     transition: all 0.6s ease 0s;
+     
      font-weight: 00px;
     font-family: "Font";
     text-decoration: none;    
@@ -1752,6 +1781,55 @@ font-family: Font;
     transition: all 1.6s ease 0s;
      font-weight: bold;
      border-color: #fff;
+}
+@media screen and (min-width: 800px)
+  {  
+#ButtonLightBlue
+{
+   
+	color: #00C4FF;
+    background: #fff;
+    width: 10%;
+    height: 26%;
+    font-size:  100%;
+     border-style: none;
+    margin: 0.4%;
+     transition: all 0.6s ease 0s;
+     font-weight: 00px;
+    font-family: "Font";
+    text-decoration: none;    
+    border-radius: 8px;
+}
+      }
+@media screen and (max-width: 480px)
+  {  
+#ButtonLightBlue
+{
+   
+	color: #00C4FF;
+    background: #fff;
+    width: 31%;
+    height: 34;
+    font-size:  100%;
+     border-style: none;
+    margin: 0.4%;
+     transition: all 0.6s ease 0s;
+     font-weight: 00px;
+    font-family: "Font";
+    text-decoration: none;    
+    border-radius: 8px;
+}
+      }
+      #ButtonLightBlue:hover
+{
+    color: #fff;
+    background: #00C4FF;
+    border-radius: 5px 8px;
+    transition: all 0.6s ease 0s;
+    border-color: #fff;
+    border-width: 1px 1px;
+    font-weight: bold;
+    border-style: solid;
 }
 	@media screen and (min-width: 800px)
   {  
@@ -1803,3 +1881,4 @@ margin-top: -10%;
  margin: 2%;
 		}
 		}
+	
