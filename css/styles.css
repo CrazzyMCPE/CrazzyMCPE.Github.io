@@ -58,8 +58,9 @@
   { 
 #SplashScreen_img
 {
- 	width: 100%;
-	height: auto;   
+ 	width: 50%;
+	height: auto; 
+	margin-right: -5%; 
 }
 }  
 
@@ -68,7 +69,8 @@
 #SplashScreen_img
 {
  	width: 100%;
-	height: auto;   
+	height: auto;  
+	
 }
 }  
 
@@ -76,11 +78,14 @@
   { 
 #SplashScreen_img
 {
- 	width: 100%;
+ 	width: 120%;
 	height: auto;   
+margin-left: -10%;
 }
 }  
-.dropbtn {
+ /*@media screen and (max-width: 480px)
+  { 
+  .dropbtn {
     background-color: #3498DB;
     color: white;
     padding: 16px;
@@ -89,21 +94,23 @@
     cursor: pointer;
     font-family: Font;
     font-weight: 800;
+    margin-bottom: 60%;
 }
+}*/
 
-/* Dropdown button on hover & focus */
+/* Dropdown button on hover & focus 
 .dropbtn:hover, .dropbtn:focus {
     background-color: #2980B9;
     family-font: Font;
 }
 
-/* The container <div> - needed to position the dropdown content */
+/* The container <div> - needed to position the dropdown content 
 .dropdown {
     position: inherit;
     display: inline-block;
 }
 
-/* Dropdown Content (Hidden by Default) */
+/* Dropdown Content (Hidden by Default) 
 .dropdown-content {
     display: none;
     position: sticky;
@@ -118,7 +125,7 @@
     
 }
 
-/* Links inside the dropdown */
+/* Links inside the dropdown 
 .dropdown-content a {
     color: black;
     padding: 12px 16px;
@@ -138,10 +145,10 @@
       transition: all 0.6s ease 0s;
 }
 
-/* Change color of dropdown links on hover */
+/* Change color of dropdown links on hover 
 .dropdown-content a:hover {background-color: #ddd}
 
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) 
 .show {display:block;
       transition: all 0.6s ease 0s;}    
 
@@ -153,7 +160,7 @@
    -webkit-transform-style: preserve-3d;
     animation: 5px 5px 9px;
     column-rule-color: aqua;
-}
+}*/
 
 @media screen and (min-width: 800px)
   { 
@@ -423,6 +430,7 @@ color: orange;
 border: none;
 transition: all 0.8s ease 0s;
 animation: fadein 1.9s;  
+position: static;
 }
   } 
 @media screen and (max-width: 480px)
@@ -438,7 +446,12 @@ border-radius: 8px  5px;
 transition: all 0.50s ease 0s;
 color: goldenrod;
     }
-  } 
+  }  
+.ItemOFont
+{
+	position: relative;
+	color: red;
+} 
       /*Search Bar TextureMenu*/
  @media screen and (max-width: 1024px)
   {
@@ -803,19 +816,21 @@ border-color: #DBDBDB #DBDBDB #DBDBDB #DBDBDB;
 box-shadow: 1px 1px 9px;
 }
     	#InsideBox {
-	transition: all 1.8s ease 0.3s;
-	 animation-duration: 1s; animation-name: slidein;  }
-   @keyframes slidein { from { margin-top: 150%; width: 100%; opacity: 0.1; } 
+	 animation-duration: 1s; 
+	 animation-name: slidein;  }
+   @keyframes slidein
+    { from 
+    { margin-top: 0%; width: 80%; opacity: 0.1; } 
  to { margin-bottom: 0%; width: 8%; opacity:0.2; } to
 { margin-bottom: 0%; width: 5%; opacity: 0.4} to  
  { margin-bottom: 0%; width: 31.3%; opacity: 0.5; }  to
  { margin-bottom: 0%; width: 31.3%; opacity: 0.7;
  }  to
- { margin-bottom: 0%; width: 100%; opacity: 0.9;
+ { margin-bottom: 0%; width: 80%; opacity: 0.9;
  animation-duration: 2s;
  }  
      }  
-      }
+      
       
 #InsideBox
 {
@@ -1075,6 +1090,7 @@ margin-top: 1%;
 margin-top: 40%;
 border-color: #505E73;
 margin-left: -0.5%;
+
 }
  }   
 .IconText
@@ -1084,12 +1100,12 @@ color: #fff;
 /*margin-left: -20%;*/
 padding: -50%;
 margin-top: -500%;
-
+ 
 }
 @media screen and (min-width: 800px)
   {  
  #SocialMediaIcon
-{
+{ 
  width: 5%;
 height: auto;
 border-radius: 100%;
