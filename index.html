@@ -1,5 +1,5 @@
 <html lang=es>
-    <head><meta name="theme-color" content="#59000B">
+    <head><meta name="theme-color" content="#B92947">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>    
     <title>CrazzyMCPE</title>
    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -43,9 +43,13 @@ window.onclick = function(event) {
     $("#tstn").fadeIn(3000);
 });  
         </script>
-    <img  id=BannerMenu src="img/banner/banner_white.png">
+    <img  id=BannerMenu src="img/banner/banner-overlay.png">
       
 <style>
+	#BannerMenu
+	{
+		margin-top: 20%;
+	}
 	body
 	{ 
 		    background-image: url("img/BgEmpty.png");
@@ -124,13 +128,37 @@ div#splashscreen{
    animation: fadein 3.0s;   
 }
       }
-   @media screen and (min-width: 1024px)
+       @media screen and (min-width: 800px)
+  { 
+  .dropbtn {
+	    height: 4%;
+	   width: 16%;
+	   padding: -1%;
+    background-color: #B92947;
+    color: white;   
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    font-family: Font;
+    font-weight: 800;
+   
+    transition: all 1.5s ease 0.1s;
+     position: relative;  
+        border-radius: 8px;
+        outline: 0;  
+        border-style: solid;
+     border-color: #fff;
+     border-width: 1.2px; 
+     margin-top: 20%;        
+} 
+} 
+   @media screen and (max-width: 720px)
   { 
   .dropbtn {
 	    height: 8%;
 	   width: 4%;
-	   padding: 1%;
-    background-color: #9C0021;
+	   padding: -1%;
+    background-color: #B92947;
     color: white;   
     font-size: 100px;
     border: none;
@@ -149,12 +177,13 @@ div#splashscreen{
 }
 /* Dropdown Button */
 
-   
+  @media screen and (max-width: 480px)
+  { 
 .dropbtn {
 	    height: 8%;
 	   width: 40%;
 	   padding: 0%;
-    background-color: #9C0021;
+    background-color: #B92947;
     color: white;   
     font-size: 10px;
     border: none;
@@ -170,7 +199,7 @@ div#splashscreen{
      border-color: #fff;
      border-width: 0.5px;         
 }
-
+}
 .dropbtn:hover, .dropbtn:focus {
     background-color: #fff;
     color: #2980B9; 
@@ -248,8 +277,7 @@ margin-top: 0%; width: 0%; opacity: 0.4} to
 .dropdown-content a:hover {
 	background-color: #3A3A3A;
   transition: all 1.5s ease 0.1s;
-        animation: fadein 0.9s; 
-        
+        animation: fadein 0.9s;        
         background-size: cover;
 }
 
@@ -351,7 +379,7 @@ href="https://crazzymcpe.github.io/es">Español</a>
 }
 </style>
 <center>   <p  id=VersionNumber>
-   2015-2018</p></center>
+   2015-2019</p></center>
 
     </body>
  </html>

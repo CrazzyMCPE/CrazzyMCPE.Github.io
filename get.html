@@ -29,7 +29,11 @@
 	    .imgr{ -webkit-animation: 3s rotate linear infinite; animation: 3s rotate linear infinite; -webkit-transform-origin: 50% 50%; transform-origin: 50% 50%; }
 	 #imgr2 { -webkit-animation-direction: reverse; animation-direction: reverse; } 
 	 #IconRotate
-	 { position: absolute; top: 25%; left: 45%; width: 170px; height: auto; margin:-60px 0 0 -60px; -webkit-animation:spin 4s linear infinite; -moz-animation:spin 4s linear infinite; animation:spin 4s linear infinite; } @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } } @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } } @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+	 { 
+	 position: absolute; top: 25%; left: 45%; width: 170px; height: auto; margin:-60px 0 0 -60px; -webkit-animation:spin 4s linear infinite; -moz-animation:spin 4s linear infinite; animation:spin 4s linear infinite; } @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } } @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } } @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+	 
+	    	
+  
 	 
 #DownloadText
 {
@@ -54,18 +58,41 @@ height: auto;
 width: 100%;
 border-radius: 8px;	
 margin-top:-15%;
+animation-duration: 2s; 
+transition: all 20s ease 0.1s;
+box-shadow: -1px -1px 20px #000;
+margin-bottom: 2%;
 }
+.Animation-gear
+{
+	animation-duration: 1s; 
+	 animation-name: Slide; 
+	 
+}
+ @keyframes Slide
+    { from 
+    { margin-bottom: 500%; width: 8%; opacity: 0.1; } 
+ to { margin-left: -500%; width: 8%; opacity:0.2; } to
+{ margin-bottom: 0%; width: 5%; opacity: 0.4} to  
+ { margin-left: 5%; width: 31.3%; opacity: 0.5; 
+  }  to
+ { margin-right: -50%; width: 31.3%; opacity: 0.7;
+ }  to
+ { margin-right: -10%; width: 90%; opacity: 0.9; 
+ animation-duration: 0.5s;
+ }  
+     }  
 		</style>
 	</head>
 	<body>
-		
+		<div class="Animation-gear">
 		<img src="img/A01.png" id="IconRotate">
-	
+	</div><br>
 			<p id="DownloadText">
 			<a>Descargando</a>
 			<br>
 				<a id="DownloadText2">CrazzyMCPE Última Versión</a></p>
 				<br><br>
-	<img id="TPT" src="img/CTP-Images/261118-1.png">		
+	<img class="Animation-gear" id="TPT" src="img/CTP-Images/261118-1.png">		
 		</body>
 		</html>
