@@ -104,7 +104,8 @@ element.backgroundClipPolyfill({
 });     
         </script>
              <script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
-         <script type="text/javascript" src="../js/banner.js"></script>
+            <img style="margin-top:-2%" id=BannerMenu src="../img/banner/banner-overlay.png">
+
         <script type="text/javascript" src="../js/splashscreen_bg_grid.js"></script>
 <style>
 	@font-face {
@@ -123,7 +124,7 @@ element.backgroundClipPolyfill({
  
  }  to
  { margin-bottom: 0%; width: 100%; opacity: 0.9;
- animation-duration: 2s;
+ /*animation-duration: 2s;*/
  }  
      }  
    
@@ -178,6 +179,16 @@ div#splashscreen{
 
 }
       }
+    body
+   {
+     background-image: url("../img/BgEmpty.png");
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 100% 110%;
+     //**   transition: all 1s ease 100s;
+        animation: fadein 20s;*  //   
+       
+        }
 </style>
 <script> 
 window.addEventListener("load", function(){
@@ -196,17 +207,22 @@ window.addEventListener("load", function(){
     $("p").slideToggle();
 });
         </script>
-    <br><br><br><center> <font id="logo" face="Comic Sans MS" size="80%" color="#fff"></font></center><br><br>
+    <br><br><br><center> <font id="logo" face="Comic Sans MS" size="8%" color="#fff"></font></center><br><br>
     <!--<center><font face="kristen itc" id="banner">CrazzyMCPE</font></center>-->
   <center> <h3 id="InterfaceLayout">
   
+<!--Online 
+
    <iframe id="frame" src="https://crazzymcpe.github.io/es/news" frameborder="0%"></iframe>
-   <br>
- 
+        
+      -->
+      
+       <iframe id="frame" src="../es/news.html" frameborder="0%"></iframe>
+
   <p id="Twitter-button"> <a  href="https://twitter.com/CrazzyMCPE" class="twitter-follow-button" data-show-count="true">
       
       <script  async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></a></p>
-      <a class="twitter-timeline" data-width="90%" data-height="90%" href="https://twitter.com/Crazzymcpe"></a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script><br> <iframe hidden=hidden src="https://www.facebook.com/CrazzyMCPE" width="50%" height="50%"> </iframe> 
+      <a id="TwitterTimeline" class="twitter-timeline" data-width="76%" data-height="90%" href="https://twitter.com/Crazzymcpe"></a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script><br> <iframe hidden=hidden src="https://www.facebook.com/CrazzyMCPE" width="50%" height="50%"> </iframe> 
       
       <br><br>
      <script> var colors = ["#420505", "#DF000F", "#00977B", "#88F000","#7900FF", "#FFFB00", "#DF00FF", "#00BBFF", "#ECA900", "#FF7B00", "#17FF00", "#FF009F", "#00FFB9", "#344474", "#343434", "#000000", ]; var colorIndex = 0; function changeColor() { var col = document.getElementById("body"); if( colorIndex >= colors.length ) { colorIndex = 0; } col.style.backgroundColor = colors[colorIndex]; colorIndex++; } </script><body id='body'><button id="ColorPalete" style="font-size: 125%" onclick="changeColor();">🎨</button>
