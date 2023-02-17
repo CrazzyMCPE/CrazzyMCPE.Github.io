@@ -1,0 +1,11 @@
+missing code
+
+
+
+<p hidden=hidden id="Twitter-button"> <a  href="https://twitter.com/CrazzyMCPE" class="twitter-follow-button" data-show-count="true">
+      
+      <script hidden=hidden async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></a></p>
+      <a hiddn=hidden id="TwitterTimeline" class="twitter-timeline" data-width="76%" data-height="90%" href="https://twitter.com/Crazzymcpe"></a> <script hidden=hidden async src="//platform.twitter.com/widgets.js" charset="utf-8"></script><br> <iframe hidden=hidden src="https://www.facebook.com/CrazzyMCPE" width="50%" height="50%"> </iframe> 
+      
+      <br><br>
+     <script hidden=hidden> var colors = ["#420505", "#DF000F", "#00977B", "#88F000","#7900FF", "#FFFB00", "#DF00FF", "#00BBFF", "#ECA900", "#FF7B00", "#17FF00", "#FF009F", "#00FFB9", "#344474", "#343434", "#000000", ]; var colorIndex = 0; function changeColor() { var col = document.getElementById("body"); if( colorIndex >= colors.length ) { colorIndex = 0; } col.style.backgroundColor = colors[colorIndex]; colorIndex++; } </script><body id='body'><button hidden=hidden id="ColorPalete" style="font-size: 125%" onclick="changeColor();">ðŸŽ¨</button>

@@ -10,6 +10,17 @@ window.addEventListener("load", function(){
 	document.body.removeChild(splashscreen);
 });
 </script>
+     //blur//   
+        
+        <script>var item = $(".item");
+
+// agrego la clase blur a todos los 'ítem' que NO sea al que le se le esta aplicando el evento 'hover'
+item.hover(function() {
+item.not($(this)).addClass('blur');
+// al perder el foco, retiro la clase a todos los 'item'
+}, function() {
+item.removeClass('blur');
+});</script>
   <!--  <div  id="splashscreen"><br><br><br><br><br><br><br><center><img id="SplashScreen_img" src="img/Splashscreen/bg2.png"/> </center></div>-->
 	<link rel="StyleSheet" href="css/styles.css" type="text/css">
         
@@ -258,8 +269,10 @@ div#splashscreen{
 	 border-radius: 0px 0px 8px 8px;
         outline: 0;
         position: inherit;
+   backdrop-filter: blur(2px);
 	 }   
       }
+    
            @media screen and (max-width: 1024px)
   { 
 .dropdown-content {
@@ -281,6 +294,7 @@ div#splashscreen{
 	 border-radius: 0px 0px 8px 8px;
         outline: 0;
         position: inherit;
+    filter: blur(6px);
 	 }   
       }
        @media screen and (max-width: 720px)
@@ -454,7 +468,7 @@ href="https://crazzymcpe.github.io/es">Español</a>
     <a href="https://crazzymcpe.github.io/en">English</a>
   </div>
 </div> </center>
-    <form hidden=hidden name="form1" method="post" action="mailto:crazzygamermcpe@gmail.com">
+    <form hidden=shown name="form1" method="post" action="mailto:crazzygamermcpe@gmail.com">
 <label for="nombre">Nombre: </label><input type="text" name="nombre" id="nombre"><br />
 <label for="email">Email: </label><input type="text" name="nombre" id="email"><br />
 &iquest;Qu&eacute; te pareci&oacute; la p&aacute;gina?<br />
@@ -473,7 +487,7 @@ href="https://crazzymcpe.github.io/es">Español</a>
 	margin-bottom: -5%;
 }
 </style>
-<center>   <p  id=VersionNumber>
+<center>   <p class=.item id=VersionNumber>
    2015-2019</p></center>
 
     </body>
