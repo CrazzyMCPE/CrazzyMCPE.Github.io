@@ -7,6 +7,62 @@
         <link rel="shortcut icon" href="../img/favicon.ico">
          <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
         
+        
+        
+        
+           <script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
+      <img style="margin-top:-2%" id="BannerMenu" src="../img/banner/banner-overlay.png">
+    
+        
+        
+        
+        
+               <!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+   <img id="Item" src="../img/media/iph.jpg">
+    </div>
+
+</div> 
+        <script>
+        
+        // Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("BannerMenu");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+        
+        
+        </script>
+  
+        
+                    
+
+
+        
 <script type="text/javascript">document.write('<center><div id="navflotante"><input id="ButtonCyan" type="button" onclick="location.href=`https://crazzymcpe.github.io`" value="Inicio"/><input id="ButtonCyan" type="button" onclick="location.href=`https://crazzymcpe.github.io/es/about`" value="acerca de "/><input id="ButtonCyan" type="button" onclick="location.href=`https://crazzymcpe.github.io/es/store`" value="Tienda"/></div></center>');
         
    Element.prototype.backgroundClipPolyfill = function () {
@@ -102,14 +158,34 @@ element.backgroundClipPolyfill({
   'patternURL' : '../img/bg_empty.png',
   'class' : 'headline'
 });     
+       
+  
+   
+        
+        
         </script>
-             <script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
-            <img style="margin-top:-2%" id=BannerMenu src="../img/banner/banner-overlay.png">
+          
 
+        
+        
+       <!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+   <img id="Item" src="../img/media/iph.jpg">
+    </div>
+
+</div>  
+        
+        
+        
+        
         <script type="text/javascript" src="../js/splashscreen_bg_grid.js"></script>
 <style>
 	@font-face {
-    font-family: Font;
+    font-family: "Lucida Console", "Courier New", monospace;;
     src: url(../font/font.ttf);
     font-weight: bold;
 }
@@ -181,25 +257,116 @@ div#splashscreen{
       }
     body
    {
-     background-image: url("../img/BgEmpty.png");
+     background-image: url("../img/bgnew.png");
     background-repeat: no-repeat;
     background-position: 50%;
-    background-size: 100% 110%;
+    background-size: 100% 100%;
      //**   transition: all 1s ease 100s;
-        animation: fadein 20s;*  //   
-       
+        animation: fadein 20s;*  *//   
+  
         }
+    
+    /* Modal Header */
+.modal-header {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+
+/* Modal Body */
+.modal-body {padding: 2px 16px;}
+
+/* Modal Footer */
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+
+/* Modal Content */
+.modal-content {
+  position: fixed;
+  background-color: #fff;
+  background-color: rgba(15, 15, 15, 0.6);
+  padding: 18%;
+  height: 2%;
+  width: 30%;
+  -webkit-backdrop-filter: blur(100px);
+  backdrop-filter: blur(9px);
+  max-width: 50%;
+  max-height: 50%;
+  font-size: 50%;
+  text-align: justify;
+    text-overflow: inherit;
+    border-radius: 28px;
+    border-style:hidden;
+    margin-top: 8.1%;
+    margin-left: 18.5%;
+    text-rendering:optimizeLegibility;
+     animation-name: bounceIn;
+  animation-duration: 150ms;
+  animation-timing-function:
+}
+.modal-text
+    {
+        text-rendering:optimizeLegibility;
+        color: #fff;
+        font-size: 20px;
+    }
+    
+    
+    
+ /*BOUNCE IN ANIMATION*/
+@keyframes bounceIn{
+  0%{
+    opacity: 1;
+    transform: scale(0.6) translate3d(0,0,0);
+  }
+  50%{
+    opacity: 1;
+    transform: scale(0.7);
+  }
+  80%{
+    opacity: 1;
+    transform: scale(0.8);
+  }
+  100%{
+    opacity: 1;
+    transform: scale(1) translate3d(0,0,0);
+  }
+}
 </style>
 <script> 
-window.addEventListener("load", function(){
-	var load_screen = document.getElementById("splashscreen");
-	document.body.removeChild(splashscreen);
-});
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("BannerMenus");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
 </script>
     </head>
    
 <body scrolling="yes">
-    
+     
     <!--<h1 id="navbar">
 </h1>-->
 <!--<h1 id="banner" onclick="location.href=`index.html`">CrazzyMCPE</h1></center>--> <script>
@@ -207,25 +374,47 @@ window.addEventListener("load", function(){
     $("p").slideToggle();
 });
         </script>
-    <br><br><br><center> <font id="logo" face="Comic Sans MS" size="8%" color="#fff"></font></center><br><br>
+    <center> <font id="logo" face="Comic Sans MS" size="8%" color="#fff"></font></center><br><br>
     <!--<center><font face="kristen itc" id="banner">CrazzyMCPE</font></center>-->
   <center> <h3 id="InterfaceLayout">
-  
+ 
 <!--Online 
 
    <iframe id="frame" src="https://crazzymcpe.github.io/es/news" frameborder="0%"></iframe>
         
       -->
+     
       
-       <iframe id="frame" src="../es/news.html" frameborder="0%"></iframe>
+      <div id="Menu">
+       <h1 id="sub-menu">INTRO:
+(Cut to a shot of the iPhone 13 mini)
+<br>
+Narrator: Introducing the iPhone 13 mini, the latest addition to Apple's iconic lineup of smartphones. The iPhone 13 mini is the perfect blend of power, performance, and portability.
+<br>
+(Cut to a shot of someone holding the iPhone 13 mini)
+<br><br><br><br>
+Narrator: With its compact size, the iPhone 13 mini is easy to carry around, making it ideal for people who are always on the go. But don't let its small size fool you, the iPhone 13 mini packs a punch when it comes to features and performance.
+<br><br><br><br>
+(Cut to a shot of the iPhone 13 mini's camera)
+<br><br><br>
+Narrator: The iPhone 13 mini is equipped with a powerful camera system that delivers stunning photos and videos. The triple-camera setup includes a wide, ultra-wide, and telephoto lens, so you can capture life's moments from every angle.
+<br><br>
+(Cut to a shot of the iPhone 13 mini's display)
+<br>
+Narrator: The iPhone 13 mini boasts a gorgeous 5.4-inch OLED display that provides vivid and accurate color reproduction, perfect for watching videos, browsing the web, and playing games.<br><br>
+<br></h1>
 
-  <p id="Twitter-button"> <a  href="https://twitter.com/CrazzyMCPE" class="twitter-follow-button" data-show-count="true">
-      
-      <script  async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></a></p>
-      <a id="TwitterTimeline" class="twitter-timeline" data-width="76%" data-height="90%" href="https://twitter.com/Crazzymcpe"></a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script><br> <iframe hidden=hidden src="https://www.facebook.com/CrazzyMCPE" width="50%" height="50%"> </iframe> 
-      
-      <br><br>
-     <script> var colors = ["#420505", "#DF000F", "#00977B", "#88F000","#7900FF", "#FFFB00", "#DF00FF", "#00BBFF", "#ECA900", "#FF7B00", "#17FF00", "#FF009F", "#00FFB9", "#344474", "#343434", "#000000", ]; var colorIndex = 0; function changeColor() { var col = document.getElementById("body"); if( colorIndex >= colors.length ) { colorIndex = 0; } col.style.backgroundColor = colors[colorIndex]; colorIndex++; } </script><body id='body'><button id="ColorPalete" style="font-size: 125%" onclick="changeColor();">🎨</button>
-      	 
-     <br></h3></center></body>
+  </div>
+  
+
+     <br></h3></center>
+    
+    
+    
+    
+    </body>
+    
+    
+    
+    
     </html>
